@@ -1,0 +1,85 @@
+{% block navigation_bar %}
+	<nav id="header" class="top-navigation navbar">
+		<a class="site-logo" href="{{ data_nav_bar.home_url }}">
+			<img src="{{ data_nav_bar.images }}gp-logo.svg" alt="Greenpeace"/>
+		</a>
+		<button
+				class="btn btn-navbar-toggle navbar-dropdown-toggle"
+				data-toggle="open"
+				data-target="#navbar-dropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation menu"
+		>
+			<span>{{ __( 'Menu', 'planet4-master-theme' ) }}</span>
+		</button>
+		<ul id="navbar-dropdown" class="navbar-dropdown list-unstyled">
+			<li class="nav-item">
+				<button class="close-navbar-dropdown">
+					<span class="screen-reader-text">{{ __( 'Close Menu', 'planet4-master-theme' ) }}</span>
+				</button>
+				<button
+						class="country-dropdown-toggle"
+						data-toggle="open"
+						data-target="#country-list"
+						aria-expanded="false"
+						aria-label="Toggle worldwide site selection menu"
+				>
+					<span class="screen-reader-text">{{ __( 'Selected', 'planet4-master-theme' ) }}:</span> {{ website_navbar_title }}
+					<span class="screen-reader-text">{{ __( 'Change Country', 'planet4-master-theme' ) }}</span>
+				</button>
+				{% include 'countries.twig' %}
+			</li>
+			{% for key,item in navbar_menu.get_items %}
+				{% if 'wpml-ls-item' in item.class %}
+					{% if key == 0 %}
+						<li class="nav-item {{ item.class }}">
+					{% endif %}
+						<a class="nav-link" href="{{ item.get_link }}">{{ item.title|striptags|slice(0, 2) }}</a>
+					{% if key == (languages - 1) %}
+						</li>
+					{% endif %}
+				{% else %}
+					<li class="nav-item {{ item.class }} {{ item == item.current ? 'active' : '' }}">
+						<a class="nav-link" href="{{ item.get_link }}">{{ item.title }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+
+
+
+			<div class="nav-item dropdown">
+			  <button class="btn btn-donate" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    {{ __( 'DONATE', 'planet4-master-theme' ) }}
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+{# 			    <a class="" href="#">Action</a>
+			    <a class="dropdown-item" href="#">Another action</a>
+			    <a class="dropdown-item" href="#">Something else here</a> #}
+			    {% for item in donation_navbar_menu.get_items %}
+						<a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a>
+					{% endfor %}
+			  </div>
+			</div>
+
+
+		</ul>
+		<button
+				class="navbar-search-toggle"
+				data-toggle="open"
+				data-target="#search_form"
+				aria-expanded="false"
+				aria-label="Toggle search box"
+		>
+			<span class="screen-reader-text">{{ __( 'Toggle search form', 'planet4-master-theme' ) }}</span>
+		</button>
+		<form id="search_form" action="{{ data_nav_bar.home_url }}" class="form nav-item nav-search-wrap">
+			<input type="text" class="form-control" placeholder="{{ __( 'Search', 'planet4-master-theme' ) }}"
+				   value="{{ data_nav_bar.search_query|e('wp_kses_post')|raw }}" name="s" aria-label="Search">
+			<input id="orderby" type="hidden" name="orderby" value="{{ selected_sort ?? default_sort }}"/>
+			<button class="top-nav-search-btn" type="submit">
+				<i class="fas fa-search"></i>
+				<span class="screen-reader-text">{{ __( 'Search', 'planet4-master-theme' ) }}</span>
+			</button>
+		</form>
+	</nav>
+{% endblock %}
