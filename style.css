@@ -16,29 +16,3 @@ Text Domain: planet4-child-theme
 	Display which theme is active right now in bottom right corner
 	See also planet4-child-theme-netherlands. Feel free to drop or hide display
 */
-*
-.top-navigation {
-  background-color: white;
-}
-
-.top-navigation .btn-donate {
-  background-color: #f36d3a;
-  color: white;
-}
-
-.country-dropdown-toggle, .country-dropdown-toggle:hover, .country-dropdown-toggle:focus, .top-navigation a {
-  color: grey;
-}
-
-.navbar-dropdown .active .nav-link, .navbar-dropdown .nav-link:focus, .navbar-dropdown .nav-link:hover {
-  border-color: #66cc00;
-  color: #212529;
-}
-
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-.dropdown-item:hover{
-  border-bottom: 2px solid #66cc00;
-}
