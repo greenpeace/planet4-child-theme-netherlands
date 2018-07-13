@@ -47,19 +47,19 @@
 
 
 
-      <div class="nav-item dropdown">
-        <button class="btn btn-donate" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ __( 'DONATE', 'planet4-master-theme' ) }}
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-{#          <a class="" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a> #}
-          {% for item in donation_navbar_menu.get_items %}
-            <a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
+      <li class="nav-item">
+        <ul id="donate-button-wrapper">
+          <li class="btn btn-donate dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ __( 'DONATE', 'planet4-master-theme' ) }}
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+              {% for item in donation_navbar_menu.get_items %}
+                <a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a>
+              {% endfor %}
+            </div>
+          </li>
+        </ul>
+      </li>
 
 
     </ul>
