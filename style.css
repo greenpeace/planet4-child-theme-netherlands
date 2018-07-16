@@ -25,12 +25,27 @@ Text Domain: planet4-child-theme
 
 
 .dropdown:hover > .dropdown-menu {
-    display: block;
+  max-height: 200px;
+  opacity: 1;
 }
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    min-width: 100%
+}
+
 
 @media (max-width: 992px) {
   .dropdown-menu {
-      margin-left: 50px;
       border: 1px solid #66cc00
   }
   .navbar-dropdown .btn-donate{
