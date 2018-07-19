@@ -16,11 +16,3 @@ Text Domain: planet4-child-theme
 	Display which theme is active right now in bottom right corner
 	See also planet4-child-theme-netherlands. Feel free to drop or hide display
 */
-
-.four-column a {
-  color: #007BFF;
-}
-
-.four-column h5 a {
-  color: #074365;
-}
