@@ -273,3 +273,10 @@ form.customize-unpreviewable, form.customize-unpreviewable input, form.customize
 @media (min-width: 576px) {
 .page-child .skewed-overlay:before { background: transparent; background: -moz-linear-gradient(-155deg, transparent 25%, rgba(255, 255, 255, 0.2) 28%, rgba(255, 255, 255, 0.9) 44%, rgba(255, 255, 255, 0.7) 66%,rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.3) 64%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9) 95%, rgba(255, 255, 255, 0.9) 100%); background: -webkit-linear-gradient(-155deg, transparent 25%, rgba(255, 255, 255, 0.2) 28%, rgba(255, 255, 255, 0.9) 44%, rgba(255, 255, 255, 0.7) 66%,rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.3) 64%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9) 95%, rgba(255, 255, 255, 0.9) 100%); background: linear-gradient(245deg, transparent 25%, rgba(255, 255, 255, 0.2) 28%, rgba(255, 255, 255, 0.9) 44%, rgba(255, 255, 255, 0.7) 66%,rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.3) 64%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0.9) 95%, rgba(255, 255, 255, 0.9) 100%); }
 }
+
+@media (min-width: 768) {
+  .page-id-1275 > .page-header .container > *:not(.row) {
+    max-width: 100%;
+  }
+  
+}
