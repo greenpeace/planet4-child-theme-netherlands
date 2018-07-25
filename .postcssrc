@@ -1,0 +1,9 @@
+{
+  "modules": false,
+  "plugins": {
+    "autoprefixer": {
+      "root": "./static/scss"
+      "grid": true
+    }
+  }
+}
