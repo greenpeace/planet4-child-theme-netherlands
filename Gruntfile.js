@@ -120,14 +120,14 @@ module.exports = function(grunt) {
             }
         },
 
-        connect: {
-          server: {
-            options: {
-              port: 9001,
-              base: '<%= config.tmpRoot %>'
-            }
-          }
-        },
+        // connect: {
+        //   server: {
+        //     options: {
+        //       port: 9001,
+        //       base: '<%= config.tmpRoot %>'
+        //     }
+        //   }
+        // },
 
         watch: {
           css: {
@@ -164,11 +164,6 @@ module.exports = function(grunt) {
         }
     });
 
-    // grunt.registerTask('default', [
-    //   'connect',
-    //   'watch'
-    // ]);
-
     grunt.registerTask('default', [
       'sass',
       'cmq',
@@ -177,7 +172,6 @@ module.exports = function(grunt) {
       'concat:core',
       'uglify:js',
       'copy:images',
-      'connect',
       'watch'
     ]);
 

@@ -1,9 +1,47 @@
-.carousel-header .carousel-item:before {
-  filter:none
-}
+.carousel-header {
+  .carousel-item {
+    &::before {
+      filter:none;
+    }
 
-.carousel-header .carousel-item:after {
-  background: none;
+    &::after {
+      background: none;
+    }
+  }
+
+  .carousel-control-next {
+    .carousel-control-next-icon {
+      display: none;
+    }
+  }
+
+  .main-header {
+    h2 {
+      padding-left: 15px;
+      background-color: #6c0;
+      box-decoration-break: clone;
+      color: #FFF;
+      display: inline;
+      font-size: 1.7rem;
+      line-height: 4.5rem;
+      text-transform: uppercase;
+      padding: 10px 1em;
+    }
+
+    h3 {
+      color: #212529;
+      display: block;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      text-transform: uppercase;
+      box-decoration-break: clone;
+      padding: 0 18px;
+      background: #ffffffcc;
+      width: auto;
+      margin: 10px 0 20px;
+      max-width: fit-content;
+    }
+  }
 }
 
 .carousel-indicators {
@@ -14,43 +52,9 @@
   display: none;
 }
 
-.carousel-header .carousel-control-next .carousel-control-next-icon {
-  display: none;
-}
-
-.carousel-header .main-header h2 {
-  color: white;
-  padding-left: 15px;
-}
-
-.carousel-header .main-header h2 {
-  background-color: #6c0;
-  box-decoration-break: clone;
-  color: #fff;
-  display: inline;
-  font-size: 1.7rem;
-  line-height: 4.5rem;
-  text-transform: uppercase;
-  padding: 10px 1em;
-}
-
 @media only screen and (max-width:783px) {
   .carousel-caption h2 {
     line-height: 3.2rem!important;
     font-size: 1.3rem!important;
   }
-}
-
-.carousel-header .main-header h3 {
-  color: #212529;
-  display: block;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  text-transform: uppercase;
-  box-decoration-break: clone;
-  padding: 0 18px;
-  background: #ffffffcc;
-  width: auto;
-  margin: 10px 0 20px;
-  max-width: fit-content;
 }
