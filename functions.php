@@ -71,4 +71,4 @@ function remove_custom_css_from_customizer() {
 	$wp_customize->remove_section( 'custom_css' );
 }
 
-add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );
+// add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );

@@ -19,6 +19,16 @@
   min-width: 100%;
 }
 
+.dropdown-toggle::after{
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.dropdown-toggle:hover:after{
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
 @media (max-width:992px) {
   .dropdown-menu {
     border: 1px solid #6c0;
@@ -106,7 +116,6 @@
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    z-index: 2;
     background: url("images/dropdown-gradient.svg") no-repeat #FFF;
   }
 }
