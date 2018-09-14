@@ -49,8 +49,8 @@
 
       <li class="nav-item">
         <ul id="donate-button-wrapper">
-          <li class="btn btn-donate dropdown dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-            {{ __( 'DONATE', 'planet4-master-theme' ) }}
+          <li class="btn dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-donate dropdown-toggle" href="{{ donatelink }}">{{ donatetext }}</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
               {% for item in donation_navbar_menu.get_items %}
