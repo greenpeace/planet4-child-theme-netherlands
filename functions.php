@@ -18,7 +18,8 @@ add_action( 'init', 'p4nl_donation_menu' );
 
 // filter for adding stuff to the timber context
 add_filter(
-	'timber_context', function ( $context ) {
+	'timber_context',
+	function ( $context ) {
 		global $timber_context;
 		$timber_context = is_array( $timber_context ) ? $timber_context : array();
 		$context        = is_array( $context ) ? $context : array();
@@ -44,20 +45,18 @@ function ignore_tag_page_redirect() {
 		$object = get_queried_object();
 		$slug   = $object->slug;
 		$page   = get_page_by_title( $slug );
-		$id     = $page->ID;
+		$pageid = $page->ID;
 		$guid   = $page->guid;
 
 		if ( true === WP_DEBUG ) {
 			add_to_timbercontext( 'object', $object );
 			add_to_timbercontext( 'slug', $slug );
 			add_to_timbercontext( 'page', $page );
-			add_to_timbercontext( 'id', $id );
+			add_to_timbercontext( 'id', $pageid );
 			add_to_timbercontext( 'guid', $guid );
-		} else {
-			if ( has_category( 'custom-tag-pagina', $id ) && null !== $guid ) {
+		} elseif ( has_category( 'custom-tag-pagina', $pageid ) && null !== $guid ) {
 				wp_redirect( $guid );
 				exit();
-			}
 		}
 	}
 }
