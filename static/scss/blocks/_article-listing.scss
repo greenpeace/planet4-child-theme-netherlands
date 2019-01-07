@@ -1,0 +1,95 @@
+.article-listing {
+    margin:0;
+    padding-bottom: 30px;
+
+    .article-listing-intro {
+        h3 {
+            font-weight: 400;
+            font-size: 1.875rem;
+            padding-top: 50px;
+            padding-left: 100px;
+            margin: 0;
+        }
+    }
+
+    .article-list-section {
+        .article-list-item {
+            background: $white;
+            padding: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 0.875rem;
+            
+            a {
+                font-weight: 400;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $hover-green;
+                }
+            }
+
+            .article-list-item-headline {
+                margin: 0px;
+                font-size: 1.3rem;
+            }
+
+            .article-list-item-body {
+                .article-list-item-tags {
+                .top-page-tags .tag-item--main.page-type {
+                    display: none !important;
+                } 
+                .article-list-item-meta{
+                    font-size: 0.875rem;
+                }
+                .article-list-item-content {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+            .article-list-item-tags {
+                display:none;
+                .tag-wrap {
+                    &:before {
+                        content: none;
+                    }
+                    .tag-item {
+                        font-size: 0.875rem;
+                        color: $gray3;
+                        display: inline-block;
+                        padding: 3px;
+                        border: 1px solid $gray3;
+                        margin-right: 15px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin-left: 100px;
+    }
+}
+
+// this class is added by JS to underline the heading. The rule below disables that
+.article-hover {
+    text-decoration: none !important;
+}
+
+@media (min-width: 1200px) {
+    .article-list-item-content {
+        font-size: 0.875rem;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .article-list-item-content {
+        display: block;
+        font-weight: 300;
+        line-height: 1.6;
+        margin: 10px 0 0;
+        width: 100%;
+    }
+}
