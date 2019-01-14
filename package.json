@@ -26,5 +26,8 @@
     "load-grunt-tasks": "^3.5.2",
     "pixrem": "^4.0.1",
     "postcss-normalize": "^4.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3"
   }
 }
