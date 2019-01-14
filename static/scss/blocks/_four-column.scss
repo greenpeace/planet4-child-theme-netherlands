@@ -1,42 +1,9 @@
-.four-column {
-    background: $white;
-    padding: 50px 100px 40px 100px;
-    margin:0;
-
-    h3 {
-        font-weight: 400 !important;
-    }
-}
-
-.four-column-information {
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 auto;
-    flex-grow: unset;
-    flex-basis: 100rem;
-}
-
-@media (min-width: 1200px) {
-    .four-column-information p {
-        font-size: 1rem;
-        flex: 0 1 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .four-column-wrap {
-        margin-bottom: 0.9%;
-        /* border: 1px solid red; */
-        padding-bottom: 20px;
-    }
-}
-
-.four-column-information a {
-    color: $gpnl-green;
-
-    &:hover {
-        color: $hover-green;
-        text-decoration: none;
-    }
-}
-
+// .four-column {
+//   a {
+//     color: #007BFF;
+//   }
+//
+//   h5 {
+//     color: #074365;
+//   }
+// }

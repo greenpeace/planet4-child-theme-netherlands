@@ -1,8 +1,4 @@
 .carousel-header {
-  margin-top: 55px;
-  border-bottom: 3px solid $gpnl-green;
-  height: 500px;
-
   .carousel-item {
     &::before {
       filter:none;
@@ -12,27 +8,24 @@
       background: none;
     }
   }
-  
+
   .carousel-control-next {
     .carousel-control-next-icon {
       display: none;
     }
   }
-  
-  .main-header {
-    margin-left: 185px;
 
+  .main-header {
     h2 {
-      @include margin($left: $sm, $bottom: $sm);
-      background-color: $white;
+      padding-left: 15px;
+      background-color: #6c0;
       box-decoration-break: clone;
-      color: $gray1;
-      display: block;
-      font-size: 2.875rem;
+      color: #FFF;
+      display: inline;
+      font-size: 1.7rem;
       line-height: 4.5rem;
       text-transform: uppercase;
       padding: 10px 1em;
-      @include padding($top: $xsm, $left: $norm, $bottom: $xsm, $right: $norm);
     }
 
     h3 {
@@ -63,29 +56,5 @@
   .carousel-caption h2 {
     line-height: 3.2rem!important;
     font-size: 1.3rem!important;
-  }
-}
-
-@media (min-width: 992px) {
-.carousel-header .main-header .action-button .btn {
-    width: auto;
-    box-shadow: none;
-    text-transform: none;
-    font-weight: 500;
-    font-size: 1.125rem;
-    @include padding($top: $sm, $right: $sm, $bottom: $sm, $left: $sm);
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .carousel-header .main-header p {
-      font-size: 1rem;
-      line-height: 1.6;
-      display: block;
-      margin: 0 0 15px 15px;
-      background: $gray1;
-      padding: 15px;
-      color: $white;
   }
 }

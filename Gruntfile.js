@@ -131,8 +131,7 @@ module.exports = function(grunt) {
 
         watch: {
           css: {
-       //     files: 'src/**/*.scss',
-            files: '/*.scss',
+            files: 'src/**/*.scss',
             tasks: [
               'sass',
               'cmq',
@@ -140,7 +139,6 @@ module.exports = function(grunt) {
               'postcss'
             ],
             options: {
-
               livereload: true
             },
           },

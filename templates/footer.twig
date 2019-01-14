@@ -2,10 +2,18 @@
 	<div class="container">
 		<ul class="footer-social-media list-unstyled col-md-8 col-lg-5">
 			{% for social in footer_social_menu %}
+				{% set name = "" %}
+				{% for class_name in social.classes %}
+					{% if 'fa-' in class_name %}
+						{% set name = class_name[3:] %}
+					{% else %}
+						{% set name = class_name %}
+					{% endif %}
+				{% endfor %}
 				<li><a href="{{ social.url }}">
-					<i class="{% for class_name in social.classes %}{{ class_name }} {% endfor %}"></i>
-					<span class="sr-only">{{ social.title }}</span>
-				</a></li>
+						{{ name|svgicon }}
+						<span class="sr-only">{{ social.title }}</span>
+					</a></li>
 			{% endfor %}
 		</ul>
 

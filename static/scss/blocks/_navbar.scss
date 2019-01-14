@@ -36,7 +36,6 @@
 
   .navbar-dropdown .btn-donate {
     margin: 1.5em;
-    padding: 2px 11px 2px 15px;
   }
 }
 
@@ -52,19 +51,10 @@
 
 .dropdown-item {
   border-bottom: 2px solid white;
-  text-transform: none;
-  font-size: 0.85rem;
-  padding: 0rem 0.8rem;
-  line-height: 2.2rem;
 }
 
 #donate-button-wrapper {
   padding-left: 0;
-}
-
-.dropdown-menu {
-  top: 80%;
-  left: 30px;
 }
 
 .carousel-header .carousel-control-next {
@@ -80,23 +70,12 @@
   font-weight: 500;
 }
 
-.nav-search-wrap .top-nav-search-btn {
-  color: $gray3;
-}
-
-.nav-search-wrap .top-nav-search-btn i {
-  vertical-align: middle;
-  font-size: 1.05rem;
-}
-
 .country-dropdown-toggle {
   font-weight: 200;
 }
 
 .top-navigation {
   background-color: white;
-  box-shadow: 0px 0px 8px #000;
-  border-top: 3px solid $gray2;
 }
 
 .btn-navbar-toggle:active,
@@ -113,15 +92,10 @@
   background-color: white;
 }
 
-.nav-link {
-  font-size: 1rem;
-  text-transform: none;
-}
-
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
-  color: $gray3;
+  color: grey;
 }
 
 .navbar-dropdown .active .nav-link,
@@ -132,15 +106,9 @@
 }
 
 .top-navigation .btn-donate {
-  background-color: #f3593c;
+  background-color: #f36d3a;
   color: white;
   box-shadow: none;
-  text-transform: none;
-  padding: 2px 11px 0px 15px;
-}
-
-.top-navigation a {
-  color: $gray3;
 }
 
 @media (max-width:992px) {
