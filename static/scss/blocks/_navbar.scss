@@ -65,6 +65,7 @@
 .dropdown-menu {
   top: 80%;
   left: 30px;
+  padding: 0;
 }
 
 .carousel-header .carousel-control-next {
@@ -136,7 +137,7 @@
   color: white;
   box-shadow: none;
   text-transform: none;
-  padding: 2px 11px 0px 15px;
+  padding: 2px 11px 2px 15px;
 }
 
 .top-navigation a {
