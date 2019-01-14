@@ -1,0 +1,29 @@
+.top-page-tags {
+    .tag-item .tag-item--main page-type {
+        display: none;
+    }
+
+    .issues {
+        display: block;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .issues:before {
+        content: none;
+    }
+
+    .tag-wrap .tags {
+        display:none;
+    }
+
+    .tag-item--main {
+        font-weight: 400;
+        color: $gray1;
+        background: $gpnl-green;
+        padding: 10px 20px;
+    }
+
+}
