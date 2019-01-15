@@ -2,22 +2,28 @@
     padding: 0;
     transition:none; 
     margin-bottom: 40px;
+    background-position: center 50px;
 
     .cover-card-tag {
         display:none;
     }
 
     .cover-card-heading {
+        display: inline-block;
         font-size: 1.125rem;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.5rem;
         color: $gray1;
         background: $white;
-        margin: 0;
         width: 100%;
+        margin: 0;
+        padding: 15px;
+        height: 110px;
         max-width: 100%;
         min-height: 100px;
-        border-top: 3px solid $gpnl-green;
+        border-top: 4px solid $gpnl-green;
+        text-decoration: none;
+        box-shadow: 0px 1px 0px #333;
         
         &:hover {
             color:$hover-green;
@@ -26,14 +32,14 @@
 
         .cover-card-btn {
         position: absolute;
-        bottom: -20px;
+        bottom: -23px;
         left: auto;
         right: 0;
-        margin: 0;
+        margin: none;
         width: 40%;
         cursor: pointer;
         height: auto;
-        background: red;
+        background: $CTA-red;
         right: 20px;
         border: none;
         text-transform: none;
@@ -42,5 +48,19 @@
             background: $hover-red;
             color: $gray1;
         }
+
+        .cover-card-tag {
+            display:none;
+        }
+    }
+}
+
+.covers-block {
+    .btn-secondary {
+        text-transform: none;
+        background: $gpnl-green;
+        color: $white;
+        width: auto;
+        padding: 0 20;
     }
 }

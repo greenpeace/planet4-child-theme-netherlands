@@ -1,12 +1,16 @@
 .top-page-tags {
     .tag-item .tag-item--main page-type {
-        display: none;
+        display: none;     
     }
 
     .issues {
         display: block;
 
         &:before {
+            display: none;
+        }
+
+        .tag {
             display: none;
         }
     }
