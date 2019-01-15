@@ -23,7 +23,6 @@
         min-height: 100px;
         border-top: 4px solid $gpnl-green;
         text-decoration: none;
-        box-shadow: 0px 1px 0px #333;
         
         &:hover {
             color:$hover-green;
@@ -32,7 +31,7 @@
 
         .cover-card-btn {
         position: absolute;
-        bottom: -23px;
+        bottom: -36px;
         left: auto;
         right: 0;
         margin: none;
