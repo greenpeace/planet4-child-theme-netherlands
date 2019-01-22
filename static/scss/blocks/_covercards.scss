@@ -23,6 +23,7 @@
         min-height: 100px;
         border-top: 4px solid $gpnl-green;
         text-decoration: none;
+        text-shadow: none;
         
         &:hover {
             color:$hover-green;
@@ -61,5 +62,6 @@
         color: $white;
         width: auto;
         padding: 0 20;
+        margin-top: $xxlrg;
     }
 }
