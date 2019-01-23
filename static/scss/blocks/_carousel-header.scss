@@ -1,26 +1,34 @@
 .hero {
+  height: 500px;
+  margin-top: 65px;
+  overflow: hidden;
+
   .hero__wrapper {
-    border: solid 4px $gpnl-green;
     margin-left: -115px;
+    width: 100vw;
+
+    img {
+
+    }
 
     .hero__text {
       position: absolute;
       top: 0px;
       left: 0px;
-      max-width: 50%;
-      padding: 150px 0 0 100px;
+      max-width: 100%;
+      padding: 60px 0 0 120px;
       display: flex-row;
       flex: 1;
 
       .hero__title {
-        margin: 0 0 10px 20px;
+        margin: 0 0 10px 15px;
         flex: 50vw;
         max-width: 60%;
 
         span {
-          box-shadow: 0 0 0 20px $white;
+          box-shadow: 0 0 0 15px $white;
           background-color: $white;
-          line-height: 2.6;
+          line-height: 2.5;
           max-width: 60%;
           color: $gray1;
         }
@@ -29,7 +37,7 @@
       .hero__description {
         background: $gray1;
         color: $white;
-        padding: 30px;
+        padding: 20px;
         max-width: 60%;
       }
 
