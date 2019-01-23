@@ -1,3 +1,45 @@
+.hero {
+  .hero__wrapper {
+    border: solid 4px $gpnl-green;
+    margin-left: -115px;
+
+    .hero__text {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      max-width: 50%;
+      padding: 150px 0 0 100px;
+      display: flex-row;
+      flex: 1;
+
+      .hero__title {
+        margin: 0 0 10px 20px;
+        flex: 50vw;
+        max-width: 60%;
+
+        span {
+          box-shadow: 0 0 0 20px $white;
+          background-color: $white;
+          line-height: 2.6;
+          max-width: 60%;
+          color: $gray1;
+        }
+      }
+
+      .hero__description {
+        background: $gray1;
+        color: $white;
+        padding: 30px;
+        max-width: 60%;
+      }
+
+      .hero__button {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
+
 .carousel-header {
   margin-top: 55px;
   border-bottom: 3px solid $gpnl-green;
