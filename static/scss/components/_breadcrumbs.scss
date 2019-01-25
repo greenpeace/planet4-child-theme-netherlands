@@ -3,6 +3,10 @@
         display: none;     
     }
 
+    a {
+        color: red;
+    }
+
     .issues {
         display: block;
 
@@ -30,4 +34,14 @@
         padding: 10px 20px;
     }
 
+    .tag-item a {
+        color: $medium-grey;
+        padding: 2px 6px;
+        border: 1px solid grey;
+
+        &:hover {
+            color: $dark-grey;
+            text-decoration: none;
+        }
+    }
 }
