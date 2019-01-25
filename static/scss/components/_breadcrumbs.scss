@@ -1,5 +1,5 @@
 .top-page-tags {
-    .tag-item .tag-item--main page-type {
+    .tag-item .tag-item--main .page-type {
         display: none;     
     }
 
@@ -25,6 +25,12 @@
 
     .tag-wrap .tags {
         display:none;
+
+        .issues {
+          &:before  {
+              display: none;
+          }  
+        }
     }
 
     .tag-item--main {
@@ -42,6 +48,10 @@
         &:hover {
             color: $dark-grey;
             text-decoration: none;
+        }
+
+        &:before {
+            display: none;
         }
     }
 }
