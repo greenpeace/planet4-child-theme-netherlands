@@ -91,7 +91,11 @@
 }
 
 .country-dropdown-toggle {
-  font-weight: 200;
+  font-weight: 400;
+
+  &:hover, active, visited {
+    color: $dark-grey;
+  }
 }
 
 .top-navigation {
@@ -141,7 +145,7 @@
 }
 
 .top-navigation a {
-  color: $light-grey;
+  color: $medium-grey;
 }
 
 @media (max-width:992px) {
