@@ -82,7 +82,7 @@
 }
 
 .nav-search-wrap .top-nav-search-btn {
-  color: $gray3;
+  color: $light-grey;
 }
 
 .nav-search-wrap .top-nav-search-btn i {
@@ -91,13 +91,17 @@
 }
 
 .country-dropdown-toggle {
-  font-weight: 200;
+  font-weight: 400;
+
+  &:hover, active, visited {
+    color: $dark-grey;
+  }
 }
 
 .top-navigation {
   background-color: white;
   box-shadow: 0px 0px 8px #000;
-  border-top: 3px solid $gray2;
+  border-top: 3px solid $anthraciet;
 }
 
 .btn-navbar-toggle:active,
@@ -122,7 +126,7 @@
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
-  color: $gray3;
+  color: $light-grey;
 }
 
 .navbar-dropdown .active .nav-link,
@@ -141,7 +145,7 @@
 }
 
 .top-navigation a {
-  color: $gray3;
+  color: $medium-grey;
 }
 
 @media (max-width:992px) {

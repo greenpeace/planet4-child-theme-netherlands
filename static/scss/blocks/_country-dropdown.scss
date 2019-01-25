@@ -2,12 +2,12 @@
 .country-dropdown-toggle:focus,
 .country-dropdown-toggle:hover,
 .top-navigation a {
-  color: grey;
+  color: $medium-grey;
 }
 
 .country-dropdown-toggle:focus,
 .country-dropdown-toggle:hover {
-  color: #6c0;
+  color: $dark-grey;
 }
 
 .country-dropdown-toggle:after:focus,

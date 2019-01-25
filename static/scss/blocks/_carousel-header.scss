@@ -30,12 +30,12 @@
           background-color: $white;
           line-height: 2.5;
           max-width: 60%;
-          color: $gray1;
+          color: $black;
         }
       }
 
       .hero__description {
-        background: $gray1;
+        background: $black;
         color: $white;
         padding: 20px;
         max-width: 60%;
@@ -50,7 +50,7 @@
 
 .carousel-header {
   margin-top: 55px;
-  border-bottom: 3px solid $gpnl-green;
+  border-bottom: 3px solid $light-green;
   height: 500px;
 
   .carousel-item {
@@ -76,7 +76,7 @@
       @include margin($left: $sm, $bottom: $sm);
       background-color: $white;
       box-decoration-break: clone;
-      color: $gray1;
+      color: $black;
       display: block;
       font-size: 2.875rem;
       line-height: 4.5rem;
@@ -134,7 +134,7 @@
       line-height: 1.6;
       display: block;
       margin: 0 0 15px 15px;
-      background: $gray1;
+      background: $black;
       padding: 15px;
       color: $white;
   }
