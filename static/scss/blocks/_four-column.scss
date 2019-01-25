@@ -5,7 +5,7 @@
 
     h3, h4, h5 {
         font-weight: 400 !important;
-        color: $gray1;
+        color: $black;
     }
 }
 
@@ -17,7 +17,7 @@
     flex-basis: 100rem;
 
     h5 a {
-        color: $gray1;
+        color: $black;
         font-weight: 400;
     }
 }
@@ -38,7 +38,7 @@
 }
 
 .four-column-information a {
-    color: $gpnl-green;
+    color: $light-green;
 
     &:hover {
         color: $hover-green;

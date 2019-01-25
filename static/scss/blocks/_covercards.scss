@@ -13,7 +13,7 @@
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 1.5rem;
-        color: $gray1;
+        color: $black;
         background: $white;
         width: 100%;
         margin: 0;
@@ -21,7 +21,7 @@
         height: 110px;
         max-width: 100%;
         min-height: 100px;
-        border-top: 4px solid $gpnl-green;
+        border-top: 4px solid $light-green;
         text-decoration: none;
         text-shadow: none;
         
@@ -39,14 +39,14 @@
         width: 40%;
         cursor: pointer;
         height: auto;
-        background: $CTA-red;
+        background: $blood-orange;
         right: 20px;
         border: none;
         text-transform: none;
 
         &:hover {
             background: $hover-red;
-            color: $gray1;
+            color:$black;
         }
 
         .cover-card-tag {
@@ -58,7 +58,7 @@
 .covers-block {
     .btn-secondary {
         text-transform: none;
-        background: $gpnl-green;
+        background: $light-green;
         color: $white;
         width: auto;
         padding: 0 20;

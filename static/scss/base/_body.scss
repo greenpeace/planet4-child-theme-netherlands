@@ -1,16 +1,16 @@
 html,
 body {
   overflow-x: hidden;
-  background: #eaeaea;
+  background: $warm-light-grey;
 }
 
 body {
   font-family: $roboto;
   font-size: 1rem;
-  color: $gray1;
+  color: $black;
   position: relative;
   overflow-y: hidden;
-  background: $gray5;
+  background: $warm-light-grey;
 
   p {
     font-family: $roboto;
@@ -21,7 +21,7 @@ body {
   }
 
   &.brown-bg {
-    background: $gray5;
+    background: $warm-light-grey;
   }
 
   //&.home {
