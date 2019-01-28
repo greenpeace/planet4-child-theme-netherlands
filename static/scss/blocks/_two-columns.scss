@@ -1,5 +1,15 @@
-@media (min-width: 768px) {.content-two-column-block 
+
+@media (min-width: 768px) {
+    .content-two-column-block 
     {
     padding-top: $xxlrg;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-two-column-block 
+    {
+    padding-left: $sm;
+    padding-right: $sm;
     }
 }
