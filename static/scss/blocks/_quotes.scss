@@ -4,3 +4,55 @@
     display: inline-flex;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .quote {
+        height: 140px;
+
+        .col-2 {
+            max-width: 35%;
+        }
+
+        .quote__text {
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        .quote__author {
+            font-size: 11px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .quote {
+        height: 180px;
+
+        .col-2 {
+            max-width: 24%;
+        }
+
+        .quote__text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .quote__author {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .quote {
+        height: 190px;
+
+        .col-2 {
+            max-width: 16%;
+        }
+
+        .quote__text {
+            font-size: 20px;
+        }
+    }
+}

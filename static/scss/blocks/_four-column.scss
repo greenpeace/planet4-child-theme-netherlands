@@ -37,6 +37,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .four-column {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
 .four-column-information a {
     color: $light-green;
 
