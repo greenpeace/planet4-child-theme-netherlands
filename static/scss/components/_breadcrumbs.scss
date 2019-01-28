@@ -1,6 +1,10 @@
 .top-page-tags {
-    .tag-item .tag-item--main page-type {
+    .tag-item .tag-item--main .page-type {
         display: none;     
+    }
+
+    a {
+        color: red;
     }
 
     .issues {
@@ -21,6 +25,12 @@
 
     .tag-wrap .tags {
         display:none;
+
+        .issues {
+          &:before  {
+              display: none;
+          }  
+        }
     }
 
     .tag-item--main {
@@ -30,4 +40,18 @@
         padding: 10px 20px;
     }
 
+    .tag-item a {
+        color: $medium-grey;
+        padding: 2px 6px;
+        border: 1px solid grey;
+
+        &:hover {
+            color: $dark-grey;
+            text-decoration: none;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
 }
