@@ -1,12 +1,10 @@
 .content-two-column-block {
     
-    @include small-and-up {
         padding-left: $sm;
         padding-right: $sm;
-    }
 
     @include medium-and-up {
-        padding-left: $xxlrg;
+        padding-left: $wide;
         padding-top: $xxlrg;
     }
 }
