@@ -9,6 +9,11 @@
             padding-top: 50px;
             padding-left: 100px;
             margin: 0;
+
+            @include small-and-up {
+                padding: 0 0 0 0;
+                margin: -15px 0 15px 35px;
+            }
         }
     }
 
@@ -19,6 +24,11 @@
             margin-left: 100px;
             margin-right: 100px;
             font-size: 0.875rem;
+
+            @include small-and-up {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
             
             a {
                 font-weight: 400;
@@ -68,7 +78,7 @@
     }
 
     .btn {
-        margin-left: 100px;
+    /*    margin-left: 100px; */
     }
 }
 
