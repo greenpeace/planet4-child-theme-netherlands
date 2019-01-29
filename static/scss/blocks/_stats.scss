@@ -1,0 +1,10 @@
+.stat-column {
+    padding: 20px;
+    flex-wrap: wrap !important;
+    flex-basis: 32% !important; 
+    justify-content: center !important;
+}
+
+.stats .stat-column:first-child {
+    margin-left: 15px !important;
+}
