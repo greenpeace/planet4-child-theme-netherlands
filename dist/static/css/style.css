@@ -655,7 +655,7 @@ h2 {
 }
 @media (min-width: 1200px) {
   .article-listing .article-listing-intro h3 {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-left: 100px;
     margin: 0;
   }
@@ -932,6 +932,17 @@ h2 {
   .quote .quote__author {
     font-size: 1rem !important;
   }
+}
+
+.stat-column {
+  padding: 20px;
+  flex-wrap: wrap !important;
+  flex-basis: 32% !important;
+  justify-content: center !important;
+}
+
+.stats .stat-column:first-child {
+  margin-left: 15px !important;
 }
 
 .page-id-7645 .page-header-background::after,
