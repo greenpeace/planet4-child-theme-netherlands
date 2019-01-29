@@ -1,10 +1,20 @@
 .content-two-column-block {
     
-        padding-left: $sm;
-        padding-right: $sm;
+        padding-left: $sm !important;
+        padding-right: $sm !important;
+        padding-bottom: 0px !important;
 
-    @include medium-and-up {
-        padding-left: $wide;
-        padding-top: $xxlrg;
+    @include small-and-up {
+        padding-top: $xlrg !important;
+        padding-left: $sm;
+        padding-top: $sm;
+        padding-bottom: 0px !important;
+    }
+
+    @include large-and-up {
+        padding-top: $xlrg !important;
+        padding-left: $wide !important;
+        padding-top: $xxlrg !important;
+        padding-bottom: $xxlrg !important;
     }
 }
