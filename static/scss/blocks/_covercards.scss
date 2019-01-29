@@ -4,6 +4,10 @@
     margin-bottom: 40px;
     background-position: center 50px;
 
+    @include small-and-up {
+        min-height: 350px;
+    }
+
     .cover-card-tag {
         display:none;
     }

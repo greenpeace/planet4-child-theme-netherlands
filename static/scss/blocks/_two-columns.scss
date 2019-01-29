@@ -6,6 +6,7 @@
     }
 
     @include medium-and-up {
+        padding-left: $xxlrg;
         padding-top: $xxlrg;
     }
 }
