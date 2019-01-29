@@ -44,3 +44,20 @@ body {
   position: relative;
   z-index: 2;
 }
+
+div.page-template {
+  @include small-and-up {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @include medium-and-up {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @include x-large-and-up {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
