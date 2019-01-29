@@ -6,13 +6,24 @@
         h3 {
             font-weight: 400;
             font-size: 1.875rem;
-            padding-top: 50px;
-            padding-left: 100px;
-            margin: 0;
+        //    padding-top: 50px;
+        //    padding-left: 100px;
+        //    margin: 0;
 
-            @include small-and-up {
-                padding: 0 0 0 0;
-                margin: -15px 0 15px 35px;
+            padding-top: 0px;
+            padding-left: 30px;
+            margin: 0 0 20px 0;
+
+            @include medium-and-up {
+                padding-top: 0px;
+                padding-left: 30px;
+                margin: 0 0 20px 0;
+            }
+        
+            @include x-large-and-up {
+                padding-top: 50px;
+                padding-left: 100px;
+                margin: 0;
             }
         }
     }
@@ -21,15 +32,23 @@
         .article-list-item {
             background: $white;
             padding: 20px;
-            margin-left: 100px;
-            margin-right: 100px;
+    //        margin-left: 100px;
+    //        margin-right: 100px;
             font-size: 0.875rem;
 
-            @include small-and-up {
-                margin-left: 0px;
-                margin-right: 0px;
-            }
+                margin-left: 0px !important;
+                margin-right: 0px !important;
             
+            @include medium-and-up {
+                margin-left: 0px !important;
+                margin-right: 0px !important;
+            }
+    
+            @include x-large-and-up {
+                margin-left: 100px !important;
+                margin-right: 100px !important;
+            }
+
             a {
                 font-weight: 400;
 

@@ -46,18 +46,19 @@ body {
 }
 
 div.page-template {
-  @include small-and-up {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  width: 100vw !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 
-  @include medium-and-up {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+@include medium-and-up {
+  width: 100vw !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 
-  @include x-large-and-up {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+@include x-large-and-up {
+  width: 1140px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
 }
