@@ -19,15 +19,29 @@
 
     .col-2 {
         @include small-and-up {
-            max-width: 35% !important;
+            flex: 0 0 35% !important;
         } 
         
         @include medium-and-up {
-            max-width: 24% !important;
+            flex: 0 0 24% !important;
         }
 
         @include x-large-and-up {
-            max-width: 16% !important;
+            flex: 0 0 16% !important;
+        }
+    }
+
+    .col-10 {
+        @include small-and-up {
+            flex: 0 0 35% !important;
+        } 
+        
+        @include medium-and-up {
+            flex: 0 0 24% !important;
+        }
+
+        @include x-large-and-up {
+            flex: 0 0 73% !important;
         }
     }
 
