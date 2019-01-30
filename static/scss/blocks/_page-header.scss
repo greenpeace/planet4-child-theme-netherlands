@@ -4,7 +4,7 @@
         .issues {
             a {
                 &:before {
-                    display: none;
+                    display: none !important;
                 }
             }
         }
