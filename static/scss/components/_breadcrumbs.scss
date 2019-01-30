@@ -11,7 +11,7 @@
         display: block;
 
         &:before {
-            display: none;
+            display: none !important;
         }
 
         .tag {
@@ -20,7 +20,7 @@
     }
 
     .issues:before {
-        content: none;
+        content: none !important;
     }
 
     .tag-wrap .tags {
@@ -28,7 +28,7 @@
 
         .issues {
           &:before  {
-              display: none;
+              display: none !important;
           }  
         }
     }
@@ -51,7 +51,7 @@
         }
 
         &:before {
-            display: none;
+            display: none !important;
         }
     }
 }
