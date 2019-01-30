@@ -13,14 +13,14 @@
       padding: 60px 0;
       display: flex-row;
       flex: 1;
-      margin-left: 15px;
+      margin-left: -50px;
 
       @include medium-and-up {
-        margin-left: 15px !important;
+        margin-left: -50px !important;
     }
 
     @include x-large-and-up {
-        margin-left: 100px !important;
+        margin-left: 0px !important;
     }
 
       .hero__title {
