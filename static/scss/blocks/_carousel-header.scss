@@ -13,6 +13,15 @@
       padding: 60px 0;
       display: flex-row;
       flex: 1;
+      margin-left: 15px;
+
+      @include medium-and-up {
+        margin-left: 15px !important;
+    }
+
+    @include x-large-and-up {
+        margin-left: 100px !important;
+    }
 
       .hero__title {
         margin: 0 0 10px 15px;
@@ -37,6 +46,7 @@
 
       .hero__button {
         margin: 10px 0 0 0;
+        box-shadow: none;
       }
     }
   }
