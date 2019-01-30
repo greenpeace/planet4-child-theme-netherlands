@@ -1,21 +1,16 @@
 .hero {
   height: 500px;
   margin-top: 65px;
-  margin-left: -115px;
   overflow: hidden;
   width: 100vw;
-  background-position: center center;
 
   .hero__wrapper {
-    margin-left: -115px;
-    width: 100vw;
 
     .hero__text {
-      position: absolute;
       top: 0px;
       left: 100px;
       max-width: 100%;
-      padding: 60px 0 0 120px;
+      padding: 60px 0;
       display: flex-row;
       flex: 1;
       margin-left: 15px;
