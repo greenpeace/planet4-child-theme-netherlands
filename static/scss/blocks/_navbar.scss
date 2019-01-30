@@ -2,7 +2,7 @@
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
   border-color: #6c0;
-  color: #212529;
+  color: $anthraciet;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -47,6 +47,7 @@
 }
 
 .dropdown-item:hover {
+  color: $anthraciet;
   border-bottom: 2px solid #6c0;
 }
 
@@ -56,6 +57,7 @@
   font-size: 0.85rem;
   padding: 0rem 0.8rem;
   line-height: 2.2rem;
+  color: $slate-grey;
 }
 
 #donate-button-wrapper {
@@ -82,7 +84,7 @@
 }
 
 .nav-search-wrap .top-nav-search-btn {
-  color: $light-grey;
+  color: $slate-grey;
 }
 
 .nav-search-wrap .top-nav-search-btn i {
@@ -94,7 +96,7 @@
   font-weight: 400;
 
   &:hover, active, visited {
-    color: $dark-grey;
+    color: $anthraciet;
   }
 }
 
@@ -126,14 +128,14 @@
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
-  color: $light-grey;
+  color: $slate-grey;
 }
 
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
   border-color: #6c0;
-  color: #212529;
+  color: $anthraciet;
 }
 
 .top-navigation .btn-donate {
@@ -145,7 +147,7 @@
 }
 
 .top-navigation a {
-  color: $medium-grey;
+  color: $slate-grey;
 }
 
 @media (max-width:992px) {
