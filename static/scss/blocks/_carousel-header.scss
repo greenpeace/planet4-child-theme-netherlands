@@ -16,14 +16,14 @@
 
     .hero__text {
       top: 0px;
-      left: 0px;
+      left: $sm;
       max-width: 100%;
       padding: 60px 0;
       display: flex-row;
       flex: 1;
 
     @include medium-and-up {
-      left: 30px;
+      left: $xlrg;
     }
 
     @include x-large-and-up {
@@ -47,7 +47,7 @@
       .hero__description {
         background: $dark-green;
         color: $white;
-        padding: 20px;
+        padding: $norm;
         max-width: 60%;
       }
 
@@ -60,7 +60,7 @@
 }
 
 .carousel-header {
-  margin-top: 55px;
+  margin-top: $xxlrg;
   border-bottom: 3px solid $light-green;
   height: 500px;
 
@@ -106,7 +106,7 @@
       padding: 0 18px;
       background: #ffffffcc;
       width: auto;
-      margin: 10px 0 20px;
+      margin: 10px 0 $norm;
       max-width: fit-content;
     }
   }
