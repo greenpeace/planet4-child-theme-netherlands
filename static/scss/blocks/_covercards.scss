@@ -19,7 +19,7 @@
             box-shadow: none !important;
     }
 
-    @include x-large-and-up {
+    @include large-and-up {
         height: 100px !important;
     }
 
@@ -91,4 +91,8 @@
 
 .cover-card:not(.single-cover):hover {
     box-shadow: none;
+}
+
+.btn-load-more-covers-click {
+    margin-left: $sm;
 }
