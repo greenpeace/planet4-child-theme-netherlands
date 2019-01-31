@@ -1,8 +1,16 @@
 .hero {
   height: 500px;
-  margin-top: 65px;
+  margin-top: 55px;
   overflow: hidden;
   width: 100vw;
+
+    @include medium-and-up {
+      margin-top: 60px;
+    }
+
+    @include x-large-and-up {
+      margin-top: 65px;
+    }
 
   .hero__wrapper {
 
@@ -14,8 +22,8 @@
       display: flex-row;
       flex: 1;
 
-      @include medium-and-up {
-        left: 30px;
+    @include medium-and-up {
+      left: 30px;
     }
 
     @include x-large-and-up {
