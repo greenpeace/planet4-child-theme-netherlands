@@ -6,24 +6,19 @@
         h3 {
             font-weight: 400;
             font-size: 1.875rem;
-        //    padding-top: 50px;
-        //    padding-left: 100px;
-        //    margin: 0;
-
-            padding-top: 0px;
-        //    padding-left: 30px;
-            margin: 0 0 20px 0;
+            padding: 0px;
+            margin: 0 0 20px 20px;
 
             @include medium-and-up {
                 padding-top: 0px;
-                padding-left: 30px;
-                margin: 0 0 20px 0;
+                padding-left: 0px;
+                margin: 0 0 20px 20px;
             }
         
             @include x-large-and-up {
                 padding-top: 0px;
-                padding-left: 100px;
-                margin: 0;
+                padding-left: 0px;
+                margin-left: 100px;
             }
         }
     }
