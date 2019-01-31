@@ -55,7 +55,6 @@
         left: auto;
         right: 0;
         margin: none;
-        width: 40%;
         cursor: pointer;
         height: auto;
         background: $blood-orange;
@@ -82,6 +81,11 @@
         width: auto;
         padding: 0 20;
         margin-top: $xsm;
+    }
+    
+    .container {
+        padding-left: $sm;
+        padding-right: $sm;
     }
 }
 
