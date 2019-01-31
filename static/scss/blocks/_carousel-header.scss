@@ -8,19 +8,18 @@
 
     .hero__text {
       top: 0px;
-      left: 100px;
+      left: 0px;
       max-width: 100%;
       padding: 60px 0;
       display: flex-row;
       flex: 1;
-      margin-left: -50px;
 
       @include medium-and-up {
-        margin-left: -50px !important;
+        left: 30px;
     }
 
     @include x-large-and-up {
-        margin-left: 0px !important;
+      left: 100px;
     }
 
       .hero__title {
