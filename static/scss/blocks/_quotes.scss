@@ -26,7 +26,7 @@
         height: 100px;
         overflow: hidden;
         border-radius: 50%;
-        margin-bottom: 30px;
+        max-width: none;
         
         @include medium-and-up {
             width: 100px;
@@ -74,7 +74,7 @@
     .quote__text {
 
             font-size: 0.875rem !important;
-            margin-bottom: 0px !important; 
+            margin-bottom: 10px !important; 
 
         @include medium-and-up {
             font-size: 1.125rem !important;
@@ -87,9 +87,7 @@
     }
 
     .quote__author {
-        @include small-and-up {
             font-size: 0.6875rem !important;
-        }
 
         @include medium-and-up {
             font-size: 0.875rem !important;
