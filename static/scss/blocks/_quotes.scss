@@ -2,11 +2,12 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
     justify-content: center !important;
-    display: inline-flex !important;
+    display: flex !important;
+    display: -webkit-flex !important;
     align-items: center !important;
 
     @include small-and-up {
-        height: 140px !important;
+        height: 140px !important ;
     }
 
     @include medium-and-up {
@@ -18,30 +19,54 @@
     }
 
     .col-2 {
+
+        .quote__img{
+            @include small-and-up {
+                width: auto;
+                height: 100px;
+                margin-left: -50%;
+            } 
+
+            @include medium-and-up {
+                width: auto;
+                height: 100px;
+                margin-left: -50%;
+            } 
+        }
+
         @include small-and-up {
-            flex: 0 0 35% !important;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: auto;
         } 
         
         @include medium-and-up {
-            flex: 0 0 24% !important;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: auto;
         }
 
         @include x-large-and-up {
-            flex: 0 0 16% !important;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: auto;
         }
     }
 
     .col-10 {
         @include small-and-up {
-            flex: 0 0 35% !important;
+            flex: 0 0 60% !important;
         } 
         
         @include medium-and-up {
-            flex: 0 0 24% !important;
+            flex: 0 0 60% !important;
         }
 
         @include x-large-and-up {
-            flex: 0 0 73% !important;
+            flex: 0 0 60% !important;
         }
     }
 
