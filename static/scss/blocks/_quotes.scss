@@ -5,10 +5,11 @@
     display: flex !important;
     display: -webkit-flex !important;
     align-items: center !important;
+    height: auto;
 
-    @include small-and-up {
-        height: 140px !important ;
-    }
+//    @include small-and-up {
+//        height: 140px !important ;
+//    }
 
     @include medium-and-up {
         height: 180px !important;
@@ -19,40 +20,39 @@
     }
 
     .col-2 {
+        flex: none;
+        -webkit-box-flex: none;
 
         .quote__img{
             @include small-and-up {
-                width: auto;
-                height: 100px;
                 margin-left: -50%;
+                width: auto;
+                height: 100%;
             } 
 
             @include medium-and-up {
-                width: auto;
-                height: 100px;
                 margin-left: -50%;
+                width: auto;
+                height: 100%;
             } 
         }
 
-        @include small-and-up {
-            border-radius: 50%;
-            overflow: hidden;
-            width: 100px;
-            height: auto;
-        } 
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 30px;
         
         @include medium-and-up {
-            border-radius: 50%;
-            overflow: hidden;
             width: 100px;
-            height: auto;
+            height: 100px;
+            margin-bottom: 0px;
         }
 
         @include x-large-and-up {
-            border-radius: 50%;
-            overflow: hidden;
             width: 100px;
-            height: auto;
+            height: 100px;
+            margin-bottom: 0px;
         }
     }
 
@@ -82,7 +82,7 @@
         }
 
         @include x-large-and-up {
-            font-size: 1.7rem !important;
+            font-size: 1.3rem !important;
         }
     }
 

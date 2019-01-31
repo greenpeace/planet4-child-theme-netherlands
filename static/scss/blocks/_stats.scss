@@ -5,14 +5,14 @@
     .stat-column {
         padding: 20px;
         flex-wrap: wrap !important;
-        flex-basis: 100% !important; 
+        flex-basis: 100%; 
         justify-content: center !important;
 
         @include medium-and-up {
             flex-basis: 32% !important;
         }
 
-        @include x-large-and-up {
+        @include large-and-up {
             flex-basis: 100% !important;
         }
     }
