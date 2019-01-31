@@ -1,10 +1,23 @@
-.stat-column {
-    padding: 20px;
-    flex-wrap: wrap !important;
-    flex-basis: 32% !important; 
-    justify-content: center !important;
-}
+.stats container {
+    width: auto;
+    padding: 0;
 
-.stats .stat-column:first-child {
-    margin-left: 15px !important;
+    .stat-column {
+        padding: 20px;
+        flex-wrap: wrap !important;
+        flex-basis: 100% !important; 
+        justify-content: center !important;
+
+        @include medium-and-up {
+            flex-basis: 32% !important;
+        }
+
+        @include x-large-and-up {
+            flex-basis: 100% !important;
+        }
+    }
+
+    .stats .stat-column:first-child {
+        margin-left: 0;
+    }
 }
