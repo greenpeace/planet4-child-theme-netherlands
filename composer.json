@@ -1,12 +1,16 @@
 {
 	"name": "greenpeace/planet4-child-theme-netherlands",
-	"description": "Example child theme for the Planet 4 Wordpress project",
+	"description": "Child theme for Netherlands for the Planet 4 Wordpress project",
 	"type":"wordpress-theme",
 	"minimum-stability" : "stable",
 	"authors": [
 		{
 			"name": "Konstantinos Kokkorogiannis",
 			"email": "kkokkoro@greenpeace.org"
+		},
+		{
+			"name": "Oscar Keur",
+			"email": "okeur@greenpeace.org"
 		}
 	],
 	"license": "GPL-3.0+",
