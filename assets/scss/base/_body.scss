@@ -48,13 +48,13 @@ body {
 
 div.page-template {
   width: 100vw !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 
   @include medium-and-up {
     width: 100vw !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   @include x-large-and-up {

@@ -4,31 +4,30 @@
   overflow: hidden;
   width: 100vw;
 
-    @include medium-and-up {
-      margin-top: 60px;
-    }
+  @include medium-and-up {
+    margin-top: 60px;
+  }
 
-    @include x-large-and-up {
-      margin-top: 65px;
-    }
+  @include x-large-and-up {
+    margin-top: 65px;
+  }
 
   .hero__wrapper {
-
     .hero__text {
-      top: 0px;
+      top: 0;
       left: $sm;
       max-width: 100%;
       padding: 60px 0;
       display: flex-row;
       flex: 1;
 
-    @include medium-and-up {
-      left: $xlrg;
-    }
+      @include medium-and-up {
+        left: $xlrg;
+      }
 
-    @include x-large-and-up {
-      left: 100px;
-    }
+      @include x-large-and-up {
+        left: 100px;
+      }
 
       .hero__title {
         margin: 0 0 10px 15px;
@@ -66,20 +65,20 @@
 
   .carousel-item {
     &::before {
-      filter:none;
+      filter: none;
     }
 
     &::after {
       background: none;
     }
   }
-  
+
   .carousel-control-next {
     .carousel-control-next-icon {
       display: none;
     }
   }
-  
+
   .main-header {
     margin-left: 185px;
 
@@ -120,7 +119,7 @@
   display: none;
 }
 
-@media only screen and (max-width:783px) {
+@media only screen and (max-width: 783px) {
   .carousel-caption h2 {
     line-height: 3.2rem!important;
     font-size: 1.3rem!important;
@@ -128,7 +127,7 @@
 }
 
 @media (min-width: 992px) {
-.carousel-header .main-header .action-button .btn {
+  .carousel-header .main-header .action-button .btn {
     width: auto;
     box-shadow: none;
     text-transform: none;
@@ -141,12 +140,12 @@
 
 @media (min-width: 1200px) {
   .carousel-header .main-header p {
-      font-size: 1rem;
-      line-height: 1.6;
-      display: block;
-      margin: 0 0 15px 15px;
-      background: $black;
-      padding: 15px;
-      color: $white;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: block;
+    margin: 0 0 15px 15px;
+    background: $black;
+    padding: 15px;
+    color: $white;
   }
 }

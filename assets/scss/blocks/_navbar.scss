@@ -3,6 +3,7 @@
 .navbar-dropdown .nav-link:hover {
   border-color: #6c0;
   color: $anthraciet;
+  // TODO should this be $slate-grey?
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -19,17 +20,17 @@
   min-width: 100%;
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   transform: rotate(90deg);
   transition: 0.3s;
 }
 
-.dropdown-toggle:hover:after{
+.dropdown-toggle:hover:after {
   transform: rotate(0deg);
   transition: 0.3s;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   .dropdown-menu {
     border: 1px solid #6c0;
   }
@@ -40,7 +41,7 @@
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .page-id-7408 > .page-header .container > *:not(.row) {
     max-width: 100%;
   }
@@ -55,7 +56,7 @@
   border-bottom: 2px solid white;
   text-transform: none;
   font-size: 0.85rem;
-  padding: 0rem 0.8rem;
+  padding: 0 0.8rem;
   line-height: 2.2rem;
   color: $slate-grey;
 }
@@ -95,14 +96,15 @@
 .country-dropdown-toggle {
   font-weight: 400;
 
-  &:hover, active, visited {
+  // TODO is :active or .active meant here?
+  &:hover, :active, :visited {
     color: $anthraciet;
   }
 }
 
 .top-navigation {
   background-color: white;
-  box-shadow: 0px 0px 8px #000;
+  box-shadow: 0 0 8px #000;
   border-top: 3px solid $anthraciet;
 }
 
@@ -125,19 +127,6 @@
   text-transform: none;
 }
 
-.navbar-dropdown .active .nav-link,
-.navbar-dropdown .nav-link:focus,
-.navbar-dropdown .nav-link:hover {
-  color: $slate-grey;
-}
-
-.navbar-dropdown .active .nav-link,
-.navbar-dropdown .nav-link:focus,
-.navbar-dropdown .nav-link:hover {
-  border-color: #6c0;
-  color: $anthraciet;
-}
-
 .top-navigation .btn-donate {
   background-color: #f3593c;
   color: white;
@@ -150,7 +139,7 @@
   color: $slate-grey;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   .navbar-dropdown {
     box-sizing: border-box;
     flex-direction: column;
@@ -160,10 +149,10 @@
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    background: url("images/dropdown-gradient.svg") no-repeat #FFF;
+    background: url("images/dropdown-gradient.svg") no-repeat #fff;
   }
 }
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .navbar-dropdown {
     width: 100%;
   }

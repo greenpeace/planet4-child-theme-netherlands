@@ -1,55 +1,54 @@
 .four-column {
-    background: $white;
-    padding: 50px 100px 40px 100px;
-    margin:0;
+  background: $white;
+  padding: 50px 100px 40px 100px;
+  margin: 0;
 
-    h3, h4, h5 {
-        font-weight: 400 !important;
-        color: $black;
-    }
+  h3, h4, h5 {
+    font-weight: 400 !important;
+    color: $black;
+  }
 }
 
 .four-column-information {
-    display: flex;
-    flex-direction: column;
-    flex: 0 1 auto;
-    flex-grow: unset;
-    flex-basis: 100rem;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  flex-grow: unset;
+  flex-basis: 100rem;
 
-    h5 a {
-        color: $black;
-        font-weight: 400;
-    }
+  h5 a {
+    color: $black;
+    font-weight: 400;
+  }
 }
 
 @media (min-width: 1200px) {
-    .four-column-information p {
-        font-size: 1rem;
-        flex: 0 1 200px;
-    }
+  .four-column-information p {
+    font-size: 1rem;
+    flex: 0 1 200px;
+  }
 }
 
 @media (min-width: 992px) {
-    .four-column-wrap {
-        margin-bottom: 0.9%;
-        /* border: 1px solid red; */
-        padding-bottom: 20px;
-    }
+  .four-column-wrap {
+    margin-bottom: 0.9%;
+    /* border: 1px solid red; */
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    .four-column {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
+  .four-column {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .four-column-information a {
-    color: $dark-green;
+  color: $dark-green;
 
-    &:hover {
-        color: $hover-green;
-        text-decoration: none;
-    }
+  &:hover {
+    color: $hover-green;
+    text-decoration: none;
+  }
 }
-

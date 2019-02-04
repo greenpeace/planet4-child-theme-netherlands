@@ -1,23 +1,24 @@
-.stats container {
-    width: auto;
-    padding: 0;
+// TODO check container
+.stats .container {
+  width: auto;
+  padding: 0;
 
-    .stat-column {
-        padding: 20px;
-        flex-wrap: wrap !important;
-        flex-basis: 100%; 
-        justify-content: center !important;
+  .stat-column {
+    padding: 20px;
+    flex-wrap: wrap !important;
+    flex-basis: 100%;
+    justify-content: center !important;
 
-        @include medium-and-up {
-            flex-basis: 32% !important;
-        }
-
-        @include large-and-up {
-            flex-basis: 100% !important;
-        }
+    @include medium-and-up {
+      flex-basis: 32% !important;
     }
 
-    .stats .stat-column:first-child {
-        margin-left: 0;
+    @include large-and-up {
+      flex-basis: 100% !important;
     }
+  }
+
+  .stats .stat-column:first-child {
+    margin-left: 0;
+  }
 }

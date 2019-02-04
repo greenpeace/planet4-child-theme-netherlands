@@ -1,8 +1,8 @@
 // Temp colors
 // Fonts
 /* stylelint-disable value-keyword-case*/
-$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:      "Georgia", Cambria, "Times New Roman", Times, serif;
+$sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
+$serif:      "Georgia", cambria, "Times New Roman", times, serif;
 $roboto:     "Roboto", sans-serif;
 $lora:       "Lora", serif;
 
@@ -155,86 +155,82 @@ $hover-nav:             #052a30;
 $cookie-bkg:            #c0dbe2;
 $cookie-blue:           #094464;
 
-
-
-
 // @import "page-specific-hacks";
 .txtFirstName {
-    border: 0 solid #61BA07;
-    width: 315px;
-    color: #666;
-    height: 40px;
-    padding: 0 10px;
-    font-size: 14px;
-    margin-bottom: 15px;
+  border: 0 solid #61ba07;
+  width: 315px;
+  color: #666;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.txtEmail {
+  border: 0 solid #61ba07;
+  width: 315px;
+  color: #666;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btnRegister {
+  width: 150px;
+  height: 40px;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer;
+  cursor: hand;
+  vertical-align: middle;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #61ba07;
+  color: white;
+}
+
+.privacylink {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+a.customize-unpreviewable,
+area.customize-unpreviewable,
+form.customize-unpreviewable,
+form.customize-unpreviewable button,
+form.customize-unpreviewable input,
+form.customize-unpreviewable select {
+  cursor: pointer!important;
+}
+@media (min-width: 992px) {
+  .happy-point-block-wrap .pt-20 {
+    padding-top: 60px;
   }
-  
-  .txtEmail {
-    border: 0 solid #61BA07;
-    width: 315px;
-    color: #666;
-    height: 40px;
-    padding: 0 10px;
-    font-size: 14px;
-    margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .cookie-block p {
+    font-size: 13px;
+    line-height: 18px;
   }
-  
-  .btnRegister {
-    width: 150px;
-    height: 40px;
-    border: 0;
-    overflow: hidden;
-    cursor: pointer;
-    cursor: hand;
-    vertical-align: middle;
-    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    background-color: #61BA07;
-    color: White;
+}
+@media (max-width: 576px) {
+  .cookie-block {
+    max-height: 140px;
+    background: whitesmoke;
   }
-  
-  .privacylink {
-    padding-left: 10px;
-    font-size: 12px;
+}
+@media (min-width: 576px) {
+  .page-parent .skewed-overlay:before,
+  .tag .skewed-overlay:before {
+    background: transparent;
+    background: linear-gradient(245deg, transparent 11%, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .9) 28%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, .85) 58%, rgba(255, 255, 255, .3) 72%, rgba(255, 255, 255, .9) 90%, rgba(255, 255, 255, .9) 90%, rgba(255, 255, 255, .95) 90%);
   }
-  
-  a.customize-unpreviewable,
-  area.customize-unpreviewable,
-  form.customize-unpreviewable,
-  form.customize-unpreviewable button,
-  form.customize-unpreviewable input,
-  form.customize-unpreviewable select {
-    cursor: pointer!important;
+}
+@media (min-width: 576px) {
+  .page-child .skewed-overlay:before {
+    background: transparent;
+    background: linear-gradient(245deg, transparent 25%, rgba(255, 255, 255, .2) 28%, rgba(255, 255, 255, .9) 44%, rgba(255, 255, 255, .7) 66%, rgba(255, 255, 255, .85) 45%, rgba(255, 255, 255, .3) 64%, rgba(255, 255, 255, .5) 65%, rgba(255, 255, 255, .9) 95%, rgba(255, 255, 255, .9) 100%);
   }
-  @media (min-width:992px) {
-    .happy-point-block-wrap .pt-20 {
-      padding-top: 60px;
-    }
-  }
-  @media (min-width:992px) {
-    .cookie-block p {
-      font-size: 13px;
-      line-height: 18px;
-    }
-  }
-  @media (max-width:576px) {
-    .cookie-block {
-      max-height: 140px;
-      background: whitesmoke;
-    }
-  }
-  @media (min-width:576px) {
-    .page-parent .skewed-overlay:before,
-    .tag .skewed-overlay:before {
-      background: transparent;
-      background: linear-gradient(245deg,transparent 11%,rgba(255,255,255,.2) 17%,rgba(255,255,255,.9) 28%,rgba(255,255,255,1) 51%,rgba(255,255,255,.85) 58%,rgba(255,255,255,.3) 72%,rgba(255,255,255,.9) 90%,rgba(255,255,255,.9) 90%,rgba(255,255,255,.95) 90%);
-    }
-  }
-  @media (min-width:576px) {
-    .page-child .skewed-overlay:before {
-      background: transparent;
-      background: linear-gradient(245deg,transparent 25%,rgba(255,255,255,.2) 28%,rgba(255,255,255,.9) 44%,rgba(255,255,255,.7) 66%,rgba(255,255,255,.85) 45%,rgba(255,255,255,.3) 64%,rgba(255,255,255,.5) 65%,rgba(255,255,255,.9) 95%,rgba(255,255,255,.9) 100%);
-    }
-  }
-  
+}

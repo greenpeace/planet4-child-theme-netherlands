@@ -1,28 +1,29 @@
 .page-header {
-    .top-page-tags {
-
-        .issues {
-            a {
-                &:before {
-                    display: none !important;
-                }
-            }
+  .top-page-tags {
+    .issues {
+      a {
+        &:before {
+          display: none !important;
         }
-
-        page-type {
-            background: none;
-            text-transform: none;
-        }
-        .tags {
-           display:none;
-
-           &:before {
-               display: none;
-           }
-
-           .tag {
-                display: none;
-           }
-        }
+      }
     }
+
+    // TODO check
+    .page-type {
+      background: none;
+      text-transform: none;
+    }
+
+    .tags {
+      display: none;
+
+      &:before {
+        display: none;
+      }
+
+      .tag {
+        display: none;
+      }
+    }
+  }
 }

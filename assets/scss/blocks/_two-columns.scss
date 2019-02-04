@@ -1,21 +1,19 @@
 .content-two-column-block {
-    
-        padding-left: $sm !important;
-        padding-right: $sm !important;
-        padding-bottom: 0px !important;
 
-    @include medium-and-up {
-        margin: -30px 0;
-        padding-top: $xlrg !important;
-        padding-left: $xlrg !important;
-        padding-top: $xlrg !important;
-        padding-bottom: 0px !important;
-    }
+  padding-left: $sm !important;
+  padding-right: $sm !important;
+  padding-bottom: 0 !important;
 
-    @include large-and-up {
-        padding-top: $xlrg !important;
-        padding-left: $wide !important;
-        padding-top: $xxlrg !important;
-        padding-bottom: $xxlrg !important;
-    }
+  @include medium-and-up {
+    margin: -30px 0;
+    padding-top: $xlrg !important;
+    padding-left: $xlrg !important;
+    padding-bottom: 0 !important;
+  }
+
+  @include large-and-up {
+    padding-left: $wide !important;
+    padding-top: $xxlrg !important;
+    padding-bottom: $xxlrg !important;
+  }
 }
