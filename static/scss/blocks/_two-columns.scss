@@ -4,10 +4,11 @@
         padding-right: $sm !important;
         padding-bottom: 0px !important;
 
-    @include small-and-up {
+    @include medium-and-up {
+        margin: -30px 0;
         padding-top: $xlrg !important;
-        padding-left: $sm;
-        padding-top: $sm;
+        padding-left: $xlrg !important;
+        padding-top: $xlrg !important;
         padding-bottom: 0px !important;
     }
 
