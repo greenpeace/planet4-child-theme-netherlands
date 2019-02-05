@@ -2,12 +2,6 @@ node_modules
 .cache
 .tmp
 
-dist/static/css/maps/style\.css\.map
-
 *.map
-
-*.css
-
-*.js
 
 *.json
