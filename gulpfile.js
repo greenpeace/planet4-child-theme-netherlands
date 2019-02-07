@@ -13,10 +13,10 @@ const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const livereload = require('gulp-livereload');
 
-const path_js = 'assets/js/**/*.js';
+const path_js = 'assets/js/src/**/*.js';
 const path_scss = 'assets/scss/**/*.scss';
 const path_style = 'assets/scss/style.scss';
-const path_dest = './';
+const path_dest = 'assets/';
 
 
 let error_handler = {
@@ -63,8 +63,8 @@ function sass() {
 		.pipe(scss().on('error', scss.logError))
     .pipe(autoprefixer())
 		.pipe(cleancss({rebase: false, level :2}))
-		.pipe(sourcemaps.write(path_dest))
-		.pipe(gulp.dest(path_dest))
+		.pipe(sourcemaps.write('/maps/'))
+		.pipe(gulp.dest(path_dest + '/css'))
 		.pipe(livereload());
 }
 
@@ -74,8 +74,8 @@ function uglify() {
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.js'))
 		.pipe(js())
-		.pipe(sourcemaps.write(path_dest))
-		.pipe(gulp.dest(path_dest))
+		.pipe(sourcemaps.write('/maps/'))
+		.pipe(gulp.dest(path_dest + '/js'))
 		.pipe(livereload());
 }
 
