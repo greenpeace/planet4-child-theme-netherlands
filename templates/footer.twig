@@ -1,0 +1,46 @@
+<footer class="site-footer" id="footer">
+	<div class="container">
+		<ul class="footer-social-media list-unstyled col-md-8 col-lg-5">
+			{% for social in footer_social_menu %}
+				{% set name = "" %}
+				{% for class_name in social.classes %}
+					{% if 'fa-' in class_name %}
+						{% set name = class_name[3:] %}
+					{% else %}
+						{% set name = class_name %}
+					{% endif %}
+				{% endfor %}
+				<li><a href="{{ social.url }}">
+						{{ name|svgicon }}
+						<span class="sr-only">{{ social.title }}</span>
+					</a></li>
+			{% endfor %}
+		</ul>
+
+		<ul class="list-unstyled footer-links">
+			{% for primary in footer_primary_menu %}
+				<li><a href="{{ primary.url }}">{{ primary.title }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<ul class="list-unstyled footer-links-secondary">
+			{% for secondary in footer_secondary_menu %}
+				<li><a href="{{ secondary.url }}">{{ secondary.title }}</a></li>
+			{% endfor %}
+		</ul>
+		<div class="row">
+				<p class="footer-sponsors-logo col-md-3">
+					<a href="https://www.greenpeace.org/nl/de-postcode-loterij-en-greenpeace/"><img src="https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" alt=""></a>
+				</p>
+				<p class="copyright-text col-md-3">
+					{{ copyright_text_line1|e('wp_kses_post')|raw }}
+				</p>
+				<p class="footer-sponsors-logo col-md-3">
+					<a href="https://www.cbf.nl/Instelling/896/Greenpeace-Nederland"><img src="https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" alt=""></a>
+				</p>
+		</div>
+		{# <p class="gp-year"><i class="fab fa-creative-commons"></i> {{ copyright_text_line2|e('wp_kses_post')|raw }} {{"now"|date('Y')}}</p> #}
+	</div>
+
+{# {{ dump() }} #}
+</footer>
