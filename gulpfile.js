@@ -82,7 +82,7 @@ function uglify() {
 function watch() {
 	livereload.listen({'port': 35729});
 	gulp.watch(path_scss, gulp.series(lint_css, sass));
-	gulp.watch(path_js, gulp.series(lint_js, uglify));
+	// gulp.watch(path_js, gulp.series(lint_js, uglify));
 }
 
 exports.fix = fix_css;

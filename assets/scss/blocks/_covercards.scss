@@ -1,9 +1,12 @@
+// TODO what to do with excerpt on hover?
 .cover-card {
   padding: 0;
   transition: none;
   margin-bottom: 40px;
+  // TODO think of a durable solution for shifting the image
   background-position: center 50px;
   height: 350px;
+  box-shadow: none;
 
   &:before {
     transition: none;
@@ -16,22 +19,32 @@
   }
 
   &:hover {
-    box-shadow: none !important;
+    box-shadow: none;
+
+    p {
+      display: none;
+    }
   }
 
   @include large-and-up {
     height: 100px !important;
   }
 
+  p {
+    display: none;
+  }
+
   .cover-card-tag {
+    display: none;
+  }
+
+  .cover-card-content p {
     display: none;
   }
 
   .cover-card-heading {
     display: inline-block;
-    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 1.6rem !important;
     color: $black;
     background: $white;
     width: 100%;
@@ -61,6 +74,7 @@
     border: none;
     text-transform: none;
 
+    // TODO discuss with sue if this is right
     &:hover {
       background: $hover-red;
       color: $black;
