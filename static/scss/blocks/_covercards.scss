@@ -1,0 +1,98 @@
+.cover-card {
+    padding: 0;
+    transition:none; 
+    margin-bottom: 40px;
+    background-position: center 50px;
+    height: 350px;
+
+        &:before {
+            transition: none;
+            display:none;
+        }
+
+        &:after {
+            transition: none;
+            display: none;
+        }
+
+        &:hover {
+            box-shadow: none !important;
+    }
+
+    @include large-and-up {
+        height: 100px !important;
+    }
+
+    .cover-card-tag {
+        display:none;
+    }
+
+    .cover-card-heading {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.6rem !important;
+        color: $black;
+        background: $white;
+        width: 100%;
+        margin: 0;
+        padding: $sm;
+        height: 110px;
+        max-width: 100%;
+        min-height: 100px;
+        border-top: 4px solid $light-green;
+        text-decoration: none;
+        text-shadow: none;
+        
+        &:hover {
+            color:$hover-green;
+        }
+    }
+
+        .cover-card-btn {
+        position: absolute;
+        bottom: -36px;
+        left: auto;
+        right: 0;
+        margin: none;
+        cursor: pointer;
+        height: auto;
+        background: $blood-orange;
+        right: 20px;
+        border: none;
+        text-transform: none;
+
+        &:hover {
+            background: $hover-red;
+            color:$black;
+        }
+
+        .cover-card-tag {
+            display:none;
+        }
+    }
+}
+
+.covers-block {
+    .btn-secondary {
+        text-transform: none;
+        background: $light-green;
+        color: $white;
+        width: auto;
+        padding: 0 20;
+        margin-top: $xsm;
+    }
+    
+    .container {
+        padding-left: $sm;
+        padding-right: $sm;
+    }
+}
+
+.cover-card:not(.single-cover):hover {
+    box-shadow: none;
+}
+
+.btn-load-more-covers-click {
+    margin-left: $sm;
+}

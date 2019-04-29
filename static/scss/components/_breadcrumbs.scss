@@ -1,0 +1,57 @@
+.top-page-tags {
+    .tag-item .tag-item--main .page-type {
+        display: none;     
+    }
+
+    a {
+        color: red;
+    }
+
+    .issues {
+        display: block;
+
+        &:before {
+            display: none !important;
+        }
+
+        .tag {
+            display: none;
+        }
+    }
+
+    .issues:before {
+        content: none !important;
+    }
+
+    .tag-wrap .tags {
+        display:none;
+
+        .issues {
+          &:before  {
+              display: none !important;
+          }  
+        }
+    }
+
+    .tag-item--main {
+        font-weight: 400;
+        color: $black;
+        background: $light-green;
+        padding: 10px 20px;
+    }
+
+    .tag-item a {
+        color: $medium-grey;
+        padding: 2px 6px;
+        border: 1px solid grey;
+
+        &:hover {
+            color: $dark-grey;
+            text-decoration: none;
+        }
+
+        &:before {
+            display: none !important;
+        }
+    }
+}
