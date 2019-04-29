@@ -1,14 +1,16 @@
 {% block navigation_bar %}
   <nav id="header" class="top-navigation navbar">
     <a class="site-logo" href="{{ data_nav_bar.home_url }}">
-      <img src="{{ data_nav_bar.images }}gp-logo.svg" alt="Greenpeace"/>
-    </a>
+		{% include 'blocks/site_logo.twig' %}
+	</a>
+	  {% set toggle_label = __( 'Toggle navigation menu', 'planet4-master-theme' ) %}
+	  {% set search_label = __( 'Search', 'planet4-master-theme' ) %}
     <button
         class="btn btn-navbar-toggle navbar-dropdown-toggle"
         data-toggle="open"
         data-target="#navbar-dropdown"
         aria-expanded="false"
-        aria-label="Toggle navigation menu"
+		aria-label="{{ toggle_label }}"
     >
       <span>{{ __( 'Menu', 'planet4-master-theme' ) }}</span>
     </button>
@@ -22,7 +24,7 @@
             data-toggle="open"
             data-target="#country-list"
             aria-expanded="false"
-            aria-label="Toggle worldwide site selection menu"
+			aria-label="{{ data_nav_bar.country_dropdown_toggle }}"
         >
           <span class="screen-reader-text">{{ __( 'Selected', 'planet4-master-theme' ) }}:</span> {{ website_navbar_title }}
           <span class="screen-reader-text">{{ __( 'Change Country', 'planet4-master-theme' ) }}</span>
@@ -43,9 +45,6 @@
           </li>
         {% endif %}
       {% endfor %}
-
-
-
       <li class="nav-item">
         <ul id="donate-button-wrapper">
           <li class="btn dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
@@ -59,26 +58,24 @@
           </li>
         </ul>
       </li>
-
-
     </ul>
     <button
         class="navbar-search-toggle"
         data-toggle="open"
         data-target="#search_form"
         aria-expanded="false"
-        aria-label="Toggle search box"
+		aria-label="{{ data_nav_bar.navbar_search_toggle }}"
     >
       <span class="screen-reader-text">{{ __( 'Toggle search form', 'planet4-master-theme' ) }}</span>
     </button>
     <form id="search_form" action="{{ data_nav_bar.home_url }}" class="form nav-item nav-search-wrap">
-      <input id="search_input" type="text" class="form-control" placeholder="{{ __( 'Search', 'planet4-master-theme' ) }}"
+		<input id="search_input" type="search" class="form-control" placeholder="{{ search_label }}"
            value="{{ data_nav_bar.search_query|e('wp_kses_post')|raw }}" name="s" aria-label="Search">
       <input id="orderby" type="hidden" name="orderby" value="{{ selected_sort ?? default_sort }}"/>
-      <button class="top-nav-search-btn" type="submit">
-        <i class="fas fa-search"></i>
-        <span class="screen-reader-text">{{ __( 'Search', 'planet4-master-theme' ) }}</span>
-      </button>
+		<button class="top-nav-search-btn" type="submit">
+			{{ 'search'|svgicon }}
+			<span class="screen-reader-text">{{ search_label }}</span>
+		</button>
     </form>
   </nav>
 {% endblock %}
