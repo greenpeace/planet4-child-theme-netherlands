@@ -1,6 +1,6 @@
 .four-column {
   background: $white;
-  padding: 50px 100px 40px 100px;
+  padding: 50px 15px 40px;
   margin: 0;
 
   h3, h4, h5 {
@@ -32,7 +32,6 @@
 @media (min-width: 992px) {
   .four-column-wrap {
     margin-bottom: 0.9%;
-    /* border: 1px solid red; */
     padding-bottom: 20px;
   }
 }

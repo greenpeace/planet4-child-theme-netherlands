@@ -87,11 +87,15 @@
 
 .nav-search-wrap .top-nav-search-btn {
   color: $slate-grey;
-}
 
-.nav-search-wrap .top-nav-search-btn i {
-  vertical-align: middle;
-  font-size: 1.05rem;
+  i {
+    vertical-align: middle;
+    font-size: 1.05rem;
+  }
+
+  .icon {
+    top: 0;
+  }
 }
 
 .country-dropdown-toggle {
