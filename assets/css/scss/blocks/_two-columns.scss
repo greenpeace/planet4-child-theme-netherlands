@@ -1,0 +1,26 @@
+// TODO make container go wider between 515px <> 688px
+.content-two-column-block {
+  background: $anthraciet;
+  padding: 50px 0 40px 100px;
+
+  h2, p {
+    font-weight: 300;
+    color: $white;
+  }
+
+  padding-left: $sm !important;
+  padding-right: $sm !important;
+  padding-bottom: 0 !important;
+
+  @include medium-and-up {
+    padding-top: $xlrg !important;
+    padding-left: $xlrg !important;
+    padding-bottom: 0 !important;
+  }
+
+  @include large-and-up {
+    padding-left: $wide !important;
+    padding-top: $xxlrg !important;
+    padding-bottom: $xxlrg !important;
+  }
+}

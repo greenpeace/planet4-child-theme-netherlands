@@ -1,0 +1,26 @@
+// TODO check container
+// TODO @max-width: 991 - elements shift left
+// TODO @max-width: 776 - elements go vertical, but shift left
+.stats .container {
+  width: auto;
+  padding: 0;
+
+  .stat-column {
+    padding: 20px;
+    flex-wrap: wrap !important;
+    flex-basis: 100%;
+    justify-content: center !important;
+
+    @include medium-and-up {
+      flex-basis: 32% !important;
+    }
+
+    @include large-and-up {
+      flex-basis: 100% !important;
+    }
+  }
+
+  .stats .stat-column:first-child {
+    margin-left: 0;
+  }
+}

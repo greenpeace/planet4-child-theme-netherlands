@@ -1,0 +1,111 @@
+// TODO what to do with excerpt on hover?
+.cover-card {
+  padding: 0;
+  transition: none;
+  margin-bottom: 40px;
+  // TODO think of a durable solution for shifting the image
+  background-position: center 50px;
+  height: 350px;
+  box-shadow: none;
+
+  &:before {
+    transition: none;
+    display: none;
+  }
+
+  &:after {
+    transition: none;
+    display: none;
+  }
+
+  &:hover {
+    box-shadow: none;
+
+    p {
+      display: none;
+    }
+  }
+
+  @include large-and-up {
+    height: 100px !important;
+  }
+
+  p {
+    display: none;
+  }
+
+  .cover-card-tag {
+    display: none;
+  }
+
+  .cover-card-content p {
+    display: none;
+  }
+
+  .cover-card-heading {
+    display: inline-block;
+    font-weight: 500;
+    color: $black;
+    background: $white;
+    width: 100%;
+    margin: 0;
+    padding: $sm;
+    height: 110px;
+    max-width: 100%;
+    min-height: 100px;
+    border-top: 4px solid $light-green;
+    text-decoration: none;
+    text-shadow: none;
+
+    &:hover {
+      color: $hover-green;
+    }
+  }
+
+  .cover-card-btn {
+    position: absolute;
+    bottom: -36px;
+    left: auto;
+    margin: none;
+    cursor: pointer;
+    height: auto;
+    background: $blood-orange;
+    right: 20px;
+    border: none;
+    text-transform: none;
+
+    // TODO discuss with sue if this is right
+    &:hover {
+      background: $hover-red;
+      color: $black;
+    }
+
+    .cover-card-tag {
+      display: none;
+    }
+  }
+}
+
+.covers-block {
+  .btn-secondary {
+    text-transform: none;
+    background: $light-green;
+    color: $white;
+    width: auto;
+    padding: 0 20;
+    margin-top: $xsm;
+  }
+
+  .container {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+}
+
+.cover-card:not(.single-cover):hover {
+  box-shadow: none;
+}
+
+.btn-load-more-covers-click {
+  margin-left: $sm;
+}
