@@ -53,6 +53,14 @@
       @include margin($left: $sm, $bottom: $sm);
       @include padding($top: $xsm, $left: $norm, $bottom: $xsm, $right: $norm);
     }
+
+    .btn {
+      background-color: #f3593c;
+
+      &:hover {
+        background-color: $hover-red;
+      }
+    }
   }
 
   &:after {
