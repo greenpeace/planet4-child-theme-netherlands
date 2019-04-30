@@ -6,7 +6,7 @@
 
   .article-listing-intro {
     h3 {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 1.875rem;
       padding: 0;
       margin: 0 0 20px 20px;
@@ -20,7 +20,7 @@
       @include x-large-and-up {
         padding-top: 0;
         padding-left: 0;
-        margin-left: 0;
+        margin-left: 15px;
       }
     }
   }
