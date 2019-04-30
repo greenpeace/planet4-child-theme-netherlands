@@ -1,0 +1,114 @@
+// TODO align article-list with margins above
+// TODO check typography
+.article-listing {
+  margin: 0;
+  padding-bottom: 30px;
+
+  .article-listing-intro {
+    h3 {
+      font-weight: 400;
+      font-size: 1.875rem;
+      padding: 0;
+      margin: 0 0 20px 20px;
+
+      @include medium-and-up {
+        padding-top: 0;
+        padding-left: 0;
+        margin: 0 0 20px 20px;
+      }
+
+      @include x-large-and-up {
+        padding-top: 0;
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .article-list-section {
+    .article-list-item {
+      background: $white;
+      padding: 20px;
+      font-size: 0.875rem;
+
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+
+      @include medium-and-up {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      a {
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: none;
+          color: $hover-green;
+        }
+      }
+
+      .article-list-item-headline {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .article-list-item-body {
+        .article-list-item-tags {
+          .top-page-tags .tag-item--main.page-type {
+            display: none !important;
+          }
+
+          .article-list-item-meta {
+            font-size: 0.875rem;
+          }
+
+          .article-list-item-content {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .article-list-item-tags {
+        display: none;
+
+        .tag-wrap {
+          &:before {
+            content: none;
+          }
+
+          .tag-item {
+            font-size: 0.875rem;
+            color: $light-grey;
+            display: inline-block;
+            padding: 3px;
+            border: 1px solid $light-grey;
+            margin-right: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// this class is added by JS to underline the heading. The rule below disables that
+.article-hover {
+  text-decoration: none !important;
+}
+
+@media (min-width: 1200px) {
+  .article-list-item-content {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .article-list-item-content {
+    display: block;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 10px 0 0;
+    width: 100%;
+  }
+}

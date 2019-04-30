@@ -1,0 +1,22 @@
+@import "copiedfrommasterforlocal/mixins";
+@import "copiedfrommasterforlocal/variables";
+
+@import "base/shame";
+@import "base/variables";
+@import "base/body";
+@import "base/font-icon";
+@import "base/fonts";
+@import "base/typography";
+
+@import "blocks/all";
+
+@import "pages/page-specific-hacks";
+
+@import "layout/footer";
+
+@import "components/buttons";
+@import "components/breadcrumbs";
+@import "components/petition";
+
+// TODO check if shedding light is gone everywhere
+// TODO check WCAG2 compliance
