@@ -38,32 +38,6 @@ add_to_timbercontext( 'donation_navbar_menu', new TimberMenu( 'donation_menu' ) 
 
 // ----------------------------------------------------------------------------------------
 
-// Function to redirect tagpage to a "normal" with the same slug page when one is available
-function ignore_tag_page_redirect() {
-	global $post;
-	if ( is_tag() ) {
-		$object = get_queried_object();
-		$slug   = $object->slug;
-		$page   = get_page_by_title( $slug );
-		$pageid = $page->ID;
-		$guid   = $page->guid;
-
-		if ( true === WP_DEBUG ) {
-			add_to_timbercontext( 'object', $object );
-			add_to_timbercontext( 'slug', $slug );
-			add_to_timbercontext( 'page', $page );
-			add_to_timbercontext( 'id', $pageid );
-			add_to_timbercontext( 'guid', $guid );
-		} elseif ( has_category( 'custom-tag-pagina', $pageid ) && null !== $guid ) {
-				wp_redirect( $guid );
-				exit();
-		}
-	}
-}
-add_action( 'template_redirect', 'ignore_tag_page_redirect' );
-
-// ----------------------------------------------------------------------------------------
-
 // Remove the ability for editors to add custom css
 function remove_custom_css_from_customizer() {
 	global $wp_customize;

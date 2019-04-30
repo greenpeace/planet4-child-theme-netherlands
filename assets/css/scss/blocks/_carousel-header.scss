@@ -1,9 +1,12 @@
 .carousel-header {
-  margin-top: $xxlrg;
+  margin-top: 3.75rem;
   border-bottom: 3px solid $light-green;
-  height: 500px;
 
   .carousel-item {
+    .carousel-preview-wrap {
+      display: none;
+    }
+
     &::before {
       filter: none;
     }
@@ -20,8 +23,6 @@
   }
 
   .main-header {
-    margin-left: 185px;
-
     h2 {
       @include margin($left: $sm, $bottom: $sm);
       background-color: $white;
@@ -48,18 +49,28 @@
       margin: 10px 0 $norm;
       max-width: fit-content;
     }
+
+    h1 {
+      font-weight: 500;
+    }
+  }
+
+  &:after {
+    margin-bottom: 0;
+  }
+
+  #carousel-wrapper-header {
+    .carousel-indicators {
+      display: none;
+    }
+
+    .carousel-inner {
+      height: 497px;
+    }
   }
 }
 
-.carousel-indicators {
-  display: none;
-}
-
-.carousel-preview-wrap {
-  display: none;
-}
-
-@media only screen and (max-width: 783px) {
+@media only screen and (max-width: 768px) {
   .carousel-caption h2 {
     line-height: 3.2rem!important;
     font-size: 1.3rem!important;
