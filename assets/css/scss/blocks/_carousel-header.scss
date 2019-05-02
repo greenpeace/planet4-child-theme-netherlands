@@ -7,11 +7,11 @@
       display: none;
     }
 
-    &::before {
+    &:before {
       filter: none;
     }
 
-    &::after {
+    &:after {
       background: none;
     }
   }

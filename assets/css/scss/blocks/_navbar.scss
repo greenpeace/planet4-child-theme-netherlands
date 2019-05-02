@@ -21,7 +21,7 @@
   min-width: 100%;
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle:after {
   transform: rotate(90deg);
   transition: 0.3s;
 }
