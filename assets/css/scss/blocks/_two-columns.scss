@@ -1,10 +1,16 @@
 // TODO make container go wider between 515px <> 688px
 .content-two-column-block {
   background: $anthraciet;
-  padding: 50px 0 40px 100px;
+  padding: 50px 15px;
 
   h2, p {
     font-weight: 300;
     color: $white;
+  }
+
+  @media (max-width: 992px) {
+    p {
+      width: 100%;
+    }
   }
 }
