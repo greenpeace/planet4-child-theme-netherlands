@@ -47,20 +47,14 @@ body {
 }
 
 div.page-template {
-  width: 100vw !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 
-  @include medium-and-up {
+  @media (max-width: $small-width) {
     width: 100vw !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
 
-  @include x-large-and-up {
-    width: 1140px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+  @media (max-width: $medium-width) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
