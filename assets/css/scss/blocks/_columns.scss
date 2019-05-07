@@ -1,0 +1,40 @@
+.columns-block {
+  background: $anthraciet;
+  padding: 50px 15px;
+
+  h2 {
+    color: $white !important;
+    font-weight: 400;
+  }
+
+  h3, p {
+    @extend h2;
+    font-weight: 300 !important;
+  }
+
+  a {
+    color: $blue;
+  }
+
+  &.block-style-no_image .column-wrap {
+    padding-bottom: 0;
+  }
+
+  &.block-style-icons {
+    background-color: $white;
+
+    h2, p {
+      color: $black !important;
+
+    }
+
+    h3 {
+      color: $black !important;
+
+      a {
+        @extend h3;
+        font-weight: 400;
+      }
+    }
+  }
+}
