@@ -8,15 +8,6 @@ function enqueue_child_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
 
-function enqueue_child_scripts() {
-
-	wp_register_script('childthemejs', get_stylesheet_directory_uri() . '/assets/js/main.js', [] ,'0.1', true);
-
-	wp_enqueue_script('childthemejs');
-}
-
-add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
-
 // ----------------------------------------------------------------------------------------
 
 // register a new wpmenu for donation dropdown
