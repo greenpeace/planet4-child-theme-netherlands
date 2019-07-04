@@ -60,6 +60,12 @@ div.page-template {
   > p {
     background-color: $white;
   }
+
+  > * {
+    &:not(section),&:not(.block) {
+      padding: 0 $sm;
+    }
+  }
 }
 
 .skewed-overlay {
