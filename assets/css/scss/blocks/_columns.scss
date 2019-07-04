@@ -51,8 +51,12 @@
     }
   }
 
-  .column-wrap h3 > a {
-    font-weight: 300 !important;
-    font-size: 1.375rem;
+  .column-wrap {
+    margin-top: 48px;
+
+    h3 > a {
+      font-weight: 300 !important;
+      font-size: 1.375rem;
+    }
   }
 }
