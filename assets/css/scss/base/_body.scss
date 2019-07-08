@@ -66,6 +66,10 @@ div.page-template {
       padding: 0 $sm;
     }
   }
+
+  section.block:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .skewed-overlay {
