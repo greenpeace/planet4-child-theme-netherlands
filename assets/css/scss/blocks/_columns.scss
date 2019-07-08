@@ -1,4 +1,9 @@
 .columns-block {
+
+  .page-section-header{
+    margin: 0;
+  }
+
   background: $anthraciet;
   padding: 15px;
   margin-top: 0;
@@ -42,13 +47,21 @@
     }
 
     h3 {
-      color: $white !important;
+      color: $black !important;
 
       a {
         font-weight: 400;
         color: $white;
       }
     }
+  }
+
+  &.block-style-tasks {
+
+    h1, h2, h3, h4, h5 {
+      color: $white !important;
+    }
+
   }
 
   .column-wrap {
