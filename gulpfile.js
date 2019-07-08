@@ -16,8 +16,8 @@ const minify = require('gulp-uglify');
 
 const path_js = 'assets/js/src/';
 const path_scss = 'assets/css/scss/';
-const path_dest_css = 'assets/css';
-const path_dest_js = 'assets/js';
+const path_dest_css = 'assets/css/';
+const path_dest_js = 'assets/js/';
 
 
 let error_handler = {
@@ -46,18 +46,18 @@ function lint_js() {
 }
 
 function fix_css() {
-  return gulp.src(path_scss)
+  return gulp.src(path_scss+'*.scss')
     .pipe(plumber(error_handler))
     .pipe(stylelint({
       reporters: [{ formatter: 'string', console: true}],
       fix: true
     }))
-    .pipe(gulp.dest('assets/css/scss/'));
+    .pipe(gulp.dest(path_scss));
 //  This outputs to 'assets/scss/**/*.scss', manual copy to right directory for now..
 }
 
 function fix_js() {
-  return gulp.src(path_js)
+  return gulp.src(path_js+'*.js')
     .pipe(plumber(error_handler))
     .pipe(eslint({fix:true}))
     .pipe(eslint.format())
@@ -67,7 +67,7 @@ function fix_js() {
 // TODO configure gulp-sass-glob to auto include all .scss files
 function sass() {
   clean_css_maps;
-  return gulp.src(path_scss)
+  return gulp.src(path_scss+'*.scss')
     .pipe(plumber(error_handler))
     .pipe(sourcemaps.init())
     .pipe(scss().on('error', scss.logError))
@@ -80,7 +80,7 @@ function sass() {
 
 function uglify() {
   gulp.parallel(clean_js, clean_js_maps);
-  return gulp.src(path_js)
+  return gulp.src(path_js+'*.js')
     .pipe(plumber(error_handler))
     .pipe(sourcemaps.init())
     .pipe(babel({
