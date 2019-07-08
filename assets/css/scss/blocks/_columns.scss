@@ -1,6 +1,5 @@
 .columns-block {
-
-  .page-section-header{
+  .page-section-header {
     margin: 0;
   }
 
@@ -42,26 +41,31 @@
   &.block-style-icons {
     background-color: $white;
 
-    h2, p {
-      color: $black !important;
-    }
+    .column-wrap {
+      h2, p {
+        color: $black !important;
+      }
 
-    h3 {
-      color: $black !important;
+      h3 {
+        color: $black !important;
 
-      a {
-        font-weight: 400;
-        color: $white;
+        a {
+          font-weight: 400;
+          color: $black;
+
+          &:hover {
+            color: $hover-green;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
 
   &.block-style-tasks {
-
     h1, h2, h3, h4, h5 {
       color: $white !important;
     }
-
   }
 
   .column-wrap {
@@ -70,6 +74,16 @@
     h3 > a {
       font-weight: 300 !important;
       font-size: 1.375rem;
+    }
+
+    .call-to-action-link {
+      font-weight: 700;
+      color: $dark-green;
+
+      &:hover {
+        color: $hover-green;
+        text-decoration: none;
+      }
     }
   }
 }
