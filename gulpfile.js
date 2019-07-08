@@ -14,8 +14,8 @@ const del = require('del');
 const babel = require('gulp-babel');
 const minify = require('gulp-uglify');
 
-const path_js = 'assets/js/src/*.js';
-const path_scss = 'assets/css/scss/*.scss';
+const path_js = 'assets/js/src/';
+const path_scss = 'assets/css/scss/';
 const path_dest_css = 'assets/css';
 const path_dest_js = 'assets/js';
 
