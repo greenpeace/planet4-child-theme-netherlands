@@ -85,3 +85,9 @@
     }
   }
 }
+
+.hero {
+  + .columns-block {
+    margin-top: 0;
+  }
+}
