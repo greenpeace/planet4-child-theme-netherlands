@@ -5,10 +5,8 @@
 
   background: $anthraciet;
   padding: 15px;
-  margin-top: 0;
 
   h2 {
-    color: $white !important;
     font-weight: 400;
   }
 
@@ -85,5 +83,11 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+.hero {
+  + .columns-block {
+    margin-top: 0;
   }
 }
