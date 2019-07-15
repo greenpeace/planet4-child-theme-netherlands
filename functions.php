@@ -44,4 +44,11 @@ function remove_custom_css_from_customizer() {
 	$wp_customize->remove_section( 'custom_css' );
 }
 
+function enqueue_child_scripts() {
+	wp_register_script('navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', [] ,'0.1', true);
+	wp_enqueue_script('navigation-bar');
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
+
 // add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );

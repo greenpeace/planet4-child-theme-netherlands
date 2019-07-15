@@ -162,3 +162,33 @@
     width: 100%;
   }
 }
+.gpnl__notifications {
+  width: 100%;
+  background-color: $hover-red;
+  margin-top: 54px;
+  color: $white;
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .javascript-not-enabled-notification, .old-ie-browser-notification {
+    p {
+      padding: $sm;
+    }
+  }
+
+  .old-ie-browser-notification {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .gpnl__notifications {
+    margin-top: 60px;
+  }
+}
