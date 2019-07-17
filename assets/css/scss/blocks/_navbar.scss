@@ -1,10 +1,8 @@
- //TODO @width 992px the menu drops down
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
   border-color: #6c0;
   color: $anthraciet;
-  // TODO should this be $slate-grey?
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -31,7 +29,7 @@
   transition: 0.3s;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .dropdown-menu {
     border: 1px solid #6c0;
   }
@@ -144,7 +142,7 @@
   color: $slate-grey;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-dropdown {
     box-sizing: border-box;
     flex-direction: column;
@@ -154,7 +152,7 @@
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    background: url("images/dropdown-gradient.svg") no-repeat #fff;
+    background: #fff;
   }
 }
 @media screen and (max-width: 576px) {
@@ -162,6 +160,7 @@
     width: 100%;
   }
 }
+
 .gpnl__notifications {
   width: 100%;
   background-color: $hover-red;
