@@ -5,7 +5,6 @@
   // TODO think of a durable solution for shifting the image
   background-position: center 50px;
   height: 350px;
-  box-shadow: none;
 
   &:before {
     transition: none;
@@ -15,14 +14,6 @@
   &:after {
     transition: none;
     display: none;
-  }
-
-  &:hover {
-    box-shadow: none;
-
-    p {
-      display: none;
-    }
   }
 
   @include large-and-up {
