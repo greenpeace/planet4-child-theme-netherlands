@@ -67,14 +67,14 @@
     left: auto;
     cursor: pointer;
     height: auto;
-    background: $blood-orange;
+    background: $orange;
     right: 20px;
     border: none;
     text-transform: none;
 
     // TODO discuss with sue if this is right
     &:hover {
-      background: $hover-red;
+      background: $orange-hover;
     }
 
     .cover-card-tag {
