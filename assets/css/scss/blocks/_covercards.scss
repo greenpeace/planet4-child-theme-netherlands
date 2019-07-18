@@ -5,6 +5,7 @@
   // TODO think of a durable solution for shifting the image
   background-position: center 50px;
   height: 350px;
+  box-shadow: none;
 
   &:before {
     transition: none;
@@ -14,6 +15,10 @@
   &:after {
     transition: none;
     display: none;
+  }
+
+  &:not(.single-cover):hover {
+    box-shadow: none;
   }
 
   @include large-and-up {
@@ -72,6 +77,14 @@
       display: none;
     }
   }
+
+  &.single-cover.action-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+    }
+  }
 }
 
 .covers-block {
@@ -85,10 +98,6 @@
     padding-left: $sm;
     padding-right: $sm;
   }
-}
-
-.cover-card:not(.single-cover):hover {
-  box-shadow: none;
 }
 
 .btn-load-more-covers-click {
