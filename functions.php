@@ -45,7 +45,7 @@ function remove_custom_css_from_customizer() {
 }
 
 function enqueue_child_scripts() {
-	wp_register_script('navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', ['jquery'] ,'0.1', true);
+	wp_register_script('navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', ['jquery'] ,'2.0.14', true);
 	wp_enqueue_script('navigation-bar');
 }
 
