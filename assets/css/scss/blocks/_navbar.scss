@@ -164,7 +164,6 @@
 .gpnl__notifications {
   width: 100%;
   background-color: $hover-red;
-  margin-top: 54px;
   color: $white;
   p {
     margin: 0;
@@ -182,8 +181,12 @@
   }
 }
 
+.javascript-not-enabled-notification, .old-ie-browser-notification {
+  margin-top: 54px;
+}
+
 @media (min-width: 768px) {
-  .gpnl__notifications {
+  .javascript-not-enabled-notification, .old-ie-browser-notification {
     margin-top: 60px;
   }
 }
