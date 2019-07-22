@@ -1,0 +1,1 @@
+{"version":3,"sources":["navigation-bar.js"],"names":["navigator","userAgent","indexOf","jQuery","show"],"mappings":"aAC2C,GAAvCA,UAAUC,UAAUC,QAAQ,SADhCC,OAAA,gCAAAC","file":"../navigation-bar.js","sourcesContent":["// If the browser is IE 10 or below\nif (navigator.userAgent.indexOf('MSIE') >= 0) {\n  jQuery('.old-ie-browser-notification').show();\n}\n"]}

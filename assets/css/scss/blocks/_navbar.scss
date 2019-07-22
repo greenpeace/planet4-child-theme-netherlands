@@ -1,10 +1,8 @@
- //TODO @width 992px the menu drops down
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover {
   border-color: #6c0;
-  color: $anthraciet;
-  // TODO should this be $slate-grey?
+  color: $anthracite;
 }
 
 .dropdown:hover > .dropdown-menu {
@@ -31,7 +29,7 @@
   transition: 0.3s;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .dropdown-menu {
     border: 1px solid #6c0;
   }
@@ -49,7 +47,7 @@
 }
 
 .dropdown-item:hover {
-  color: $anthraciet;
+  color: $anthracite;
   border-bottom: 2px solid #6c0;
 }
 
@@ -103,14 +101,14 @@
 
   // TODO is :active or .active meant here?
   &:hover, :active, :visited {
-    color: $anthraciet;
+    color: $anthracite;
   }
 }
 
 .top-navigation {
   background-color: white;
   box-shadow: 0 0 8px #000;
-  border-top: 3px solid $anthraciet;
+  border-top: 3px solid $anthracite;
 }
 
 .btn-navbar-toggle:active,
@@ -133,7 +131,7 @@
 }
 
 .top-navigation .btn-donate {
-  background-color: #f3593c;
+  background-color: $orange;
   color: white;
   box-shadow: none;
   text-transform: none;
@@ -144,7 +142,7 @@
   color: $slate-grey;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-dropdown {
     box-sizing: border-box;
     flex-direction: column;
@@ -154,11 +152,38 @@
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    background: url("images/dropdown-gradient.svg") no-repeat #fff;
+    background: #fff;
   }
 }
 @media screen and (max-width: 576px) {
   .navbar-dropdown {
     width: 100%;
+  }
+}
+
+.gpnl__notifications {
+  width: 100%;
+  background-color: $hover-red;
+  margin-top: 54px;
+  color: $white;
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .javascript-not-enabled-notification, .old-ie-browser-notification {
+    p {
+      padding: $sm;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .gpnl__notifications {
+    margin-top: 60px;
   }
 }

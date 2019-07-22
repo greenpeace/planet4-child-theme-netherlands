@@ -17,12 +17,8 @@
     display: none;
   }
 
-  &:hover {
+  &:not(.single-cover):hover {
     box-shadow: none;
-
-    p {
-      display: none;
-    }
   }
 
   @include large-and-up {
@@ -67,18 +63,26 @@
     left: auto;
     cursor: pointer;
     height: auto;
-    background: $blood-orange;
+    background: $orange;
     right: 20px;
     border: none;
     text-transform: none;
 
     // TODO discuss with sue if this is right
     &:hover {
-      background: $hover-red;
+      background: $orange-hover;
     }
 
     .cover-card-tag {
       display: none;
+    }
+  }
+
+  &.single-cover.action-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, .35);
     }
   }
 }
@@ -94,10 +98,6 @@
     padding-left: $sm;
     padding-right: $sm;
   }
-}
-
-.cover-card:not(.single-cover):hover {
-  box-shadow: none;
 }
 
 .btn-load-more-covers-click {
