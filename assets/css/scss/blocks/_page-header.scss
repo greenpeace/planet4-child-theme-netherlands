@@ -1,13 +1,9 @@
 .page-header {
   .top-page-tags {
-    display: none;
-
-    .tag-wrap {
-      .issues {
-        a {
-          &:before {
-            display: none !important;
-          }
+    .issues {
+      a {
+        &:before {
+          display: none !important;
         }
       }
     }
