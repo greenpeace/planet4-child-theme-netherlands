@@ -25,7 +25,7 @@
   }
 
   .navbar-dropdown .btn-donate {
-    margin: 1.5em;
+    margin: 1em;
     padding: 2px 11px 2px 15px;
   }
 }
@@ -71,6 +71,7 @@
 .navbar-search-toggle,
 .site-logo {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .nav-search-wrap .top-nav-search-btn {
@@ -78,11 +79,6 @@
 
   i {
     vertical-align: middle;
-    font-size: 1.05rem;
-  }
-
-  .icon {
-    top: 0;
   }
 }
 
@@ -98,7 +94,7 @@
 .top-navigation {
   background-color: white;
   box-shadow: 0 0 8px #000;
-  border-top: 3px solid $anthracite;
+  //border-top: 3px solid $anthracite;
 }
 
 .btn-navbar-toggle:active,
@@ -144,7 +140,14 @@
     overflow-x: hidden;
     background: #fff;
   }
+
+  .site-logo {
+    font-weight: 500;
+    font-size: 1rem;
+    color: $grey-1;
+  }
 }
+
 @media screen and (max-width: 576px) {
   .navbar-dropdown {
     width: 100%;
@@ -179,4 +182,8 @@
   .javascript-not-enabled-notification, .old-ie-browser-notification {
     margin-top: 60px;
   }
+}
+
+.navbar-dropdown::before {
+  width: 0;
 }
