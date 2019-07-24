@@ -5,18 +5,8 @@
   color: $anthracite;
 }
 
-.dropdown:hover > .dropdown-menu {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.dropdown .dropdown-menu {
-  transition: all 0.3s;
-  max-height: 0;
+.dropdown:hover>.dropdown-menu {
   display: block;
-  overflow: hidden;
-  opacity: 0;
-  min-width: 100%;
 }
 
 .dropdown-toggle:after {
