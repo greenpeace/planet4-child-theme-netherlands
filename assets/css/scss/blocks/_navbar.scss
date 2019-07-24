@@ -19,16 +19,42 @@
   transition: 0.3s;
 }
 
+.dropdown-menu {
+  border: 1px solid #6c0;
+}
+
 @media (max-width: 991px) {
+  .navbar-dropdown .nav-link {
+    padding: 0 15px;
+  }
+
+  .nav-link::before {
+    width: 0;
+  }
+
   .dropdown-menu {
-    border: 1px solid #6c0;
+    border: none;
   }
 
   .navbar-dropdown .btn-donate {
-    margin: 1em;
     padding: 2px 11px 2px 15px;
   }
+
+  #dropdownMenuButton, #dropdownDonateMenu {
+    width: 100%;
+    padding: 0 10px;
+
+    &.btn {
+      white-space: normal;
+    }
+
+    .dropdown-item {
+      white-space: unset;
+    }
+
+  }
 }
+
 
 @media (min-width: 768px) {
   .page-id-7408 > .page-header .container > *:not(.row) {
@@ -42,7 +68,7 @@
 }
 
 .dropdown-item {
-  border-bottom: 2px solid white;
+  //border-bottom: 2px solid white;
   text-transform: none;
   font-size: 0.85rem;
   padding: 0 0.8rem;
@@ -52,12 +78,6 @@
 
 #donate-button-wrapper {
   padding-left: 0;
-}
-
-.dropdown-menu {
-  top: 80%;
-  left: 30px;
-  padding: 0;
 }
 
 .carousel-header .carousel-control-next {
