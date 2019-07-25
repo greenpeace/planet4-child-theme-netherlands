@@ -32,10 +32,6 @@
     width: 0;
   }
 
-  .dropdown-menu {
-    border: none;
-  }
-
   .navbar-dropdown .btn-donate {
     padding: 2px 11px 2px 15px;
   }
@@ -43,6 +39,14 @@
   #dropdownMenuButton, #dropdownDonateMenu {
     width: 100%;
     padding: 0 10px;
+
+    li {
+      a {
+        padding: 8px 0 0 0;
+        margin: 14px 0;
+        line-height: 1rem;
+      }
+    }
 
     &.btn {
       white-space: normal;
@@ -52,6 +56,10 @@
       white-space: unset;
     }
 
+    .dropdown-menu {
+      border: none;
+      background-color: white;
+    }
   }
 }
 
