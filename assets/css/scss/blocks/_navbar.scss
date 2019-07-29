@@ -5,18 +5,8 @@
   color: $anthracite;
 }
 
-.dropdown:hover > .dropdown-menu {
-  max-height: 500px;
-  opacity: 1;
-}
-
-.dropdown .dropdown-menu {
-  transition: all 0.3s;
-  max-height: 0;
+.dropdown:hover>.dropdown-menu {
   display: block;
-  overflow: hidden;
-  opacity: 0;
-  min-width: 100%;
 }
 
 .dropdown-toggle:after {
@@ -29,16 +19,50 @@
   transition: 0.3s;
 }
 
+.dropdown-menu {
+  border: 1px solid #6c0;
+}
+
 @media (max-width: 991px) {
-  .dropdown-menu {
-    border: 1px solid #6c0;
+  .navbar-dropdown .nav-link {
+    padding: 0 15px;
+  }
+
+  .nav-link::before {
+    width: 0;
   }
 
   .navbar-dropdown .btn-donate {
-    margin: 1.5em;
     padding: 2px 11px 2px 15px;
   }
+
+  #dropdownMenuButton, #dropdownDonateMenu {
+    width: 100%;
+    padding: 0 10px;
+
+    li {
+      a {
+        padding: 8px 0 0 0;
+        margin: 14px 0;
+        line-height: 1rem;
+      }
+    }
+
+    &.btn {
+      white-space: normal;
+    }
+
+    .dropdown-item {
+      white-space: unset;
+    }
+
+    .dropdown-menu {
+      border: none;
+      background-color: white;
+    }
+  }
 }
+
 
 @media (min-width: 768px) {
   .page-id-7408 > .page-header .container > *:not(.row) {
@@ -52,7 +76,7 @@
 }
 
 .dropdown-item {
-  border-bottom: 2px solid white;
+  //border-bottom: 2px solid white;
   text-transform: none;
   font-size: 0.85rem;
   padding: 0 0.8rem;
@@ -62,12 +86,6 @@
 
 #donate-button-wrapper {
   padding-left: 0;
-}
-
-.dropdown-menu {
-  top: 80%;
-  left: 30px;
-  padding: 0;
 }
 
 .carousel-header .carousel-control-next {
@@ -81,6 +99,7 @@
 .navbar-search-toggle,
 .site-logo {
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .nav-search-wrap .top-nav-search-btn {
@@ -88,11 +107,6 @@
 
   i {
     vertical-align: middle;
-    font-size: 1.05rem;
-  }
-
-  .icon {
-    top: 0;
   }
 }
 
@@ -108,7 +122,7 @@
 .top-navigation {
   background-color: white;
   box-shadow: 0 0 8px #000;
-  border-top: 3px solid $anthracite;
+  //border-top: 3px solid $anthracite;
 }
 
 .btn-navbar-toggle:active,
@@ -154,7 +168,14 @@
     overflow-x: hidden;
     background: #fff;
   }
+
+  .site-logo {
+    font-weight: 500;
+    font-size: 1rem;
+    color: $grey-1;
+  }
 }
+
 @media screen and (max-width: 576px) {
   .navbar-dropdown {
     width: 100%;
@@ -189,4 +210,8 @@
   .javascript-not-enabled-notification, .old-ie-browser-notification {
     margin-top: 60px;
   }
+}
+
+.navbar-dropdown::before {
+  width: 0;
 }
