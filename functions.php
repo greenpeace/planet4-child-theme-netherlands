@@ -52,3 +52,6 @@ function enqueue_child_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
 // add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );
+
+require_once __DIR__ . '/classes/class-p4nl-loader.php';
+P4NL_Loader::get_instance();
