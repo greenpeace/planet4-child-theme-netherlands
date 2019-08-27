@@ -21,6 +21,10 @@ body {
     text-decoration: none !important;
   }
 
+  .block:first-child {
+    margin-top: 0;
+  }
+
   p {
     font-family: $roboto;
   }
