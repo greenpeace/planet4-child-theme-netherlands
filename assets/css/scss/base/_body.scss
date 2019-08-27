@@ -1,3 +1,7 @@
+html > iframe:first-child {
+  display: none;
+}
+
 html,
 body {
   overflow-x: hidden;
