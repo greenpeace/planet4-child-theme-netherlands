@@ -122,8 +122,8 @@
 .top-navigation {
   background-color: white;
   box-shadow: 0 0 8px #000;
-  position: unset;
-  //border-top: 3px solid $anthracite;
+  position: relative;
+  top: 0 !important;
 }
 
 .btn-navbar-toggle:active,
