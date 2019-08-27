@@ -21,6 +21,10 @@ body {
     text-decoration: none !important;
   }
 
+  a, a.icon-link {
+    font-family: $roboto;
+  }
+
   .block:first-child {
     margin-top: 0;
   }
