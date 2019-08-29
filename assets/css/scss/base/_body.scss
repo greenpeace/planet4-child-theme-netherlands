@@ -78,10 +78,6 @@ div.page-template {
     padding-right: 0 !important;
   }
 
-  > p {
-    background-color: $white;
-  }
-
   > * {
     &:not(section),&:not(.block) {
       padding: 0 $sm;
