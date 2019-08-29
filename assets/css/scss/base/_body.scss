@@ -1,3 +1,7 @@
+html > iframe:first-child {
+  display: none;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -15,6 +19,18 @@ body {
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
   a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
     text-decoration: none !important;
+  }
+
+  a, a.icon-link {
+    font-family: $roboto;
+  }
+
+  .block:first-child {
+    margin-top: 0;
+  }
+
+  .block {
+    display: block;
   }
 
   p {
