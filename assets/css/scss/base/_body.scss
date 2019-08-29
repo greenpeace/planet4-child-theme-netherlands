@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  font-family: $roboto;
+  font-family: $roboto !important;
   font-size: 1rem;
   color: $black;
   position: relative;
@@ -76,10 +76,6 @@ div.page-template {
   @media (max-width: $medium-width) {
     padding-left: 0 !important;
     padding-right: 0 !important;
-  }
-
-  > p {
-    background-color: $white;
   }
 
   > * {

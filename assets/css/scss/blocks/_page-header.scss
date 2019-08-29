@@ -2,6 +2,10 @@
   padding: 84px 0 80px;
 
   .top-page-tags {
+    .page-type {
+      display: none;
+    }
+
     .issues {
       a {
         &:before {
