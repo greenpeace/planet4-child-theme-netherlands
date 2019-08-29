@@ -16,7 +16,7 @@ const minify = require('gulp-uglify');
 
 const path_js = 'assets/js/src/';
 const path_scss = 'assets/css/scss/';
-const path_dest_css = 'assets/css/';
+const path_dest_css = './';
 const path_dest_js = 'assets/js/';
 
 
@@ -73,7 +73,7 @@ function sass() {
     .pipe(scss().on('error', scss.logError))
     .pipe(autoprefixer())
     .pipe(cleancss({rebase: false, level :2}))
-    .pipe(sourcemaps.write('/maps/'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(path_dest_css))
     .pipe(livereload());
 }
