@@ -60,6 +60,14 @@ body {
   &.search {
     font-family: $roboto;
   }
+
+  .page-header {
+    margin-top: 0;
+
+    .page-header-title {
+      padding-top: 16px;
+    }
+  }
 }
 
 .container > * {
