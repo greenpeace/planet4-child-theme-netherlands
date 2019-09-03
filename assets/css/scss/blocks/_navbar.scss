@@ -122,8 +122,7 @@
 .top-navigation {
   background-color: white;
   box-shadow: 0 0 8px #000;
-  position: relative;
-  top: 0 !important;
+  position: fixed;
 }
 
 .btn-navbar-toggle:active,
