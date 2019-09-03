@@ -77,6 +77,14 @@ body {
 
 div.page-template {
 
+  margin-top: 54px;
+
+  @media (min-width: 768px) {
+    .page-template {
+      margin-top: 60px;
+    }
+  }
+
   @media (max-width: $small-width) {
     width: 100vw !important;
   }
