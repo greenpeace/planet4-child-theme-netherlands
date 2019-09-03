@@ -8,6 +8,17 @@ body {
   background: $warm-light-grey;
 }
 
+// Margin on body to push all content down to where the 'position: fixed' navbar stops.
+body {
+  margin-top: 54px;
+
+  @media (min-width: 768px) {
+    body {
+      margin-top: 60px;
+    }
+  }
+}
+
 body {
   font-family: $roboto !important;
   font-size: 1rem;
@@ -61,13 +72,7 @@ body {
     font-family: $roboto;
   }
 
-  .page-header {
-    margin-top: 0;
 
-    .page-header-title {
-      padding-top: 16px;
-    }
-  }
 }
 
 .container > * {
@@ -76,15 +81,6 @@ body {
 }
 
 div.page-template {
-
-  margin-top: 54px;
-
-  @media (min-width: 768px) {
-    .page-template {
-      margin-top: 60px;
-    }
-  }
-
   @media (max-width: $small-width) {
     width: 100vw !important;
   }
@@ -95,7 +91,7 @@ div.page-template {
   }
 
   > * {
-    &:not(section),&:not(.block) {
+    &:not(section), &:not(.block) {
       padding: 0 $sm;
     }
   }
