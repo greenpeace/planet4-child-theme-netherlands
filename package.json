@@ -26,8 +26,8 @@
 		"stylelint": "^9.10.1"
 	},
 	"browserslist": [
-		"last 2 version",
-		"> 0.2%",
+		"last 1 version",
+		"> 0.2% in my stats",
 		"not dead"
 	],
 	"dependencies": {}
