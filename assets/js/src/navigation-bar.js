@@ -9,5 +9,6 @@ jQuery( document ).ready(function() {
   var donateButton = jQuery('.btn-donate');
   if ('ontouchstart' in window === true) {
     donateButton.removeAttr("href");
+    donateButton.attr('data-toggle', 'dropdown');
   }
 });
