@@ -3,6 +3,7 @@
  * Include the child css.
  */
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99 );
+add_action( 'admin_enqueue_scripts',  'enqueue_child_styles', 99 );
 function enqueue_child_styles() {
 	$plugin_version = wp_get_theme()->get( 'Version' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $plugin_version );
@@ -45,7 +46,7 @@ function remove_custom_css_from_customizer() {
 }
 
 function enqueue_child_scripts() {
-	wp_register_script('navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', ['jquery'] ,'2.0.14', true);
+	wp_register_script('navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', ['jquery'] ,'3.1.3', true);
 	wp_enqueue_script('navigation-bar');
 }
 
