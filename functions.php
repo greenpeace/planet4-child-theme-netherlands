@@ -3,7 +3,6 @@
  * Include the child css.
  */
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99 );
-add_action( 'admin_enqueue_scripts',  'enqueue_child_styles', 99 );
 function enqueue_child_styles() {
 	$plugin_version = wp_get_theme()->get( 'Version' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $plugin_version );
