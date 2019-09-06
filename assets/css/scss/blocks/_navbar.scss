@@ -202,16 +202,6 @@
   }
 }
 
-.javascript-not-enabled-notification, .old-ie-browser-notification {
-  margin-top: 54px;
-}
-
-@media (min-width: 768px) {
-  .javascript-not-enabled-notification, .old-ie-browser-notification {
-    margin-top: 60px;
-  }
-}
-
 .navbar-dropdown::before {
   width: 0;
 }
