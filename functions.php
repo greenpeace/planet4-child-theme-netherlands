@@ -19,7 +19,7 @@ function enqueue_editor_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $plugin_version );
 }
 
-add_action( 'wp_enqueue_editor', 'enqueue_editor_styles');
+//add_action( 'wp_enqueue_editor', 'enqueue_editor_styles');
 
 // ----------------------------------------------------------------------------------------
 

@@ -8,17 +8,6 @@ body {
   background: $warm-light-grey;
 }
 
-// Margin on body to push all content down to where the 'position: fixed' navbar stops.
-body {
-  margin-top: 54px;
-
-  @media (min-width: 768px) {
-    body {
-      margin-top: 60px;
-    }
-  }
-}
-
 body {
   font-family: $roboto !important;
   font-size: 1rem;
@@ -72,7 +61,17 @@ body {
     font-family: $roboto;
   }
 
+  margin-top: 54px;
 
+  @media (min-width: 768px) {
+    body {
+      margin-top: 60px;
+    }
+  }
+
+  &.wp-admin {
+    margin-top: unset;
+  }
 }
 
 .container > * {
