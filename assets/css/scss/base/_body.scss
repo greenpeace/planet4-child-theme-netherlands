@@ -68,6 +68,10 @@ body {
       margin-top: 60px;
     }
   }
+
+  &.wp-admin {
+    margin-top: unset;
+  }
 }
 
 .container > * {
