@@ -72,6 +72,11 @@ body {
   &.wp-admin {
     margin-top: unset;
   }
+
+  &:not(.wp-admin) input[type="checkbox"]{
+    opacity: 1
+  }
+
 }
 
 .container > * {
