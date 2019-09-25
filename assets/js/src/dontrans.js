@@ -45,7 +45,7 @@ $(document).ready(function() {
               dataLayer.push({
                 'event': 'trackTrans',
                 'transactionId': donation_transaction,
-                'transactionAffiliation': '',
+                'transactionAffiliation': data.frequency,
                 'transactionTotal': data.amount,
                 'transactionTax': '',
                 'transactionShipping': '',
