@@ -72,5 +72,21 @@ add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
 // add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );
 
+/**
+ * This will change the title placeholders for the different 'post' types.
+ */
+function change_title_placeholders( ){
+	$screen = get_current_screen();
+
+	if  ( 'post' == $screen->post_type ) {
+		$title = 'Posttitel toevoegen (voor de URL)';
+	} else {
+		$title = 'Paginatitel toevoegen (voor de URL)';
+	}
+	return $title;
+}
+
+add_filter( 'enter_title_here', 'change_title_placeholders' );
+
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
 P4NL_Loader::get_instance();
