@@ -54,6 +54,13 @@ $(document).ready(function() {
                 'transactionPromoCode': '',
                 'transactionProducts': gtm_products
               });
+
+              dataLayer.push({
+                'event': 'virtualPageViewDonatie',
+                'virtualPageviewStep': 'Bedankt', //Vul hier de stap in. E.g. Stap 1, Stap 2, Stap 3, Bedankt
+                'virtuelPageviewName': 'Bedankt' // Vul hier de stapnaam in. E.g. Donatie, gegevens, adres, Bedankt
+              });
+
             }
           },
           error: function() {
