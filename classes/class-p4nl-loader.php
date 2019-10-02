@@ -62,7 +62,7 @@ final class P4NL_Loader {
 			// Class names need to be prefixed with P4 and should use capitalized words separated by underscores. Any acronyms should be all upper case.
 			spl_autoload_register(
 				function ( $class_name ) {
-					if ( strpos( $class_name, 'P4NL_' ) !== false ) {
+					if ( strpos( $class_name, 'P4NL_Settings' ) !== false ) {
 						$file_name = 'class-' . str_ireplace( [ 'p4nl\\', '_' ], [ '', '-' ], strtolower( $class_name ) );
 						require_once __DIR__ . '/' . $file_name . '.php';
 					}
