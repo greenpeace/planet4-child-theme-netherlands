@@ -65,7 +65,7 @@ function remove_custom_css_from_customizer() {
 function enqueue_child_scripts() {
 	wp_register_script( 'navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', [ 'jquery' ], '3.1.3', true );
 	wp_enqueue_script( 'navigation-bar' );
-	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '3.1.6', true );
+	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '3.2.0', true );
 	wp_enqueue_script( 'donation' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
