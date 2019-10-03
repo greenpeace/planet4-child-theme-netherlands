@@ -59,6 +59,11 @@ if ( ! class_exists( 'P4NL_Settings' ) ) {
 					'type' => 'text',
 				],
 				[
+					'name' => __( 'PetitiePixel URL', 'planet4NL-master-theme-backend' ),
+					'id'   => 'petitionpixel_url',
+					'type' => 'text',
+				],
+				[
 					'name' => __( 'Kenikdeze URL', 'planet4NL-master-theme-backend' ),
 					'id'   => 'knownemail_url',
 					'type' => 'text',
