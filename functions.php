@@ -21,9 +21,10 @@ function enqueue_editor_styles() {
 
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', [], $parent_plugin_version );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $plugin_version );
+
 }
 
-// add_action( 'wp_enqueue_editor', 'enqueue_editor_styles');
+ add_action( 'admin_head', 'enqueue_editor_styles');
 
 // ----------------------------------------------------------------------------------------
 
