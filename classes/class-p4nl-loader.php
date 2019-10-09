@@ -82,6 +82,7 @@ final class P4NL_Theme_Loader {
 
 		$this->default_services = [
 			'P4NL_Theme_Settings',
+			'P4NL_Theme_MediaLibrary',
 			'P4NL_Theme_Navbar',
 		];
 
