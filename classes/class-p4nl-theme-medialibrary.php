@@ -25,6 +25,7 @@ if ( ! class_exists( 'P4NL_Theme_MediaLibrary' ) ) {
 			add_filter( 'manage_upload_columns', [$this, 'add_column_file_size'] );
 			add_action( 'manage_media_custom_column', [$this, 'column_file_size'], 10, 2 );
 			add_action( 'admin_print_styles-upload.php', [$this, 'filesize_column_filesize'] );
+			// add_filter( 'mime_types', 'webp_upload_mimes' );
 		}
 
 		public function add_column_file_size( $columns ) {
@@ -52,6 +53,15 @@ if ( ! class_exists( 'P4NL_Theme_MediaLibrary' ) ) {
                             }
                         </style>';
 		}
+
+		private function webp_upload_mimes( $existing_mimes ) {
+			// add webp to the list of mime types.
+			$existing_mimes['webp'] = 'image/webp';
+
+			// return the array back to the function with our added mime type.
+			return $existing_mimes;
+		}
+
 
 	}
 }
