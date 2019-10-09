@@ -5,7 +5,7 @@
 
 function enqueue_child_styles() {
 	$plugin_version = wp_get_theme()->get( 'Version' );
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [ 'bootstrap', 'parent-style' ], $plugin_version );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [ 'bootstrap', 'parent-style', 'plugin-blocks' ], $plugin_version );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 1 );
 
