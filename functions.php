@@ -25,7 +25,7 @@ function enqueue_editor_styles() {
 
 }
 
-add_action( 'admin_head', 'enqueue_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'enqueue_editor_styles' );
 
 // ----------------------------------------------------------------------------------------
 
