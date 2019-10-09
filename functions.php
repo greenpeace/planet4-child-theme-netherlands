@@ -2,11 +2,12 @@
 /**
  * Include the child css.
  */
-add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99 );
+add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 1 );
 function enqueue_child_styles() {
 	$plugin_version = wp_get_theme()->get( 'Version' );
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $plugin_version );
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', ['bootstrap', 'parent-style'], $plugin_version );
 }
+
 
 /*
 * Include the styles required for the editor on the backend.
@@ -14,7 +15,7 @@ function enqueue_child_styles() {
 function enqueue_editor_styles() {
 
 	// add twitter bootstrap
-	wp_enqueue_style( 'twitter-bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css', array(), '4.1.1' );
+	wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css', array(), '4.1.1' );
 
 	$plugin_version        = wp_get_theme()->get( 'Version' );
 	$parent_plugin_version = filectime( get_template_directory() . '/style.css' );
@@ -24,7 +25,7 @@ function enqueue_editor_styles() {
 
 }
 
- add_action( 'enqueue_block_editor_assets', 'enqueue_editor_styles' );
+add_action( 'admin_head', 'enqueue_editor_styles' );
 
 // ----------------------------------------------------------------------------------------
 
