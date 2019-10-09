@@ -5,11 +5,11 @@
  * @package P4NL_CT
  */
 
-if ( ! class_exists( 'P4NL_Settings' ) ) {
+if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 	/**
-	 * Class P4_Settings
+	 * Class P4NL_Theme_Settings
 	 */
-	class P4NL_Settings {
+	class P4NL_Theme_Settings {
 
 		/**
 		 * Option key, and option page slug

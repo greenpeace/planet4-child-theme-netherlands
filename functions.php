@@ -96,11 +96,10 @@ function webp_upload_mimes( $existing_mimes ) {
 	// return the array back to the function with our added mime type
 	return $existing_mimes;
 }
-//add_filter( 'mime_types', 'webp_upload_mimes' );
-
+// add_filter( 'mime_types', 'webp_upload_mimes' );
 
 /**
  * Instantiate the GPNL settings menu.
  */
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
-P4NL_Loader::get_instance();
+P4NL_Theme_Loader::get_instance();
