@@ -33,7 +33,7 @@ function change_title_placeholders() {
 	$screen = get_current_screen();
 
 	if ( 'post' === $screen->post_type ) {
-		$title = 'Posttitel toevoegen (voor de URL)';
+		$title = 'Posttitel toevoegen';
 	} else {
 		$title = 'Paginatitel toevoegen (voor de URL)';
 	}
