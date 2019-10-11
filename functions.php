@@ -43,6 +43,21 @@ function change_title_placeholders() {
 add_filter( 'enter_title_here', 'change_title_placeholders' );
 
 /**
+ * Default template for pages.
+ */
+function set_page_template() {
+
+	$post_type_object = get_post_type_object( 'page' );
+	$post_type_object->template = array(
+		array( 'planet4-gpnl-blocks/hero-image'),
+		array( 'core/paragraph' ),
+		array( 'planet4-gpnl-blocks/newsletter' ),
+	);
+}
+add_action( 'init', 'set_page_template' );
+
+
+/**
  * Instantiate the GPNL child theme.
  */
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
