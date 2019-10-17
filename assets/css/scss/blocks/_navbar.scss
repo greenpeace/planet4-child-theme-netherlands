@@ -23,6 +23,11 @@
   border: 1px solid #6c0;
 }
 
+.navbar-dropdown .btn-donate {
+  padding: 2px 11px 2px 15px;
+  margin: 0;
+}
+
 @media (max-width: 991px) {
   .navbar-dropdown .nav-link {
     padding: 0 15px;
@@ -62,7 +67,6 @@
     }
   }
 }
-
 
 @media (min-width: 768px) {
   .page-id-7408 > .page-header .container > *:not(.row) {
