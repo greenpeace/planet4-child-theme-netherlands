@@ -5,11 +5,11 @@
  * @package P4NL_CT
  */
 
-if ( ! class_exists( 'P4NL_Settings' ) ) {
+if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 	/**
-	 * Class P4_Settings
+	 * Class P4NL_Theme_Settings
 	 */
-	class P4NL_Settings {
+	class P4NL_Theme_Settings {
 
 		/**
 		 * Option key, and option page slug
@@ -56,6 +56,11 @@ if ( ! class_exists( 'P4NL_Settings' ) ) {
 				[
 					'name' => __( 'Registreren API URL', 'planet4NL-master-theme-backend' ),
 					'id'   => 'register_url',
+					'type' => 'text',
+				],
+				[
+					'name' => __( 'PetitiePixel URL', 'planet4NL-master-theme-backend' ),
+					'id'   => 'petitionpixel_url',
 					'type' => 'text',
 				],
 				[

@@ -1,0 +1,4 @@
+// Override any of the master theme css rules removing our border-radius.
+.form-control {
+  border-radius: .25rem !important;
+}
