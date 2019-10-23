@@ -60,17 +60,14 @@ body {
     font-family: $roboto;
   }
 
-  margin-top: 54px;
-
-  @media (min-width: 768px) {
-    body {
-      margin-top: 60px;
-    }
+  margin-top: 3.375rem;
+  @include medium-and-up {
+    margin-top: 3.75rem;
   }
 
   &.wp-admin {
     margin-top: unset;
-  }
+  }r
 
   &:not(.wp-admin) {
     input[type="checkbox"] {
