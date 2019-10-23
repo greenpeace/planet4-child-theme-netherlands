@@ -72,8 +72,16 @@ body {
     margin-top: unset;
   }
 
-  &:not(.wp-admin) input[type="checkbox"] {
-    opacity: 1
+  &:not(.wp-admin) {
+    input[type="checkbox"] {
+      opacity: 1;
+    }
+
+    .filter-sidebar {
+      input[type="checkbox"] {
+        opacity: 0;
+      }
+    }
   }
 
 }
