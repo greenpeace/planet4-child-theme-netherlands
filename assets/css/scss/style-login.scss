@@ -1,0 +1,15 @@
+form#loginform {
+  .galogin-or {
+    ~ p {
+      display: none;
+    }
+  }
+}
+
+#nav {
+  display: none;
+}
+
+.galogin-powered {
+  display: none;
+}
