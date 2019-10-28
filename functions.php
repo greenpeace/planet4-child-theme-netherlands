@@ -13,11 +13,11 @@ add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 1 );
 
 function enqueue_child_scripts() {
 
-	wp_register_script( 'jquery','https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', [], '3.4.1', true );
+	wp_register_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', [], '3.4.1', true );
 	wp_enqueue_script( 'jquery' );
-	wp_register_script( 'popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"', [], '1.14.7', true );
+	wp_register_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"', [], '1.14.7', true );
 	wp_enqueue_script( 'popper' );
-	wp_register_script( 'bootstrap','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js', [ 'jquery', 'popper' ], '4.1.1', true );
+	wp_register_script( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js', [ 'jquery', 'popper' ], '4.1.1', true );
 	wp_enqueue_script( 'bootstrap' );
 
 
@@ -26,10 +26,10 @@ function enqueue_child_scripts() {
 	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '3.2.0', true );
 	wp_enqueue_script( 'donation' );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts');
+add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
 function remove_custom_css_from_customizer() {
-	if ( !current_user_can( 'administrator' ) ) {
+	if ( ! current_user_can( 'administrator' ) ) {
 		global $wp_customize;
 		$wp_customize->remove_section( 'custom_css' );
 	}
@@ -53,19 +53,21 @@ function change_title_placeholders() {
 
 add_filter( 'enter_title_here', 'change_title_placeholders' );
 //
-///**
+// **
 // * Default template for pages.
 // */
-//function set_page_template() {
+// function set_page_template() {
 //
-//	$post_type_object = get_post_type_object( 'page' );
-//	$post_type_object->template = array(
-//		array( 'planet4-gpnl-blocks/hero-image'),
-//		array( 'core/paragraph' ),
-//		array( 'planet4-gpnl-blocks/newsletter' ),
-//	);
-//}
-//add_action( 'init', 'set_page_template' );
+// $post_type_object = get_post_type_object( 'page' );
+// $post_type_object->template = array(
+// array( 'planet4-gpnl-blocks/hero-image'),
+// array( 'core/paragraph' ),
+// array( 'planet4-gpnl-blocks/newsletter' ),
+// );
+// }
+// add_action( 'init', 'set_page_template' );
+
+
 
 
 /**
