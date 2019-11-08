@@ -102,9 +102,11 @@ div.page-template {
     padding-right: 0 !important;
   }
 
-  > * {
-    &:not(section), &:not(.block) {
-      padding: 0 $sm;
+  @media (max-width: $small-width) {
+    > * {
+      &:not(section), &:not(.block) {
+        padding: 0 $sm;
+      }
     }
   }
 }
