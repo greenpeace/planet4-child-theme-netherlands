@@ -6,12 +6,12 @@
       font-weight: 500;
       font-size: 1.875rem;
       padding: 0;
-      margin: 0 0 20px 20px;
+      margin: 0 0 15px 15px;
 
       @include medium-and-up {
         padding-top: 0;
         padding-left: 0;
-        margin: 0 0 20px 20px;
+        margin: 0 0 15px 15px;
       }
 
       @include x-large-and-up {
@@ -24,17 +24,10 @@
 
   .article-list-section {
     .article-list-item {
-      background: $white;
-      padding: 20px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
       font-size: 0.875rem;
-
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-
-      @include medium-and-up {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
 
       a {
         font-weight: 400;
@@ -51,6 +44,10 @@
       }
 
       .article-list-item-body {
+        flex-basis: 70%;
+        background-color: white;
+        padding: 15px;
+
         .article-list-item-tags {
           .top-page-tags .tag-item--main.page-type {
             display: none !important;

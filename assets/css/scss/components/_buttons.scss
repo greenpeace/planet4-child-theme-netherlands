@@ -36,11 +36,8 @@
 .load-more {
   margin-left: 15px !important;
 
-  @include medium-and-up {
-    margin-left: 15px !important;
+  @include small-and-up {
+    margin-left: 0px !important;
   }
 
-  @include x-large-and-up {
-    margin-left: 15px !important;
-  }
 }

@@ -67,7 +67,7 @@ body {
 
   &.wp-admin {
     margin-top: unset;
-  }r
+  }
 
   &:not(.wp-admin) {
     input[type="checkbox"] {
@@ -81,6 +81,10 @@ body {
     }
   }
 
+  // This class is added to centered images in Gutenberg.
+  .aligncenter {
+    text-align: center !important;
+  }
 }
 
 .container > * {
@@ -98,9 +102,11 @@ div.page-template {
     padding-right: 0 !important;
   }
 
-  > * {
-    &:not(section), &:not(.block) {
-      padding: 0 $sm;
+  @media (max-width: $small-width) {
+    > * {
+      &:not(section), &:not(.block) {
+        padding: 0 $sm;
+      }
     }
   }
 }
