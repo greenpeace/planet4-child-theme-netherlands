@@ -81,6 +81,10 @@ body {
     }
   }
 
+  // This class is added to centered images in Gutenberg.
+  .aligncenter {
+    text-align: center !important;
+  }
 }
 
 .container > * {
