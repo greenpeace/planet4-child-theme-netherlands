@@ -1,0 +1,1 @@
+{"version":3,"sources":["style-login.scss"],"names":[],"mappings":"AAQA,KAIA,iBAZA,6BAGM,QAAA","file":"style-login.css","sourcesContent":["form#loginform {\n  .galogin-or {\n    ~ p {\n      display: none;\n    }\n  }\n}\n\n#nav {\n  display: none;\n}\n\n.galogin-powered {\n  display: none;\n}\n"]}
