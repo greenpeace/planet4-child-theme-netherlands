@@ -58,7 +58,6 @@
   }
 
   .column-wrap {
-
     a {
       font-weight: 400;
       color: $black;
@@ -71,7 +70,6 @@
   }
 
   &.block-style-no_image, &.block-style-tasks {
-
     .can-do-steps .step-info .steps-action a.btn {
       width: 100%;
       margin-bottom: 15px;
@@ -84,6 +82,7 @@
     .tasks-wrap {
       .row {
         padding: 15px 0;
+
         .col {
           .step-number {
             margin: 24px 0 0 0;
@@ -95,15 +94,15 @@
 
           .col:first-child {
             margin-left: -15px;
+          }
         }
-      }
-
       }
     }
 
     .page-section-description {
       font-weight: 300;
       padding-bottom: 15px;
+
       p {
         margin-bottom: 0;
       }
@@ -114,22 +113,18 @@
       margin-top: 0;
       background-color: $anthracite;
 
-      h1, h2, h3, h4, h5, h6, a  {
+      h1, h2, h3, h4, h5, h6, a {
         color: $white !important;
         font-weight: 400 !important;
-    }
-      p{
+      }
+
+      p {
         color: $white !important;
         font-weight: 300;
       }
 
-
-
-
-
       &.btn {
         color: $black !important;
-        //font-weight: 400 !important;
       }
     }
   }
