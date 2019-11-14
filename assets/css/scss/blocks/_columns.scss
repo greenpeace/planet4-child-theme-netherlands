@@ -11,10 +11,34 @@
 .columns-block {
   .page-section-header, .page-section-description {
     margin: 0;
+    background-color: transparent;
+  }
+
+  header {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include small-and-up {
+      margin-left: -15px;
+    }
+  }
+
+  .page-section-description {
+    @include small-and-up {
+      margin-left: -15px;
+    }
   }
 
   a {
     font-weight: 400;
+  }
+
+  h3 {
+    a {
+      font-weight: 300 !important;
+    }
   }
 
   p {
@@ -34,7 +58,6 @@
   }
 
   .column-wrap {
-    margin-top: 48px;
 
     a {
       font-weight: 400;
@@ -48,25 +71,78 @@
   }
 
   &.block-style-no_image, &.block-style-tasks {
-    background: $anthracite;
 
-    h1, h2, h3, h4, h5, h6, p, a, .page-section-description {
-      color: $white !important;
-      font-weight: 300 !important;
+    .can-do-steps .step-info .steps-action a.btn {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .column-wrap {
+      margin-top: 0;
+    }
+
+    .tasks-wrap {
+      .row {
+        padding: 15px 0;
+        .col {
+          .step-number {
+            margin: 24px 0 0 0;
+          }
+
+          .step-info h5 {
+            margin: 0;
+          }
+
+          .col:first-child {
+            margin-left: -15px;
+        }
+      }
+
+      }
+    }
+
+    .page-section-description {
+      font-weight: 300;
+      padding-bottom: 15px;
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .row {
+      padding: 15px;
+      margin-top: 0;
+      background-color: $anthracite;
+
+      h1, h2, h3, h4, h5, h6, a  {
+        color: $white !important;
+        font-weight: 400 !important;
+    }
+      p{
+        color: $white !important;
+        font-weight: 300;
+      }
+
+
+
+
 
       &.btn {
         color: $black !important;
-        font-weight: 400 !important;
+        //font-weight: 400 !important;
       }
     }
   }
 
   &.block-style-icons, &.block-style-image {
-    background-color: $white;
+    .row {
+      background-color: $white;
+      padding-bottom: 15px;
+    }
 
-    h1, h2, h3, h4, h5, h6, p {
+    h1, h2, h3, h4, h5, h6 {
       color: $black !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
     }
 
     .call-to-action-link {
@@ -77,6 +153,10 @@
         color: $hover-green;
         text-decoration: none;
       }
+    }
+
+    .column-wrap {
+      margin-top: 48px;
     }
   }
 }
