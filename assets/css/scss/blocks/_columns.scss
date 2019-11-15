@@ -145,7 +145,6 @@
   }
 
   &.block-style-no_image {
-
     .column-wrap {
       padding-bottom: 20px;
     }
@@ -185,8 +184,16 @@
   }
 }
 
-.columns-block.block-style-tasks .can-do-steps-mobile .card .card-block p {
-  color: white;
+.columns-block.block-style-tasks .can-do-steps-mobile .card {
+  background-color: $anthracite;
+  border-radius: 0;
+  
+  .card-block{
+    p {
+      color: $white;
+    }
+  }
+
 }
 
 .columns-block.block-style-tasks .can-do-steps .step-info p.has-cta {
