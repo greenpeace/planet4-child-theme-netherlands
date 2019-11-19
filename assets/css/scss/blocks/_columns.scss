@@ -11,10 +11,34 @@
 .columns-block {
   .page-section-header, .page-section-description {
     margin: 0;
+    background-color: transparent;
+  }
+
+  header {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include small-and-up {
+      margin-left: -15px;
+    }
+  }
+
+  .page-section-description {
+    @include small-and-up {
+      margin-left: -15px;
+    }
   }
 
   a {
     font-weight: 400;
+  }
+
+  h3 {
+    a {
+      font-weight: 300 !important;
+    }
   }
 
   p {
@@ -34,8 +58,6 @@
   }
 
   .column-wrap {
-    margin-top: 48px;
-
     a {
       font-weight: 400;
       color: $black;
@@ -48,25 +70,95 @@
   }
 
   &.block-style-no_image, &.block-style-tasks {
-    background: $anthracite;
+    .can-do-steps .step-info .steps-action a.btn {
+      width: 100%;
+      margin: 64px 0 15px;
+    }
 
-    h1, h2, h3, h4, h5, h6, p, a, .page-section-description {
-      color: $white !important;
-      font-weight: 300 !important;
+    .step-info {
+      .row {
+        padding: 5px 0;
+      }
+
+    }
+
+    .column-wrap {
+      margin-top: 0;
+    }
+
+    .tasks-wrap {
+      .steps-action {
+
+        .row:first-child {
+          position: absolute;
+          padding: 0;
+        }
+
+        .row {
+          padding: 0;
+
+          .col {
+            .step-number {
+              margin: 24px 0 0 0;
+            }
+
+            .step-info h5 {
+              margin: 0;
+            }
+
+            .col:first-child {
+              margin-left: -15px;
+            }
+          }
+        }
+      }
+    }
+
+      .page-section-description {
+      font-weight: 300;
+      padding-bottom: 15px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .row {
+      padding: 20px 0 15px;
+      margin-top: 0;
+      background-color: $anthracite;
+
+      h1, h2, h3, h4, h5, h6, a {
+        color: $white !important;
+        font-weight: 400 !important;
+      }
+
+      p {
+        color: $white !important;
+        font-weight: 300;
+      }
 
       &.btn {
         color: $black !important;
-        font-weight: 400 !important;
       }
     }
   }
 
-  &.block-style-icons, &.block-style-image {
-    background-color: $white;
+  &.block-style-no_image {
+    .column-wrap {
+      padding-bottom: 20px;
+    }
+  }
 
-    h1, h2, h3, h4, h5, h6, p {
+  &.block-style-icons, &.block-style-image {
+    .row {
+      background-color: $white;
+      padding-bottom: 15px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       color: $black !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
     }
 
     .call-to-action-link {
@@ -78,5 +170,36 @@
         text-decoration: none;
       }
     }
+
+    .column-wrap {
+      margin-top: 20px;
+    }
   }
+}
+
+.block-style-tasks {
+  .row {
+    background-color: $anthracite;
+    color: $white;
+  }
+}
+
+.columns-block.block-style-tasks .can-do-steps-mobile .card {
+  background-color: $anthracite;
+  border-radius: 0;
+  
+  .card-block{
+    p {
+      color: $white;
+    }
+  }
+
+}
+
+.columns-block.block-style-tasks .can-do-steps .step-info p.has-cta {
+  margin-bottom: 0;
+}
+
+.columns-block.block-style-tasks .can-do-steps .step-number {
+  margin-bottom: 0;
 }
