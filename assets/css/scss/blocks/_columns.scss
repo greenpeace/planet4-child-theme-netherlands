@@ -79,16 +79,14 @@
       .row {
         padding: 5px 0;
       }
-
     }
 
     .column-wrap {
-      margin-top: 0;
+      margin-top: 20px;
     }
 
     .tasks-wrap {
       .steps-action {
-
         .row:first-child {
           position: absolute;
           padding: 0;
@@ -114,7 +112,7 @@
       }
     }
 
-      .page-section-description {
+    .page-section-description {
       font-weight: 300;
       padding-bottom: 15px;
 
@@ -124,7 +122,7 @@
     }
 
     .row {
-      padding: 20px 0 15px;
+      padding: 0px 0 15px;
       margin-top: 0;
       background-color: $anthracite;
 
@@ -138,8 +136,8 @@
         font-weight: 300;
       }
 
-      &.btn {
-        color: $black !important;
+      .btn-secondary {
+        color: #1a1a1a !important;
       }
     }
   }
@@ -174,6 +172,7 @@
     .column-wrap {
       margin-top: 20px;
     }
+
   }
 }
 
@@ -187,13 +186,12 @@
 .columns-block.block-style-tasks .can-do-steps-mobile .card {
   background-color: $anthracite;
   border-radius: 0;
-  
-  .card-block{
+
+  .card-block {
     p {
       color: $white;
     }
   }
-
 }
 
 .columns-block.block-style-tasks .can-do-steps .step-info p.has-cta {
@@ -201,5 +199,5 @@
 }
 
 .columns-block.block-style-tasks .can-do-steps .step-number {
-  margin-bottom: 0;
+  margin: 20px 0 0;
 }
