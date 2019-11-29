@@ -29,6 +29,12 @@
     display: none;
   }
 
+  &:hover {
+    p {
+      display: none;
+    }
+  }
+
   .cover-card-tag {
     display: none;
   }
