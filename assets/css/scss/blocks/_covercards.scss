@@ -29,6 +29,12 @@
     display: none;
   }
 
+  &:hover {
+    p {
+      display: none;
+    }
+  }
+
   .cover-card-tag {
     display: none;
   }
@@ -102,4 +108,8 @@
 
 .btn-load-more-covers-click {
   margin-left: $sm;
+
+  @include small-and-up {
+    margin-left: 0;
+  }
 }
