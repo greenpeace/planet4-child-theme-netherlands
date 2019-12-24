@@ -2,7 +2,16 @@
   .author-block {
     background: $light-grey;
 
-    @include large-and-up {
+    a {
+      color: $black;
+
+      &:hover {
+        color: $hover-green;
+        text-decoration: none;
+      }
+    }
+
+    @include x-large-and-up {
       max-width: 65%;
     }
   }
