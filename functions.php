@@ -22,7 +22,7 @@ function enqueue_child_scripts() {
 
 	wp_register_script( 'navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', [ 'jquery' ], '3.1.3', false);
 	wp_enqueue_script( 'navigation-bar' );
-	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '4.0.7', true );
+	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '4.0.8', true );
 	wp_enqueue_script( 'donation' );
 	// Pass options to frontend code
 	wp_localize_script(
