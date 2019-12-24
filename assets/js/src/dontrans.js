@@ -5,10 +5,11 @@ $(document).ready(function() {
 
   if(donation_transaction) {
     let donation_transaction = params.get("don_trans");
+    let ajaxurl = window['p4nl_vars'].ajaxurl;
 
     $.ajax({
       type:    'POST',
-      url:     window['p4_vars'].ajaxurl,
+      url:     ajaxurl,
       data:    {'action' : 'request_id'},
       success: function(response) {
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
 
         $.ajax({
           method: 'POST',
-          url: window['p4_vars'].ajaxurl,
+          url: ajaxurl,
           data: request,
           success: function(response) {
             let data = JSON.parse(response.data.data);
