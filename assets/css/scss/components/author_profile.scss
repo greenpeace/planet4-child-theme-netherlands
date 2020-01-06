@@ -1,0 +1,44 @@
+.gpnl-author {
+  .author-block {
+    background: $light-grey;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $hover-green;
+        text-decoration: none;
+      }
+    }
+
+    @include x-large-and-up {
+      max-width: 65%;
+    }
+  }
+
+  .author-block-info-title {
+    text-transform: unset;
+    margin-bottom: 15px;
+  }
+
+  .gpnl-author-block-image {
+    margin: 15px;
+  }
+
+  .author-block-info {
+    background: unset;
+
+    @include medium-and-up {
+      margin: 15px 15px 15px 0;
+      padding: unset;
+    }
+
+    .author-block-info-name {
+      margin-bottom: unset;
+    }
+
+    .author-block-info-bio {
+      -webkit-line-clamp: unset;
+    }
+  }
+}
