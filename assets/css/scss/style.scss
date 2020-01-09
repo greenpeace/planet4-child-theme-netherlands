@@ -6,7 +6,7 @@ Description: GPNL Child theme for the Planet 4 Wordpress project
 Author: Greenpeace Netherlands
 Author URI: https://github.com/greenpeace
 Template: planet4-master-theme
-Version: 4.0.8
+Version: 4.1.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: light, accessibility-ready
@@ -33,6 +33,7 @@ Text Domain: planet4-child-theme
 @import "components/breadcrumbs";
 @import "components/petition";
 @import "components/forms";
+@import "components/author_profile";
 
 // TODO check if shedding light is gone everywhere
 // TODO check WCAG2 compliance
