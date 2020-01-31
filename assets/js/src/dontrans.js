@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
   let params = new URLSearchParams(document.location.search.substring(1));
   let donation_transaction = params.has('don_trans');
 
@@ -7,7 +7,7 @@ $(document).ready(function() {
     let donation_transaction = params.get("don_trans");
     let ajaxurl = window['p4nl_vars'].ajaxurl;
 
-    $.ajax({
+    jQuery.ajax({
       type:    'POST',
       url:     ajaxurl,
       data:    {'action' : 'request_id'},
@@ -19,7 +19,7 @@ $(document).ready(function() {
           'transaction' : donation_transaction
         };
 
-        $.ajax({
+        jQuery.ajax({
           method: 'POST',
           url: ajaxurl,
           data: request,
