@@ -54,7 +54,7 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 					'type' => 'text',
 				],
 				[
-					'name' => __( 'Registreren API URL', 'planet4NL-master-theme-backend' ),
+					'name' => __( 'Registreren API URL (DEPRECATED)', 'planet4NL-master-theme-backend' ),
 					'id'   => 'register_url',
 					'type' => 'text',
 				],
