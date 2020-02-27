@@ -78,6 +78,11 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 					'id'   => 'gpnl_api_key',
 					'type' => 'text',
 				],
+				[
+					'name' => __( 'API host', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_api_host',
+					'type' => 'text',
+				],
 			];
 			$this->hooks();
 		}
