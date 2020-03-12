@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <div class="clearfix"></div>
+  <div class="skewed-overlay"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-header-title">{{ taxonomy.name }}</h1>
+      <div class="page-header-content">
+        <p>{{ taxonomy.description|e('wp_kses_post')|raw }}</p>
+      </div>
+      {{function('the_posts_pagination' )}}
+{#      {{ dump(posts.pagination )}}#}
+    </div>
+  </header>
+
+  <div class="page-template">
+    <h3>{{ __( 'Results', 'planet4-master-theme' ) }}</h3>
+
+    <div class="row">
+      <div class="col-lg-8 multiple-search-result">
+        <ul class="list-unstyled">
+          {% for post in posts %}
+            {% include 'tease-taxonomy-post.twig' %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+    {% if posts.pagination.total > 1 %}
+      {% if posts.pagination.prev %}
+        <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
+      {% endif %}
+      {% if posts.pagination.next %}
+        <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endblock %}
