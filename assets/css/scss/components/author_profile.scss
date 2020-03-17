@@ -1,9 +1,12 @@
+@import "../base/variables";
+
 .gpnl-author {
   .author-block {
-    background: $light-grey;
+    background: $grey-1;
 
     a {
-      color: $black;
+      color: $light-green;
+      font-weight: bold;
 
       &:hover {
         color: $hover-green;
@@ -34,11 +37,10 @@
     }
 
     .author-block-info-name {
-      margin-bottom: unset;
+      color: black;
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
     }
 
-    .author-block-info-bio {
-      -webkit-line-clamp: unset;
-    }
   }
 }

@@ -15,13 +15,14 @@
       {% endif %}
 
       <div class="author-block-info">
-        <h5 rel="author" class="author-block-info-name">
-          <a href="{{ post.author.link }}" itemprop="name">{{ post.author.name }}</a>
-        </h5>
+        <h4 rel="author" class="author-block-info-name" itemprop="name">
+			{{ post.author.name }}
+        </h4>
         <p class="author-block-info-bio" itemprop="description">
           {{ fn('wpautop', fn('the_author_meta', 'description', author.id))|e('wp_kses_post')|raw }}
         </p>
-      </div>
+		  <a href="{{ post.author.link }}" itemprop="name">Lees meer van {{ post.author.name }}</a>
+	  </div>
     </footer>
   </div>
 {% endif %}
