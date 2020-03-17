@@ -87,3 +87,7 @@ function set_page_template() {
  */
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
 P4NL_Theme_Loader::get_instance();
+
+// Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
+remove_filter( 'pre_user_description', 'wp_filter_kses' );
+add_filter( 'pre_user_description', 'wp_filter_post_kses' );
