@@ -17,6 +17,10 @@
     @include x-large-and-up {
       max-width: 65%;
     }
+
+    .read-more {
+      margin-top: .5rem;
+    }
   }
 
   .author-block-info-title {
