@@ -19,7 +19,25 @@
     }
 
     .read-more {
-      margin-top: .5rem;
+      display: block;
+      margin: 1rem 0;
+    }
+
+    .author-block-info-bio {
+      color: $grey-6;
+      margin: 1rem 0;
+    }
+
+    .tag-item {
+      display: inline-block;
+      color: $grey-3;
+      border: 1px solid $grey-3;
+      padding: 5px;
+      margin-right: 15px;
+
+      &:hover {
+        border: 1px solid $hover-green;
+      }
     }
   }
 
