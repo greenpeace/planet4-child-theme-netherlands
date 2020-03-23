@@ -20,9 +20,15 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
             {% if posts.pagination.total > 1 %}
+
+                {% if posts.pagination.prev%}
+                    <li class="page-item"><a class="page-link" href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">&laquo; Vorige</a></li>
+                {% endif %}
+
                 {% for page in posts.pagination.pages %}
                     <li>
                         {% if page.link %}
+
 
                             {%  if loop.first and posts.pagination.current != 2%}
                                 <li class="page-item"><a class="page-link" href="{{page.link}}" class="{{page.class}}">Begin</a></li>
@@ -35,17 +41,7 @@
                         {% else %}
 
                             {% if page.current %}
-
-                                {% if posts.pagination.prev%}
-                                    <li class="page-item"><a class="page-link" href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">&laquo; Vorige</a></li>
-                                {% endif %}
-
                                 <li class="page-item active"><a class="page-link" href="{{page.link}}" class="{{page.class}}">{{page.name}}</a></li>
-
-                                {% if posts.pagination.next%}
-                                    <li class="page-item"><a class="page-link" href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Volgende &raquo;</a></li>
-                                {% endif %}
-
                             {% else %}
                                 <li class="page-item"><a class="page-link" class="{{page.class}}">{{page.title|raw}}</a></li>
                             {% endif %}
@@ -53,6 +49,9 @@
                         {% endif %}
                     </li>
                 {% endfor %}
+                {% if posts.pagination.next%}
+                    <li class="page-item"><a class="page-link" href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Volgende &raquo;</a></li>
+                {% endif %}
             {% endif %}
             </ul>
         </nav>
