@@ -16,26 +16,47 @@
 
     <div class="page-template">
         <h3>{{ __( 'Results', 'planet4-master-theme' ) }}</h3>
-        
-        <ul class="pages">
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
             {% if posts.pagination.total > 1 %}
                 {% for page in posts.pagination.pages %}
                     <li>
                         {% if page.link %}
-                            <a href="{{page.link}}" class="{{page.class}}">{{page.link}}</a>
+
+                            {%  if loop.first and posts.pagination.current != 2%}
+                                <li class="page-item"><a class="page-link" href="{{page.link}}" class="{{page.class}}">Begin</a></li>
+                            {%  elseif loop.last and posts.pagination.current != posts.pagination.total - 1%}
+                                <li class="page-item"><a class="page-link" href="{{page.link}}" class="{{page.class}}">Eind</a></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="{{page.link}}" class="{{page.class}}">{{page.name}}</a></li>
+                            {% endif %}
+
                         {% else %}
-                            {% if posts.pagination.prev %}
-                                <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
+
+                            {% if page.current %}
+
+                                {% if posts.pagination.prev%}
+                                    <li class="page-item"><a class="page-link" href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">&laquo; Vorige</a></li>
+                                {% endif %}
+
+                                <li class="page-item active"><a class="page-link" href="{{page.link}}" class="{{page.class}}">{{page.name}}</a></li>
+
+                                {% if posts.pagination.next%}
+                                    <li class="page-item"><a class="page-link" href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Volgende &raquo;</a></li>
+                                {% endif %}
+
+                            {% else %}
+                                <li class="page-item"><a class="page-link" class="{{page.class}}">{{page.title|raw}}</a></li>
                             {% endif %}
-                            <span class="{{page.class}}">{{page.title|raw}}</span>
-                            {% if posts.pagination.next %}
-                                <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
-                            {% endif %}
+
                         {% endif %}
                     </li>
                 {% endfor %}
             {% endif %}
-        </ul>
+            </ul>
+        </nav>
+
 
         <div class="row">
             <div class="col-lg-8 multiple-search-result">
