@@ -84,8 +84,10 @@ remove_filter( 'template_redirect', 'redirect_canonical' );
  */
 function my_pagination_rewrite() {
 	add_rewrite_rule('nieuws/page/?([0-9]{1,})/?$', 'index.php?category_name=blog&paged=$matches[1]', 'top');
+function news_pagination() {
+	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
 }
-add_action('init', 'my_pagination_rewrite');
+add_action('init', 'news_pagination');
 
 /**
  * Hides login fields on everwhere except for dev environment.
