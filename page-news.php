@@ -31,5 +31,16 @@ $args = [
 	'paged'          => $paged,
 	'p4-page-type'   => ['artikelen', 'publicaties', 'pers'],
 ];
-$context['posts'] = new PostQuery( $args );
+$context['posts'] = new PostQuery( $args, 'P4_Post' );
+global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+$current_url = str_replace( "/".$paged, "", $current_url);
+$prefs = [
+	'base' => $current_url."/%_%", // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
+	'format' => '%#%', // ?page=%#% : %#% is replaced by the page number
+	'current' => $paged,
+	'end_size' => 0,
+	'mid_size' => 3,
+];
+$context['pagination'] = $context['posts']->pagination( $prefs );
 Timber::render('news.twig', $context);
