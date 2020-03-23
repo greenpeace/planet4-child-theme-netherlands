@@ -75,6 +75,9 @@ function set_page_template() {
 }
  add_action( 'init', 'set_page_template' );
 
+// Removes the canonical redirection
+remove_filter( 'template_redirect', 'redirect_canonical' );
+
 /**
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
