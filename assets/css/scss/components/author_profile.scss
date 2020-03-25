@@ -1,9 +1,12 @@
+@import "../base/variables";
+
 .gpnl-author {
   .author-block {
-    background: $light-grey;
+    background: $grey-1;
 
     a {
-      color: $black;
+      color: $light-green;
+      font-weight: bold;
 
       &:hover {
         color: $hover-green;
@@ -13,6 +16,33 @@
 
     @include x-large-and-up {
       max-width: 65%;
+    }
+
+    .read-more {
+      display: block;
+      margin: 1rem 0;
+    }
+
+    .author-block-info-bio {
+      color: $grey-6;
+      margin: 1rem 0;
+    }
+
+    .tag-item {
+      display: inline-block;
+      color: $grey-3;
+      border: 1px solid $grey-3;
+      padding: 5px;
+      margin-right: 15px;
+      margin-top: 15px;
+
+      &:hover {
+        border: 1px solid $hover-green;
+      }
+    }
+
+    .author-block-info {
+      flex: auto;
     }
   }
 
@@ -34,11 +64,9 @@
     }
 
     .author-block-info-name {
-      margin-bottom: unset;
-    }
-
-    .author-block-info-bio {
-      -webkit-line-clamp: unset;
+      color: black;
+      font-size: 1.1rem;
+      margin-bottom: 0;
     }
   }
 }
