@@ -3,7 +3,7 @@
 
 		<h2 class="author-block-info-title">Auteur</h2>
 
-		<footer class="author-block" itemtype="http://schema.org/Person">
+		<footer class="author-block" itemscope itemtype="http://schema.org/Person">
 
 			{% if ( post.author.avatar ) %}
 				<figure class="gpnl-author-block-image d-none d-md-block">
@@ -34,7 +34,7 @@
 
 
 
-				<a href="{{ post.author.link }}" itemprop="name" class="read-more">Meer van {{ post.author.name }}</a>
+				<a href="{{ post.author.link }}" class="read-more">Meer van {{ post.author.name }}</a>
 
 
 			</div>
