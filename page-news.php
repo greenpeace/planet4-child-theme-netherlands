@@ -43,4 +43,5 @@ $prefs = [
 	'mid_size' => 3,
 ];
 $context['pagination'] = $context['posts']->pagination( $prefs );
+$context["edge"] = in_array($context['pagination']->current, range(5,$context['pagination']->total -4 ));
 Timber::render('news.twig', $context);
