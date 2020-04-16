@@ -26,6 +26,7 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.225;
   margin-bottom: 30px;
+  text-transform: uppercase;
 
   @include large-and-up {
     font-size: 3.5rem;
