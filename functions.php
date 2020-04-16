@@ -82,9 +82,6 @@ remove_filter( 'template_redirect', 'redirect_canonical' );
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
  */
-//function my_pagination_rewrite() {
-//	add_rewrite_rule( 'nieuws/page/?([0-9]{1,})/?$', 'index.php?category_name=blog&paged=$matches[1]', 'top' );
-//}
 function news_pagination() {
 	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
 }
