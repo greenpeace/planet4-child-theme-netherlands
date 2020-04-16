@@ -1,0 +1,32 @@
+.gpnl-pagination {
+  .page-item {
+    .page-link {
+      color: black;
+
+      &.prev, &.next {
+        //color: $white;
+        background-color: $light-green;
+        border-color: $light-green;
+        @media (max-width: #{$medium-width}) {
+          padding: .5rem 1rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      &.ends {
+        @media (max-width: #{$medium-width}) {
+          padding: .5rem .25rem;
+        }
+      }
+    }
+
+    &.active .page-link {
+      font-weight: 700;
+      color: $white;
+      background-color: $dark-green;
+      border-color: $dark-green;
+    }
+  }
+}
