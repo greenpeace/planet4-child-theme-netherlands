@@ -37,7 +37,12 @@
   margin-left: 15px !important;
 
   @include small-and-up {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
+}
 
+.share-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }
