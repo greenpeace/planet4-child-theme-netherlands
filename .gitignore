@@ -2,3 +2,5 @@ node_modules
 vendor
 .cache
 .tmp
+
+page-debug\.php
