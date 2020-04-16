@@ -86,6 +86,7 @@ function news_pagination() {
 	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
 }
 add_action('init', 'news_pagination');
+add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 /**
  * Hides login fields on everwhere except for dev environment.
