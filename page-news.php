@@ -24,9 +24,10 @@ global $paged;
 if (!isset($paged) || !$paged){
 	$paged = 1;
 }
-$context = Timber::context();
+$context         = Timber::context();
 $post            = new P4_Post();
 $context['post'] = $post;
+
 $args = [
 	'posts_per_page' => 10,
 	'post_type'      => 'post',
@@ -38,12 +39,12 @@ global $wp;
 $current_url = home_url( add_query_arg( array(), $wp->request ) );
 $current_url = str_replace( "/".$paged, "", $current_url);
 $prefs = [
-	'base' => $current_url."/%_%", // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
-	'format' => '%#%', // ?page=%#% : %#% is replaced by the page number
-	'current' => $paged,
+	'base'     => $current_url."/%_%", // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
+	'format'   => '%#%', // ?page=%#% : %#% is replaced by the page number
+	'current'  => $paged,
 	'end_size' => 0,
 	'mid_size' => 3,
 ];
 $context['pagination'] = $context['posts']->pagination( $prefs );
-$context["edge"] = in_array($context['pagination']->current, range(5,$context['pagination']->total -4 ));
+$context["edge"]       = in_array($context['pagination']->current, range(5,$context['pagination']->total -4 ));
 Timber::render('news.twig', $context);
