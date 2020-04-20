@@ -64,26 +64,43 @@ add_filter( 'enter_title_here', 'change_title_placeholders' );
 // **
 // * Default template for pages.
 // */
- function set_page_template() {
+function set_page_template() {
 
- $post_type_object = get_post_type_object( 'page' );
- $post_type_object->template = array(
- array( 'planet4-gpnl-blocks/hero-image'),
- array( 'core/paragraph' ),
- array( 'planet4-gpnl-blocks/newsletter' ),
- );
- }
+	$post_type_object           = get_post_type_object( 'page' );
+	$post_type_object->template = array(
+		array( 'planet4-gpnl-blocks/hero-image' ),
+		array( 'core/paragraph' ),
+		array( 'planet4-gpnl-blocks/newsletter' ),
+	);
+}
  add_action( 'init', 'set_page_template' );
+
+// Removes the canonical redirection
+remove_filter( 'template_redirect', 'redirect_canonical' );
+
+/**
+ * Fix pagination on archive pages
+ * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
+ */
+function news_pagination() {
+	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
+}
+add_action('init', 'news_pagination');
+add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 /**
  * Hides login fields on everwhere except for dev environment.
  */
-//if ( 'www.planet4.test' !== getenv( 'HOSTNAME' ) ) {
-//	wp_enqueue_style( 'child-custom-login', get_stylesheet_directory_uri() . '/style-login.css', [ 'custom-login' ], '0.1' );
-//}
+// if ( 'www.planet4.test' !== getenv( 'HOSTNAME' ) ) {
+// wp_enqueue_style( 'child-custom-login', get_stylesheet_directory_uri() . '/style-login.css', [ 'custom-login' ], '0.1' );
+// }
 
 /**
  * Instantiate the GPNL child theme.
  */
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
 P4NL_Theme_Loader::get_instance();
+
+// Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
+remove_filter( 'pre_user_description', 'wp_filter_kses' );
+add_filter( 'pre_user_description', 'wp_filter_post_kses' );

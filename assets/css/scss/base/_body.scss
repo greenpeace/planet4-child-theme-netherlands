@@ -8,6 +8,15 @@ body {
   background: $warm-light-grey;
 }
 
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+  &:before {
+    content: '';
+    display: block;
+    height:      120px;
+    margin-top: -120px;
+  }
+}
+
 body {
   font-family: $roboto !important;
   font-size: 1rem;
@@ -22,10 +31,6 @@ body {
 
   a, a.icon-link {
     font-family: $roboto;
-  }
-
-  .block:first-child {
-    margin-top: 0;
   }
 
   .block {
