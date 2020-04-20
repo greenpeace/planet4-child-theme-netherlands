@@ -25,6 +25,8 @@ if (!isset($paged) || !$paged){
 	$paged = 1;
 }
 $context = Timber::context();
+$post            = new P4_Post();
+$context['post'] = $post;
 $args = [
 	'posts_per_page' => 10,
 	'post_type'      => 'post',
