@@ -3,21 +3,13 @@
 {% block content %}
 
     <div class="clearfix"></div>
-    <div class="skewed-overlay"></div>
-
-    <header class="page-header">
-{#        <div class="container">#}
-{#            <h1 class="page-header-title">{{ taxonomy.name }}</h1>#}
-{#            <div class="page-header-content">#}
-{#                <p>{{ taxonomy.description|e('wp_kses_post')|raw }}</p>#}
-{#            </div>#}
-{#        </div>#}
-    </header>
 
     <div class="page-template">
+        {% if posts.pagination.current == 1 %}
+            {{ post.content|raw }}
+        {% endif %}
 
-
-        <h3>{{ __( 'Results', 'planet4-master-theme' ) }}</h3>
+        <h3>{{ __( 'Results', 'planet4-master-theme' ) }} - {{ __( 'Page', 'planet4-master-theme' )|lower }} {{ posts.pagination.current }}</h3>
 
         <div class="row">
             <div class="col-lg-8 multiple-search-result">
