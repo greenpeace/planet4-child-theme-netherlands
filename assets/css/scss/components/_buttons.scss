@@ -41,8 +41,18 @@
   }
 }
 
+.share-buttons {
+  display: flex;
+}
+
 .share-btn {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
+  margin-left: .2em;
+
+  .icon {
+    top: unset;
+    position: unset;
+  }
 }
