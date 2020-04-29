@@ -15,7 +15,6 @@ h4,
 h5,
 h6 {
   font-family: $roboto;
-  text-transform: uppercase;
   hyphens: auto !important;
 
   @include medium-and-up {
@@ -30,6 +29,7 @@ h2 {
 }
 
 h1 {
+  text-transform: uppercase;
   font-size: 1.8rem;
   line-height: 1.225;
   margin-bottom: 30px;
