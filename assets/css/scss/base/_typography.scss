@@ -15,7 +15,13 @@ h4,
 h5,
 h6 {
   font-family: $roboto;
-}
+  hyphens: auto !important;
+
+  @include medium-and-up {
+    hyphens: none !important;
+  }
+
+  }
 
 h1,
 h2 {
@@ -23,17 +29,18 @@ h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
   line-height: 1.225;
   margin-bottom: 30px;
-  text-transform: uppercase;
+
+  @include medium-and-up {
+    font-size: 2.5rem;
+  }
 
   @include large-and-up {
-    font-size: 3.5rem;
+    font-size: 2.875rem;
     margin-bottom: 48px;
-  }
-  @include x-large-and-up {
-    font-size: 4.125rem;
   }
 }
 
