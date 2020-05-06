@@ -1,4 +1,12 @@
+@import "variables";
+
 .site-footer {
-  background: $dark-blue !important;
-  border-top: 3px solid #66cc00;
+  background: $blue-4;
+  border-top: 4px solid $light-green;
+
+  a {
+    &:hover {
+      color: $blue-3 !important;
+    }
+  }
 }
