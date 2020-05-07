@@ -1,8 +1,10 @@
+@import "variables";
+
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
-.navbar-dropdown .nav-link:hover {
-  border-color: #6c0;
-  color: $anthracite;
+.navbar-dropdown .nav-link:hover,
+.dropdown-item:hover{
+  color: $anthracite !important;
 }
 
 .dropdown:hover>.dropdown-menu {
@@ -26,6 +28,10 @@
 .navbar-dropdown .btn-donate {
   padding: 2px 11px 2px 15px;
   margin: 0;
+
+  &:hover {
+    color: white;
+  }
 }
 
 @media (max-width: 991px) {
@@ -62,7 +68,6 @@
     }
 
     .dropdown-menu {
-      border: none;
       background-color: white;
     }
   }
@@ -80,7 +85,7 @@
 }
 
 .dropdown-item {
-  //border-bottom: 2px solid white;
+  border-bottom: 2px solid transparent;
   text-transform: none;
   font-size: 0.85rem;
   padding: 0 0.8rem;
