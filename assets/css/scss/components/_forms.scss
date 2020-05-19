@@ -2,3 +2,7 @@
 .form-control {
   border-radius: .25rem !important;
 }
+
+body:not(.wp-admin):not(.search-results) input[type="checkbox"]{
+  opacity: 1;
+}
