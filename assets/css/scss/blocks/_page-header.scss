@@ -4,6 +4,8 @@
   .top-page-tags {
     .page-type {
       display: none;
+      background: none;
+      text-transform: none;
     }
 
     .issues {
@@ -12,12 +14,6 @@
           display: none !important;
         }
       }
-    }
-
-    // TODO check
-    .page-type {
-      background: none;
-      text-transform: none;
     }
 
     .tags {
