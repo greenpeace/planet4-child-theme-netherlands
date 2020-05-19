@@ -8,6 +8,10 @@
   border-bottom: 4px solid $light-green;
 }
 
+.nav-link {
+  color: $grey-5 !important;
+}
+
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
