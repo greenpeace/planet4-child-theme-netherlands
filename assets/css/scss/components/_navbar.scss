@@ -3,16 +3,18 @@
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover,
-.dropdown-item:hover{
+.dropdown-item:hover {
   color: $anthracite !important;
-  border-bottom: 4px solid $light-green !important;;
+  border-bottom: 4px solid $light-green;
 }
 
 .nav-link {
   color: $grey-5 !important;
+  font-size: 1rem;
+  text-transform: none;
 }
 
-.dropdown:hover>.dropdown-menu {
+.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
@@ -137,6 +139,10 @@
   background-color: white;
   box-shadow: 0 0 8px #000;
   position: fixed;
+
+  a {
+    color: $slate-grey;
+  }
 }
 
 .btn-navbar-toggle:active,
@@ -153,10 +159,6 @@
   background-color: white;
 }
 
-.nav-link {
-  font-size: 1rem;
-  text-transform: none;
-}
 
 .top-navigation .btn-donate {
   background-color: $blood-orange;
