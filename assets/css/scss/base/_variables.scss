@@ -1,13 +1,18 @@
-$roboto: "Roboto", sans-serif;
+$roboto:     "Roboto", sans-serif;
+// TODO Check: below are no in use
+$sans-serif: "Helvetica Neue", helvetica, arial, sans-serif;
+$serif:      "Georgia", cambria, "Times New Roman", times, serif;
+$lora:       "Lora", serif;
 
 // main colours:
 $black: #000000;
 $white: #ffffff;
-$blood-orange: #f3593c;
+$blood-orange: #f36d3a;
 $light-green: #66cc00;
 $dark-green: #003300;
 $hover-green: #1d8c61;
 $hover-red: #c02a0c;
+$hover-orange: #f3593c;
 
 // Basic website SECONDARY COLOURS:
 $anthracite:      #323842;
@@ -40,3 +45,13 @@ $small-width:        576px;
 $medium-width:       768px;
 $large-width:        992px;
 $extra-large-width:  1200px;
+
+// units:
+$xxsm: 5px;
+$xsm: 10px;
+$sm: 15px;
+$norm: 20px;
+$lrg: 25px;
+$xlrg: 30px;
+$xxlrg: 50px;
+$wide: 100px;

@@ -13,29 +13,19 @@ Tags: light, accessibility-ready
 Text Domain: planet4-child-theme
 */
 
-@import "copiedfrommasterforlocal/mixins";
-@import "copiedfrommasterforlocal/variables";
-
 @import "base/shame";
 @import "base/variables";
 @import "base/body";
 @import "base/font-icon";
 @import "base/fonts";
 @import "base/typography";
-@import "base/navbar";
+@import "base/mixins";
 
 @import "blocks/all";
 
-@import "pages/page-specific-hacks";
+@import "components/all";
 
-@import "base/footer";
-
-@import "components/buttons";
-@import "components/breadcrumbs";
-@import "components/petition";
-@import "components/forms";
-@import "components/author_profile";
-@import "components/pagination";
+@import "pages/search";
 
 // TODO check if shedding light is gone everywhere
 // TODO check WCAG2 compliance
