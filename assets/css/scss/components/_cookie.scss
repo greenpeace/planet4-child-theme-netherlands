@@ -1,0 +1,21 @@
+.cookie-block {
+  max-height: 100%;
+
+  @media (max-width: 576px) {
+    max-height: 180px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .cookie-block p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .cookie-block {
+    max-height: 140px;
+    background: whitesmoke;
+  }
+}

@@ -1,10 +1,15 @@
-@import "variables";
+@import "../base/variables";
 
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover,
 .dropdown-item:hover{
   color: $anthracite !important;
+  border-bottom: 4px solid $light-green !important;;
+}
+
+.nav-link {
+  color: $grey-5 !important;
 }
 
 .dropdown:hover>.dropdown-menu {
@@ -154,7 +159,7 @@
 }
 
 .top-navigation .btn-donate {
-  background-color: $orange;
+  background-color: $blood-orange;
   color: white;
   box-shadow: none;
   text-transform: none;
