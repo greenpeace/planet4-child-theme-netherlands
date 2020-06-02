@@ -88,13 +88,6 @@ add_action('init', 'news_pagination');
 add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 /**
- * Hides login fields on everwhere except for dev environment.
- */
-// if ( 'www.planet4.test' !== getenv( 'HOSTNAME' ) ) {
-// wp_enqueue_style( 'child-custom-login', get_stylesheet_directory_uri() . '/style-login.css', [ 'custom-login' ], '0.1' );
-// }
-
-/**
  * Instantiate the GPNL child theme.
  */
 require_once __DIR__ . '/classes/class-p4nl-loader.php';
