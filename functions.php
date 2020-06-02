@@ -70,7 +70,6 @@ function set_page_template() {
 	$post_type_object->template = array(
 		array( 'planet4-gpnl-blocks/hero-image' ),
 		array( 'core/paragraph' ),
-		array( 'planet4-gpnl-blocks/newsletter' ),
 	);
 }
  add_action( 'init', 'set_page_template' );
