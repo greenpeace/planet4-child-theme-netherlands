@@ -1,49 +1,5 @@
 @import "variables";
 
-// Temp colors
-// Fonts
-/* stylelint-disable value-keyword-case*/
-
-// @import "page-specific-hacks";
-.txtFirstName {
-  border: 0 solid #61ba07;
-  width: 315px;
-  color: #666;
-  height: 40px;
-  padding: 0 10px;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.txtEmail {
-  border: 0 solid #61ba07;
-  width: 315px;
-  color: #666;
-  height: 40px;
-  padding: 0 10px;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.btnRegister {
-  width: 150px;
-  height: 40px;
-  border: 0;
-  overflow: hidden;
-  cursor: pointer;
-  cursor: hand;
-  vertical-align: middle;
-  font-size: 15px;
-  font-weight: 700;
-  background-color: #61ba07;
-  color: white;
-}
-
-.privacylink {
-  padding-left: 10px;
-  font-size: 12px;
-}
-
 a.customize-unpreviewable,
 area.customize-unpreviewable,
 form.customize-unpreviewable,
@@ -51,11 +7,6 @@ form.customize-unpreviewable button,
 form.customize-unpreviewable input,
 form.customize-unpreviewable select {
   cursor: pointer!important;
-}
-@media (min-width: 992px) {
-  .happy-point-block-wrap .pt-20 {
-    padding-top: 60px;
-  }
 }
 
 @media (min-width: 576px) {
