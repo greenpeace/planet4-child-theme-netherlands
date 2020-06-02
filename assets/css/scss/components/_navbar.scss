@@ -159,17 +159,12 @@
   background-color: white;
 }
 
-
 .top-navigation .btn-donate {
   background-color: $blood-orange;
   color: white;
   box-shadow: none;
   text-transform: none;
   padding: 2px 11px 2px 15px;
-}
-
-.top-navigation a {
-  color: $slate-grey;
 }
 
 @media (max-width: 991px) {
@@ -202,6 +197,7 @@
   width: 100%;
   background-color: $hover-red;
   color: $white;
+
   p {
     margin: 0;
   }
