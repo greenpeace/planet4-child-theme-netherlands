@@ -1,4 +1,5 @@
 @import "../base/variables";
+@import "buttons";
 
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
@@ -32,7 +33,7 @@
   border: 1px solid #6c0;
 }
 
-.navbar-dropdown .btn-donate {
+.navbar-dropdown {
   padding: 2px 11px 2px 15px;
   margin: 0;
 
@@ -86,11 +87,6 @@
   }
 }
 
-.dropdown-item:hover {
-  color: $anthracite;
-  border-bottom: 2px solid #6c0;
-}
-
 .dropdown-item {
   border-bottom: 2px solid transparent;
   text-transform: none;
@@ -98,6 +94,11 @@
   padding: 0 0.8rem;
   line-height: 2.2rem;
   color: $slate-grey;
+
+  &:hover {
+    color: $anthracite;
+    border-bottom: 2px solid $light-green;
+  }
 }
 
 #donate-button-wrapper {
@@ -129,7 +130,6 @@
 .country-dropdown-toggle {
   font-weight: 400;
 
-  // TODO is :active or .active meant here?
   &:hover, :active, :visited {
     color: $anthracite;
   }
@@ -160,11 +160,7 @@
 }
 
 .top-navigation .btn-donate {
-  background-color: $blood-orange;
-  color: white;
-  box-shadow: none;
-  text-transform: none;
-  padding: 2px 11px 2px 15px;
+  @extend .btn-donate;
 }
 
 @media (max-width: 991px) {
