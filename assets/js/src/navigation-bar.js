@@ -21,8 +21,7 @@ function removeHref (event) {
 }
 
 function addHref (event, href) {
-  let button = $(event.target);
-  button.attr("href", href);
-  donateButton.attr('data-toggle', '');
+  let donateButton = $(event.target);
+  donateButton.attr("href", href);
 }
 
