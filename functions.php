@@ -96,3 +96,36 @@ P4NL_Theme_Loader::get_instance();
 // Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
 remove_filter( 'pre_user_description', 'wp_filter_kses' );
 add_filter( 'pre_user_description', 'wp_filter_post_kses' );
+
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+
+function extra_user_profile_fields( $user ) { ?>
+	<h3><?php _e("Socials", "blank"); ?></h3>
+
+	<table class="form-table">
+		<tr>
+			<th><label for="twitter"><?php _e("Twitter"); ?></label></th>
+			<td>
+				<input type="url" name="twitter" id="twitter" ><?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?></input><br />
+			</td>
+		</tr>
+        <tr>
+			<th><label for="linkedin"><?php _e("linkedin"); ?></label></th>
+			<td>
+				<input type="url" name="linkedin" id="linkedin" ><?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?></input><br />
+			</td>
+		</tr>
+	</table>
+<?php }
+
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+
+function save_extra_user_profile_fields( $user_id ) {
+
+	if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
+
+	update_user_meta( $user_id, 'twitter', $_POST['twitter'] );
+	update_user_meta( $user_id, 'linkedin', $_POST['linkedin'] );
+}
