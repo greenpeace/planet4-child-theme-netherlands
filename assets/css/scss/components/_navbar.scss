@@ -33,13 +33,15 @@
   border: 1px solid #6c0;
 }
 
-.navbar-dropdown {
-  padding: 2px 11px 2px 15px;
-  margin: 0;
-
-  &:hover {
-    color: white;
+@include large-and-up {
+  .navbar-dropdown {
+    padding: 2px 11px 2px 15px;
+    margin: 0;
   }
+}
+
+.navbar-dropdown:hover {
+  color: white;
 }
 
 @media (max-width: 991px) {
