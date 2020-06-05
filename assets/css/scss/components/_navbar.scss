@@ -81,12 +81,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .page-id-7408 > .page-header .container > *:not(.row) {
-    max-width: 100%;
-  }
-}
-
 .dropdown-item {
   border-bottom: 2px solid transparent;
   text-transform: none;
@@ -103,10 +97,6 @@
 
 #donate-button-wrapper {
   padding-left: 0;
-}
-
-.carousel-header .carousel-control-next {
-  display: none;
 }
 
 .btn-navbar-toggle,
