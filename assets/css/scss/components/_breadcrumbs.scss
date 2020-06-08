@@ -30,7 +30,7 @@
     }
   }
 
-  .tag-item--main {
+  .tag-item--main, .tag-item--main.page-type {
     font-weight: 400;
     color: $black;
     background: $light-green;
