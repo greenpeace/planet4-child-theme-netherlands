@@ -1,24 +1,21 @@
-.country-dropdown-toggle,
-.country-dropdown-toggle:focus,
-.country-dropdown-toggle:hover,
-.top-navigation a {
-  color: $slate-grey;
+.country-dropdown-toggle {
+  color: $grey-5;
+
+  &:hover, &:focus {
+    color: $grey-6;
+  }
 }
 
-.country-dropdown-toggle:focus,
-.country-dropdown-toggle:hover {
-  color: $anthracite;
-}
+#country-list {
+  a:hover {
+    color: #8bcc49;
+  }
 
-.country-dropdown-toggle:after:focus,
-.country-dropdown-toggle:after:hover {
-  background-image: url("images/down-arrow-green.svg")!important;
-}
+  & > ul > li > ul > li > a {
+    color: #fff;
 
-#country-list > ul > li > ul > li > a {
-  color: #fff;
-}
-
-#country-list > ul > li > ul > li > a:hover {
-  color: #8bcc49;
+    &:hover {
+      color: #8bcc49;
+    }
+  }
 }

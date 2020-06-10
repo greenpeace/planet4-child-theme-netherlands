@@ -24,6 +24,24 @@
   }
 }
 
+.btn-donate {
+  padding: 2px 11px 2px 15px;
+  margin: 0;
+  background-color: $blood-orange;
+  color: $white;
+  box-shadow: none;
+  text-transform: none;
+
+  &:hover, &:active, &:focus {
+    background-color: $hover-orange;
+    color: $white;
+  }
+
+  &.btn-donate-top::after {
+    display: none;
+  }
+}
+
 .btn-block {
   display: block;
   width: auto;

@@ -6,9 +6,22 @@ if (navigator.userAgent.indexOf('MSIE') >= 0) {
 // This will remove the direct link on the donate button on devices with touchscreens.
 // On touch or click the dropdown menu will show instead of following the link.
 jQuery( document ).ready(function() {
-  var donateButton = jQuery('.btn-donate');
-  if ('ontouchstart' in window === true) {
-    donateButton.removeAttr("href");
-    donateButton.attr('data-toggle', 'dropdown');
+  let donateButton = jQuery('#donate-button-wrapper .dropdown .btn-donate');
+  if ('ontouchstart' in window) {
+    donateButton[0].addEventListener("touchstart", removeHref);
   }
 });
+
+function removeHref (event) {
+  let donateButton = $(event.target);
+  let href = donateButton.attr("href");
+  donateButton.removeAttr("href");
+  donateButton.attr('data-toggle', 'dropdown');
+  donateButton[0].addEventListener("touchend", addHref, href);
+}
+
+function addHref (event, href) {
+  let donateButton = $(event.target);
+  donateButton.attr("href", href);
+}
+

@@ -30,11 +30,16 @@
     }
   }
 
-  .tag-item--main {
+  .tag-item--main, .tag-item--main.page-type {
     font-weight: 400;
     color: $black;
     background: $light-green;
     padding: 10px 20px;
+
+    &:hover {
+      color: $black;
+      background: $hover-green;
+    }
   }
 
   .tag-item a {
