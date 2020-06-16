@@ -34,6 +34,7 @@ class P4NL_Theme_Metabox_Register {
 	 */
 	public function register_p4nl_meta_box() {
 		$this->register_meta_box_internal_comments();
+		$this->register_meta_box_noindex();
 	}
 
 	/**
@@ -59,6 +60,32 @@ class P4NL_Theme_Metabox_Register {
 				'attributes' => [
 					'style' => 'width: 100%'
 				],
+			]
+		);
+
+	}
+
+	/**
+	 * Register internal comment box.
+	 *
+	 */
+	public function register_meta_box_noindex() {
+
+		$noindex = new_cmb2_box(
+			[
+				'id'           => $this->prefix . 'metabox_p4nl_noindex',
+				'title'        => 'SEO verbeteringen',
+				'object_types' => [ 'page', 'post', 'campaign' ],
+				'closed'       => true,  // Keep the metabox closed by default.
+			]
+		);
+
+		$noindex->add_field(
+			[
+				'name'       => __( 'Verberg pagina voor zoekmachines', 'planet4-master-theme-backend' ),
+				'desc'       => __( 'Hiermee wordt een instructie aan zoekmachines gegeven om deze pagina niet op te nemen', 'planet4-master-theme-backend' ),
+				'id'      => $this->prefix . 'noindex',
+				'type'       => 'checkbox',
 			]
 		);
 
