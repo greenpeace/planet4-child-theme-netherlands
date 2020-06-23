@@ -1,21 +1,45 @@
-.cookie-block {
-  max-height: 100%;
+@import "../base/variables";
 
-  @media (max-width: 576px) {
-    max-height: 180px;
-    height: 100%;
-  }
-}
+.cookie-notice {
+  background: $anthracite;
+  height: auto;
+  flex-direction: column;
 
-@media (min-width: 992px) {
-  .cookie-block p {
-    font-size: 13px;
-    line-height: 18px;
+  div {
+    color: white;
+    margin-bottom: 32px;
+    padding: 0;
+
+    a {
+      color: $light-green;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-}
-@media (max-width: 576px) {
-  .cookie-block {
-    max-height: 140px;
-    background: whitesmoke;
+
+  button.btn {
+    background-color: $blood-orange;
+    height: 2.4rem;
+    border-radius: .25rem;
+    color: white;
+    align-self: end;
+
+    &:hover {
+      background-color: $hover-orange;
+      outline: $hover-orange;
+      border: none;
+    }
+  }
+
+  @include medium-and-up {
+    width: 350px;
+    bottom: 16px;
+    right: 16px;
+    left: auto;
+    padding: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .35);
   }
 }
