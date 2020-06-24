@@ -96,3 +96,11 @@ P4NL_Theme_Loader::get_instance();
 // Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
 remove_filter( 'pre_user_description', 'wp_filter_kses' );
 add_filter( 'pre_user_description', 'wp_filter_post_kses' );
+
+// Set green "G" as default gravatar (profile picture)
+add_filter( 'avatar_defaults', 'wpb_new_gravatar' );
+function wpb_new_gravatar ($avatar_defaults) {
+	$default_gravatar = 'https://storage.googleapis.com/planet4-netherlands-stateless/2020/06/7c8213f7-letterg_2019_greenbackground.png';
+	$avatar_defaults[$default_gravatar] = "Default Gravatar";
+	return $avatar_defaults;
+}
