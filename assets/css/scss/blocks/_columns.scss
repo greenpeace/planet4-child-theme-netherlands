@@ -23,6 +23,10 @@
     }
   }
 
+  p {
+    font-size: 1rem;
+  }
+
   .page-section-description {
     @include small-and-up {
       margin-left: -15px;
@@ -51,7 +55,7 @@
 
   .column-wrap {
     a {
-      font-weight: 400;
+      font-weight: 700;
       color: $black;
 
       &:hover {
@@ -149,11 +153,17 @@
     h1, h2, h3, h4, h5, h6 {
       color: $black !important;
       font-weight: 400 !important;
+      font-size: 1.25rem !important;
+
+      > a {
+        font-size: 1.25rem !important;
+      }
     }
 
     .call-to-action-link {
       font-weight: 700;
       color: $dark-green;
+      font-size: 1rem;
 
       &:hover {
         color: $hover-green;
