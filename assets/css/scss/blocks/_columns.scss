@@ -51,8 +51,9 @@
 
   .column-wrap {
     a {
-      font-weight: 400;
+      font-weight: 700;
       color: $black;
+      font-size: 1.25rem;
 
       &:hover {
         color: $hover-green;
@@ -154,6 +155,7 @@
     .call-to-action-link {
       font-weight: 700;
       color: $dark-green;
+      font-size: 1rem;
 
       &:hover {
         color: $hover-green;
