@@ -83,6 +83,17 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 					'id'   => 'gpnl_api_host',
 					'type' => 'text',
 				],
+					[
+						'name'    => __( 'Disco Status?', 'planet4-master-theme-backend' ),
+						'id'      => 'gpnl_system_status',
+						'type'    => 'select',
+						'default' => 'charibase',
+						'options' => [
+								'charibase'    => 'Charibase',
+								'systemfreeze' => 'Systemfreeze',
+								'salesforce'   => 'Salesforce',
+						],
+				],
 				[
 						'name' => __( 'SystemFreeze Notif', 'planet4NL-master-theme-backend' ),
 						'id'   => 'gpnl_sf_notification',
