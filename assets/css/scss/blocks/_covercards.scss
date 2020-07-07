@@ -103,6 +103,10 @@
     padding-left: $sm;
     padding-right: $sm;
   }
+
+  .row.limit-visibility {
+    margin-top: unset;
+  }
 }
 
 .btn-load-more-covers-click {
