@@ -116,7 +116,7 @@ if ( 'charibase' != $system_status) {
 		$notification= nl2br($options['gpnl_sf_notification']);
 		$notification = '<div class="gpnl-notification"><p>'.$notification.'</p></div>';
 
-		$content = preg_replace('/(<iframe src=").*(greenpeace\.nl).*(<\/iframe>)/', "$notification", $content);
+		$content = preg_replace('/(<iframe).*(greenpeace\.nl).*>.*(<\/iframe>)/', "$notification", $content);
 		return $content;
 	}
 }
