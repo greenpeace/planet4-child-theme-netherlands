@@ -104,3 +104,19 @@ function wpb_new_gravatar ($avatar_defaults) {
 	$avatar_defaults[$default_gravatar] = "Default Gravatar";
 	return $avatar_defaults;
 }
+
+$options     = get_option( 'planet4nl_options' );
+$notification= $options['gpnl_sf_notification'];
+$system_status= $options['gpnl_system_status'];
+
+if ( 'charibase' != $system_status) {
+	add_filter('the_content', 'filter_charibaselinks');
+	function filter_charibaselinks( $content ) {
+		$options     = get_option( 'planet4nl_options' );
+		$notification= nl2br($options['gpnl_sf_notification']);
+		$notification = '<div class="gpnl-notification"><p>'.$notification.'</p></div>';
+
+		$content = preg_replace('/(<iframe src=").*(greenpeace\.nl).*(<\/iframe>)/', "$notification", $content);
+		return $content;
+	}
+}
