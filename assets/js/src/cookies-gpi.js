@@ -24,26 +24,11 @@ window.readCookie = function(name) {
 const cookie = window.readCookie('greenpeace');
 
 if (cookie === null) {
+  console.log("CDS: Domain: " + document.domain);
+  console.log("CDS: cookie: " + cookie);
   $('.cookie-notice').css('display', 'flex');
 } else {
+  console.log("CDS: Found cookie; hiding banner")
   $('#hidecookie').click();
   window.createCookie('gp_nro', nro, 365);
 }
-
-$('#hidecookie').click(function () {
-  window.createCookie('greenpeace', '2', 365);
-
-  // Remove the 'no_track' cookie, if user accept the cookies consent.
-  window.createCookie('no_track', '0', -1);
-
-  // Create cookie to store last visited nro.
-  window.createCookie('gp_nro', nro, 365);
-
-  // DataLayer push event on cookies consent.
-  window.dataLayer = window.dataLayer || [];
-  dataLayer.push({
-    'event' : 'cookiesConsent'
-  });
-
-  $('.cookie-notice').fadeOut('slow');
-});
