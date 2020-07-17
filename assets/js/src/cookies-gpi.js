@@ -22,11 +22,11 @@ window.readCookie = function(name) {
 };
 
 const cookie = window.readCookie('greenpeace');
-const nro = $('body').data('nro');
 
-if (cookie == null) {
+if (cookie === null) {
   $('.cookie-notice').css('display', 'flex');
 } else {
+  $('#hidecookie').click();
   window.createCookie('gp_nro', nro, 365);
 }
 
