@@ -24,6 +24,10 @@ function enqueue_child_scripts() {
 	wp_enqueue_script( 'navigation-bar' );
 	wp_register_script( 'donation', get_stylesheet_directory_uri() . '/assets/js/dontrans.js', [ 'jquery' ], '4.0.9', true );
 	wp_enqueue_script( 'donation' );
+	wp_register_script( 'cookies-gpi', get_stylesheet_directory_uri() . '/assets/js/cookies-gpi.js', [ 'jquery' ], '4.0.9', true );
+	wp_enqueue_script( 'cookies-gpi' );
+	wp_register_script( 'cookies-gpnl', get_stylesheet_directory_uri() . '/assets/js/cookies-gpnl.js', [ 'jquery' ], '4.0.9', true );
+	wp_enqueue_script( 'cookies-gpnl' );
 	// Pass options to frontend code
 	wp_localize_script(
 		'navigation-bar',
