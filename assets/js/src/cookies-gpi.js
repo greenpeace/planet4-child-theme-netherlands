@@ -22,6 +22,7 @@ window.readCookie = function(name) {
 };
 
 const cookie = window.readCookie('greenpeace');
+let nro = 'https://www.greenpeace.org/nl';
 
 if (cookie === null) {
   console.log("CDS: Domain: " + document.domain);
