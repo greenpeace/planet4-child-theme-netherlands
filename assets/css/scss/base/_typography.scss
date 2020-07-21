@@ -66,6 +66,14 @@ h2 {
   color: $white;
 }
 
+a {
+  color: $dark-blue;
+
+  &:hover {
+    color: darken($dark-blue, 10%)
+  }
+}
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
