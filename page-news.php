@@ -19,6 +19,7 @@
 
 use Timber\Timber;
 use Timber\PostQuery;
+use Timber\Helper;
 
 global $paged;
 if (!isset($paged) || !$paged){
@@ -47,4 +48,5 @@ $prefs = [
 ];
 $context['pagination'] = $context['posts']->pagination( $prefs );
 $context["edge"]       = in_array($context['pagination']->current, range(5,$context['pagination']->total -4 ));
+$context["wp_title"]   = Helper::get_wp_title() . ' - Pagina ' . $paged . ' van ' . $context['pagination']->total;
 Timber::render('news.twig', $context);
