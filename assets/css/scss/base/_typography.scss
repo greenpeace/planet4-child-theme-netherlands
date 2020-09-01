@@ -15,6 +15,7 @@ h4,
 h5,
 h6 {
   font-family: $roboto;
+  font-weight: $font-weight-titles;
   hyphens: auto !important;
 
   @include medium-and-up {
