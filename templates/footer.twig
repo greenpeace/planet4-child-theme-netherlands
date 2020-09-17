@@ -1,3 +1,6 @@
+{% if current_url matches 'greenpeace\.org\/nl' %}
+	set url_prefix = '/nl'
+{% endif %}
 <footer class="site-footer" id="footer">
 	<div class="container">
 		<ul class="footer-social-media list-unstyled col-md-8 col-lg-5">
@@ -65,7 +68,7 @@
 				<p class="footer-sponsors-logo col-md-3">
 					<a href="https://www.greenpeace.org/nl/de-postcode-loterij-en-greenpeace/">
 						<picture>
-							<source srcset="/nl/wp-content/themes/planet4-child-theme-netherlands/assets/img/logo-postcode-loterij.webp" type="image/webp">
+							<source srcset={{ url_prefix }}"/wp-content/themes/planet4-child-theme-netherlands/assets/img/logo-postcode-loterij.webp" type="image/webp">
 							<source srcset=https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" type="image/png">
 							<img src="https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" alt="Greenpeace & Postcode Loterij">
 						</picture>
@@ -77,8 +80,7 @@
 				<p class="footer-sponsors-logo col-md-3">
 					<a href="https://www.cbf.nl/organisatie/greenpeace">
 						<picture>
-							<source srcset="/nl/wp-content/themes/planet4-child-theme-netherlands/assets/img/CBF-ERKEND-DIAP-small.webp" type="image/webp">
-							<source srcset="/nl/wp-content/themes/planet4-child-theme-netherlands/assets/img/CBF-ERKEND-DIAP-small.webp" type="image/webp">
+							<source srcset={{ url_prefix }}"/wp-content/themes/planet4-child-theme-netherlands/assets/img/CBF-ERKEND-DIAP-small.webp" type="image/webp">
 							<source srcset="https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" type="image/png">
 							<img src="https://storage.googleapis.com/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" alt="CBF Keurmerk">
 						</picture>
