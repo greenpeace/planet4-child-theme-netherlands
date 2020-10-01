@@ -34,15 +34,6 @@ function enqueue_child_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
-function remove_custom_css_from_customizer() {
-	if ( ! current_user_can( 'administrator' ) ) {
-		global $wp_customize;
-		$wp_customize->remove_section( 'custom_css' );
-	}
-}
-// Remove the ability for editors to add custom css
- add_action( 'customize_register', 'remove_custom_css_from_customizer', 11 );
-
 /**
  * This will change the title placeholders for the different 'post' types.
  */
