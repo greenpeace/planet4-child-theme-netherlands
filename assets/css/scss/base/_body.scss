@@ -121,19 +121,3 @@ div.page-template {
   mask-image: none !important;
   -webkit-mask-image: none !important;
 }
-
-.modal {
-  position: fixed !important;
-  z-index: 1050 !important;
-
-  .btn-secondary {
-    background-color: $slate-grey;
-    color: $white;
-    margin-bottom: 0;
-
-    &:hover {
-      color: darken($white, 10%);
-      background-color: darken($slate-grey, 10%);
-    }
-  }
-}
