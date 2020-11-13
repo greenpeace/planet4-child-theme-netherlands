@@ -109,3 +109,20 @@ if ( 'charibase' != $system_status) {
 		return $content;
 	}
 }
+
+/**
+ * Modify the behavior of tag pages when a redirect is set. The master theme will just load the content of the page,
+ * we'll redirect instead.
+ *
+ * @param $redirect_page
+ */
+function p4_child_theme_tag_page_redirect ($redirect_page) {
+	$permalink = get_permalink($redirect_page);
+
+	if ($permalink !== false) {
+		wp_safe_redirect($permalink, 301);
+		exit;
+	}
+}
+
+add_action('p4_action_tag_page_redirect', 'p4_child_theme_tag_page_redirect');
