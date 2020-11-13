@@ -109,3 +109,40 @@ if ( 'charibase' != $system_status) {
 		return $content;
 	}
 }
+
+/**
+ * Modify the behavior of tag pages when a redirect is set. The master theme will just load the content of the page,
+ * we'll redirect instead.
+ *
+ * @param $redirect_page
+ */
+function p4_child_theme_tag_page_redirect ($redirect_page) {
+	$permalink = get_permalink($redirect_page);
+
+	if ($permalink !== false) {
+		wp_safe_redirect($permalink, 301);
+		exit;
+	}
+}
+
+add_action('p4_action_tag_page_redirect', 'p4_child_theme_tag_page_redirect');
+
+/**
+ * Change default sort order of pages in Wordpress admin
+ */
+function p4_child_theme_set_post_order_in_admin( $wp_query ) {
+	global $pagenow;
+
+	if ( is_admin() && 'edit.php' == $pagenow && array_key_exists('post_type', $_GET) && $_GET['post_type'] == 'page' && ! isset( $_GET['orderby'] ) ) {
+		$wp_query->set( 'orderby', 'post_modified' );
+		$wp_query->set( 'order', 'DESC' );
+	}
+}
+add_filter( 'pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5 );
+
+function datawrapper_oembed_provider() {
+
+	wp_oembed_add_provider( 'https://datawrapper.dwcdn.net/*', 'https://api.datawrapper.de/v3/oembed', false );
+
+}
+add_action( 'init', 'datawrapper_oembed_provider' );
