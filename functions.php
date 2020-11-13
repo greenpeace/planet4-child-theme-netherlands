@@ -139,3 +139,10 @@ function p4_child_theme_set_post_order_in_admin( $wp_query ) {
 	}
 }
 add_filter( 'pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5 );
+
+function datawrapper_oembed_provider() {
+
+	wp_oembed_add_provider( 'https://datawrapper.dwcdn.net/*', 'https://api.datawrapper.de/v3/oembed', false );
+
+}
+add_action( 'init', 'datawrapper_oembed_provider' );
