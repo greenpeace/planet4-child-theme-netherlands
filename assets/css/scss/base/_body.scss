@@ -73,11 +73,6 @@ body {
   }
 }
 
-.container > * {
-  position: relative;
-  z-index: 2;
-}
-
 div.page-template {
   @media (max-width: $small-width) {
     width: 100vw !important;
@@ -100,4 +95,13 @@ div.page-template {
 .skewed-overlay {
   mask-image: none !important;
   -webkit-mask-image: none !important;
+}
+
+// Unset Z-index that is set in the parent theme.
+div.page-template > * {
+  z-index: unset;
+}
+
+.skewed-overlay {
+  z-index: 0;
 }
