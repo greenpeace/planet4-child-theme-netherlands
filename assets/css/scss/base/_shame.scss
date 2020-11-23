@@ -8,17 +8,3 @@ form.customize-unpreviewable input,
 form.customize-unpreviewable select {
   cursor: pointer!important;
 }
-
-@media (min-width: 576px) {
-  .page-parent .skewed-overlay:before,
-  .tag .skewed-overlay:before {
-    background: transparent;
-    background: linear-gradient(245deg, transparent 11%, rgba(255, 255, 255, .2) 17%, rgba(255, 255, 255, .9) 28%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, .85) 58%, rgba(255, 255, 255, .3) 72%, rgba(255, 255, 255, .9) 90%, rgba(255, 255, 255, .9) 90%, rgba(255, 255, 255, .95) 90%);
-  }
-}
-@media (min-width: 576px) {
-  .page-child .skewed-overlay:before {
-    background: transparent;
-    background: linear-gradient(245deg, transparent 25%, rgba(255, 255, 255, .2) 28%, rgba(255, 255, 255, .9) 44%, rgba(255, 255, 255, .7) 66%, rgba(255, 255, 255, .85) 45%, rgba(255, 255, 255, .3) 64%, rgba(255, 255, 255, .5) 65%, rgba(255, 255, 255, .9) 95%, rgba(255, 255, 255, .9) 100%);
-  }
-}
