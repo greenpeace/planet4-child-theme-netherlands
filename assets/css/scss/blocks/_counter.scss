@@ -38,3 +38,58 @@
     }
   }
 }
+
+.wp-block-planet4-gpnl-blocks-columns {
+  &.bg-anthracite, &.bg-dark-blue{
+    .counter-block{
+      &.counter-style-bar, &.counter-style-arc, &.counter-style-plain {
+        .content-counter {
+          .progress-container {
+            background-color: $warm-light-grey;
+            margin-bottom: unset;
+
+            .progress-bar {
+              background-color: $hover-green;
+            }
+          }
+
+          .progress-arc {
+            .background {
+              stroke: $warm-light-grey;
+            }
+
+            .foreground {
+              stroke: $hover-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.bg-sea-blue{
+    .counter-block{
+      &.counter-style-bar, &.counter-style-arc, &.counter-style-plain {
+        .content-counter {
+          .progress-container {
+            background-color: $warm-light-grey;
+            margin-bottom: unset;
+
+            .progress-bar {
+              background-color: $dark-green;
+            }
+          }
+
+          .progress-arc {
+            .background {
+              stroke: $warm-light-grey;
+            }
+
+            .foreground {
+              stroke: $dark-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
