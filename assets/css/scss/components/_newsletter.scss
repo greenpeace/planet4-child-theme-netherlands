@@ -8,6 +8,7 @@
   height: unset;
   margin: 32px calc(50% - 50vw) 0;
   background-color: $sea-blue;
+  z-index: 2;
 
   .gpnl-newsletter__text {
     margin: 16px 0;
