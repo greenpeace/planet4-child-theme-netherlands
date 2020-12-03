@@ -5,6 +5,9 @@
 
     .container .without-search-result {
       margin-top: 32px;
+      .result-statement+i{
+        display: none;
+      }
     }
   }
 }
