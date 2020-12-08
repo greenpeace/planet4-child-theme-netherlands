@@ -92,8 +92,8 @@ div.page-template {
   }
 }
 
-// Unset Z-index that is set in the parent theme.
-//div.page-template > * {
-//  z-index: unset;
-//}
+ //Unset Z-index that is set in the parent theme.
+div.page-template > * {
+  z-index: unset;
+}
 
