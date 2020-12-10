@@ -68,16 +68,19 @@
 
 .share-buttons {
   display: flex;
-}
 
-.share-btn {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  margin-left: .2em;
+  .share-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: .2em;
+    border-radius: 0;
+    box-shadow: none;
 
-  .icon {
-    top: unset;
-    position: unset;
+    .icon {
+      top: unset;
+      position: unset;
+    }
   }
 }
+
