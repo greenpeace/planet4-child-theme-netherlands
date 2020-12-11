@@ -16,6 +16,13 @@
   }
 }
 
+.btn-primary {
+  background-color: $blood-orange;
+  color: $white;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .btn-secondary {
   background-color: $light-green;
   color: $black;
