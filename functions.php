@@ -4,27 +4,19 @@
  */
 
 function enqueue_child_styles() {
-	$plugin_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'bootstrap-gpnl', get_stylesheet_directory_uri() . '/bootstrap-gpnl-build.css', array(), '4.1.1' );
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [ 'bootstrap', 'parent-style', 'plugin-blocks' ], $plugin_version );
+	$bootstrap_style_file_path = glob( get_stylesheet_directory() . '/public/build/bootstrap.min.*.css' );
+	$app_style_file_path = glob( get_stylesheet_directory() . '/public/build/app.min.*.css' );
+
+	wp_enqueue_style( 'bootstrap-gpnl-build', get_stylesheet_directory_uri(). '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
+	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri(). '/public/build/' . basename($app_style_file_path[0]), [ 'bootstrap', 'parent-style', 'plugin-blocks' ], null);
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 1 );
 
 function enqueue_child_scripts() {
 
-
-	wp_register_script( 'navigation-bar', get_stylesheet_directory_uri() . '/assets/js/navigation-bar.js', [ 'jquery' ], '3.1.3', false);
-	wp_enqueue_script( 'navigation-bar' );
-	// Pass options to frontend code
-	wp_localize_script(
-		'navigation-bar',
-		'p4nl_vars',
-		[
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-		]
-	);
-
+	$app_script_file_path = glob( get_stylesheet_directory() . '/public/build/app.min.*.js' );
+	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), [ 'jquery' ], null, false);
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
