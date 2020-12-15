@@ -5,33 +5,33 @@
 	"author": "Greenpeace Netherlands",
 	"license": "MIT",
 	"scripts": {
+		"start": "wp-scripts start",
+		"watch": "wp-scripts start",
+		"build": "wp-scripts build"
 		"postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
 		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.10",
+		"@wordpress/scripts": "^12.0.0",
+		"babel-loader": "^8.1.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^3.6.0",
 		"del": "^3.0.0",
 		"eslint": "^5.12.0",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^6.1.0",
-		"gulp-babel": "^8.0.0",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-eslint": "5.0.0",
-		"gulp-livereload": "^4.0.2",
-		"gulp-notify": "^3.2.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-sass": "^4.1.0",
-		"gulp-sourcemaps": "^2.6.4",
-		"gulp-stylelint": "^8.0.0",
-		"gulp-uglify": "^3.0.1",
-		"stylelint": "^13.8.0"
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.14.1",
+		"postcss-loader": "^3.0.0",
+		"sass": "^1.26.10",
+		"sass-loader": "^9.0.0",
+		"style-loader": "^1.2.1",
+		"stylelint": "^13.8.0",
+		"webpack": "^5.10.2",
+		"webpack-cli": "^4.2.0",
+		"webpack-dev-server": "^3.11.0"
 	},
-	"browserslist": [
-		"last 1 version",
-		"> 0.2% in my stats",
-		"not dead"
-	],
 	"dependencies": {
 		"bootstrap": "^4.5.3",
 		"jquery": "^3.5.1",
