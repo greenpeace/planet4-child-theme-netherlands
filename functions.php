@@ -1,32 +1,43 @@
 <?php
-/**
- * Include the child css.
- */
 
-function enqueue_child_styles() {
-
-	$bootstrap_style_file_path = glob( get_stylesheet_directory() . '/public/build/bootstrap.min.*.css' );
-	$app_style_file_path = glob( get_stylesheet_directory() . '/public/build/app.min.*.css' );
-
-	wp_enqueue_style( 'bootstrap-gpnl-build', get_stylesheet_directory_uri(). '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri(). '/public/build/' . basename($app_style_file_path[0]), [ 'bootstrap', 'parent-style', 'plugin-blocks' ], null);
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 1 );
-
-function enqueue_child_scripts() {
-
-	$app_script_file_path = glob( get_stylesheet_directory() . '/public/build/app.min.*.js' );
-	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), [ 'jquery' ], null, false);
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_child_scripts' );
 
 /**
- * This will change the title placeholders for the different 'post' types.
+ * Include styles (css).
  */
-function change_title_placeholders() {
+function enqueue_child_styles()
+{
+
+	$bootstrap_style_file_path = glob(get_stylesheet_directory() . '/public/build/bootstrap.min.*.css');
+	$app_style_file_path = glob(get_stylesheet_directory() . '/public/build/app.min.*.css');
+
+	wp_enqueue_style('bootstrap-gpnl-build', get_stylesheet_directory_uri() . '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
+	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/public/build/' . basename($app_style_file_path[0]), ['bootstrap', 'parent-style', 'plugin-blocks'], null);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_child_styles', 1);
+
+
+/**
+ * Include scripts (js).
+ */
+function enqueue_child_scripts()
+{
+
+	$app_script_file_path = glob(get_stylesheet_directory() . '/public/build/app.min.*.js');
+	wp_enqueue_script('app', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), ['jquery'], null, false);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_child_scripts');
+
+
+/**
+ * Change the title placeholders for the posts and pages.
+ */
+function change_title_placeholders()
+{
 	$screen = get_current_screen();
 
-	if ( 'post' === $screen->post_type ) {
+	if ('post' === $screen->post_type) {
 		$title = 'Posttitel toevoegen';
 	} else {
 		$title = 'Paginatitel toevoegen (voor de URL)';
@@ -34,33 +45,41 @@ function change_title_placeholders() {
 	return $title;
 }
 
-add_filter( 'enter_title_here', 'change_title_placeholders' );
-//
-// **
-// * Default template for pages.
-// */
-function set_page_template() {
+add_filter('enter_title_here', 'change_title_placeholders');
 
-	$post_type_object           = get_post_type_object( 'page' );
-	$post_type_object->template = array(
-		array( 'planet4-gpnl-blocks/hero-image' ),
-		array( 'core/paragraph' ),
-	);
+
+/**
+ * Default template for page (if GPNL plugin is activated).
+ */
+function set_page_template()
+{
+	if (is_plugin_active('planet4-gpnl-plugin-gutenberg-blocks/planet4-gutenberg-blocks.php')) {
+		$post_type_object = get_post_type_object('page');
+		$post_type_object->template = array(
+			array('planet4-gpnl-blocks/hero-image'),
+			array('core/paragraph'),
+		);
+	}
 }
- add_action( 'init', 'set_page_template' );
+
+add_action('init', 'set_page_template');
 
 // Removes the canonical redirection
-remove_filter( 'template_redirect', 'redirect_canonical' );
+remove_filter('template_redirect', 'redirect_canonical');
+
 
 /**
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
  */
-function news_pagination() {
+function news_pagination()
+{
 	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
 }
+
 add_action('init', 'news_pagination');
-add_action( 'after_switch_theme', 'flush_rewrite_rules' );
+add_action('after_switch_theme', 'flush_rewrite_rules');
+
 
 /**
  * Instantiate the GPNL child theme.
@@ -69,32 +88,35 @@ require_once __DIR__ . '/classes/class-p4nl-loader.php';
 P4NL_Theme_Loader::get_instance();
 
 // Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
-remove_filter( 'pre_user_description', 'wp_filter_kses' );
-add_filter( 'pre_user_description', 'wp_filter_post_kses' );
+remove_filter('pre_user_description', 'wp_filter_kses');
+add_filter('pre_user_description', 'wp_filter_post_kses');
 
 // Set green "G" as default gravatar (profile picture)
-add_filter( 'avatar_defaults', 'wpb_new_gravatar' );
-function wpb_new_gravatar ($avatar_defaults) {
+add_filter('avatar_defaults', 'wpb_new_gravatar');
+function wpb_new_gravatar($avatar_defaults)
+{
 	$default_gravatar = 'https://storage.googleapis.com/planet4-netherlands-stateless/2020/06/7c8213f7-letterg_2019_greenbackground.png';
 	$avatar_defaults[$default_gravatar] = "Default Gravatar";
 	return $avatar_defaults;
 }
 
-$options     = get_option( 'planet4nl_options' );
-$notification= $options['gpnl_sf_notification'];
-$system_status= $options['gpnl_system_status'];
+$options = get_option('planet4nl_options');
+$notification = $options['gpnl_sf_notification'];
+$system_status = $options['gpnl_system_status'];
 
-if ( 'charibase' != $system_status) {
+if ('charibase' != $system_status) {
 	add_filter('the_content', 'filter_charibaselinks');
-	function filter_charibaselinks( $content ) {
-		$options     = get_option( 'planet4nl_options' );
-		$notification= nl2br($options['gpnl_sf_notification']);
-		$notification = '<div class="gpnl-notification"><p>'.$notification.'</p></div>';
+	function filter_charibaselinks($content)
+	{
+		$options = get_option('planet4nl_options');
+		$notification = nl2br($options['gpnl_sf_notification']);
+		$notification = '<div class="gpnl-notification"><p>' . $notification . '</p></div>';
 
 		$content = preg_replace('/(<iframe).*(greenpeace\.nl).*>.*(<\/iframe>)/', "$notification", $content);
 		return $content;
 	}
 }
+
 
 /**
  * Modify the behavior of tag pages when a redirect is set. The master theme will just load the content of the page,
@@ -102,7 +124,8 @@ if ( 'charibase' != $system_status) {
  *
  * @param $redirect_page
  */
-function p4_child_theme_tag_page_redirect ($redirect_page) {
+function p4_child_theme_tag_page_redirect($redirect_page)
+{
 	$permalink = get_permalink($redirect_page);
 
 	if ($permalink !== false) {
@@ -113,22 +136,27 @@ function p4_child_theme_tag_page_redirect ($redirect_page) {
 
 add_action('p4_action_tag_page_redirect', 'p4_child_theme_tag_page_redirect');
 
+
 /**
  * Change default sort order of pages in Wordpress admin
  */
-function p4_child_theme_set_post_order_in_admin( $wp_query ) {
+function p4_child_theme_set_post_order_in_admin($wp_query)
+{
 	global $pagenow;
 
-	if ( is_admin() && 'edit.php' == $pagenow && array_key_exists('post_type', $_GET) && $_GET['post_type'] == 'page' && ! isset( $_GET['orderby'] ) ) {
-		$wp_query->set( 'orderby', 'post_modified' );
-		$wp_query->set( 'order', 'DESC' );
+	if (is_admin() && 'edit.php' == $pagenow && array_key_exists('post_type', $_GET) && $_GET['post_type'] == 'page' && !isset($_GET['orderby'])) {
+		$wp_query->set('orderby', 'post_modified');
+		$wp_query->set('order', 'DESC');
 	}
 }
-add_filter( 'pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5 );
 
-function datawrapper_oembed_provider() {
+add_filter('pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5);
 
-	wp_oembed_add_provider( 'https://datawrapper.dwcdn.net/*', 'https://api.datawrapper.de/v3/oembed', false );
+function datawrapper_oembed_provider()
+{
+
+	wp_oembed_add_provider('https://datawrapper.dwcdn.net/*', 'https://api.datawrapper.de/v3/oembed', false);
 
 }
-add_action( 'init', 'datawrapper_oembed_provider' );
+
+add_action('init', 'datawrapper_oembed_provider');
