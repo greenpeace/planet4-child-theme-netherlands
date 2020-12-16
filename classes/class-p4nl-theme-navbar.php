@@ -40,8 +40,7 @@ if ( ! class_exists( 'P4NL_Theme_Navbar' ) ) {
 					global $timber_context;
 					$timber_context = is_array( $timber_context ) ? $timber_context : array();
 					$context        = is_array( $context ) ? $context : array();
-					$context        = array_merge( $timber_context, $context );
-					return $context;
+					return array_merge( $timber_context, $context );
 				}
 			);
 
