@@ -25,7 +25,6 @@ if ( ! class_exists( 'P4NL_Theme_MediaLibrary' ) ) {
 			add_filter( 'manage_upload_columns', [$this, 'add_column_file_size'] );
 			add_action( 'manage_media_custom_column', [$this, 'column_file_size'], 10, 2 );
 			add_action( 'admin_print_styles-upload.php', [$this, 'filesize_column_filesize'] );
-			// add_filter( 'mime_types', 'webp_upload_mimes' );
 		}
 
 		public function add_column_file_size( $columns ) {
