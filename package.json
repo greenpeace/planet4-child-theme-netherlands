@@ -5,9 +5,6 @@
 	"author": "Greenpeace Netherlands",
 	"license": "MIT",
 	"scripts": {
-		"start": "wp-scripts start",
-		"watch": "wp-scripts start",
-		"build": "wp-scripts build"
 		"postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
 		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
 	},
@@ -30,7 +27,7 @@
 		"style-loader": "^2.0.0",
 		"stylelint": "^13.8.0",
 		"webpack": "^5.10.2",
-		"webpack-cli": "^4.2.0",
+		"webpack-cli": "^3.3.12",
 		"webpack-dev-server": "^3.11.0"
 	},
 	"dependencies": {
