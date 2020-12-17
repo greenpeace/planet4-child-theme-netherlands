@@ -9,8 +9,8 @@ function enqueue_child_styles()
 
 	$bootstrap_style_file_path = glob(get_stylesheet_directory() . '/public/build/bootstrap.*.css');
 	$app_style_file_path = glob(get_stylesheet_directory() . '/public/build/app.*.css');
-
-	wp_enqueue_style('bootstrap-gpnl-build', get_stylesheet_directory_uri() . '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
+	wp_dequeue_style('bootstrap');
+	wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
 	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/public/build/' . basename($app_style_file_path[0]), ['bootstrap', 'parent-style', 'plugin-blocks'], null);
 }
 

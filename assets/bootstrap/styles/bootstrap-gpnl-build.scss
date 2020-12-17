@@ -13,57 +13,57 @@ Text Domain: planet4-master-theme
 */
 
 // Full bootstrap:
-// @import "../../../../node_modules/bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
-@import "../../../node_modules/bootstrap/scss/bootstrap-grid";
-@import "../../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~bootstrap/scss/bootstrap-reboot.scss";
 
 // Required
 // See: https://getbootstrap.com/docs/4.3/getting-started/theming/#importing
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 // TODO: Add variable overrides for the 16px grid here.
 
 
 // Optional
-// @import "../../../../node_modules/bootstrap/scss/reboot";
-// @import "../../../../node_modules/bootstrap/scss/type";
-// @import "../../../../node_modules/bootstrap/scss/images";
-// @import "../../../../node_modules/bootstrap/scss/code";
-// @import "../../../../node_modules/bootstrap/scss/grid";
-// @import "../../../../node_modules/bootstrap/scss/_alert.scss";
-// @import "../../../../node_modules/bootstrap/scss/_badge.scss";
-// @import "../../../../node_modules/bootstrap/scss/_breadcrumb.scss";
-// @import "../../../../node_modules/bootstrap/scss/_button-group.scss";
-// @import "../../../../node_modules/bootstrap/scss/_buttons.scss";
-// @import "../../../../node_modules/bootstrap/scss/_card.scss";
-//@import "../../../node_modules/bootstrap/scss/carousel";
- @import "../../../node_modules/bootstrap/scss/close";
- //@import "../../../../node_modules/bootstrap/scss/_code.scss";
-// @import "../../../../node_modules/bootstrap/scss/_custom-forms.scss";
- @import "../../../node_modules/bootstrap/scss/dropdown";
-@import "../../../node_modules/bootstrap/scss/forms";
-// @import "../../../../node_modules/bootstrap/scss/_functions.scss";
-// @import "../../../../node_modules/bootstrap/scss/_grid.scss";
-// @import "../../../../node_modules/bootstrap/scss/_images.scss";
-// @import "../../../../node_modules/bootstrap/scss/_input-group.scss";
-// @import "../../../../node_modules/bootstrap/scss/_jumbotron.scss";
-// @import "../../../../node_modules/bootstrap/scss/_list-group.scss";
-//@import "../../../node_modules/bootstrap/scss/media";
-// @import "../../../../node_modules/bootstrap/scss/_mixins.scss";
-//@import "../../../node_modules/bootstrap/scss/modal";
-@import "../../../node_modules/bootstrap/scss/nav";
- @import "../../../node_modules/bootstrap/scss/navbar";
-// @import "../../../../node_modules/bootstrap/scss/_pagination.scss";
-// @import "../../../../node_modules/bootstrap/scss/_popover.scss";
-// @import "../../../../node_modules/bootstrap/scss/_print.scss";
-// @import "../../../../node_modules/bootstrap/scss/_progress.scss";
-// @import "../../../../node_modules/bootstrap/scss/_reboot.scss";
-// @import "../../../../node_modules/bootstrap/scss/_root.scss";
-// @import "../../../../node_modules/bootstrap/scss/_tables.scss";
-// @import "../../../../node_modules/bootstrap/scss/_tooltip.scss";
-// @import "../../../../node_modules/bootstrap/scss/_transitions.scss";
-//@import "../../../node_modules/bootstrap/scss/type";
-//@import "../../../node_modules/bootstrap/scss/utilities";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/_alert.scss";
+// @import "~bootstrap/scss/_badge.scss";
+// @import "~bootstrap/scss/_breadcrumb.scss";
+// @import "~bootstrap/scss/_button-group.scss";
+// @import "~bootstrap/scss/_buttons.scss";
+ @import "~bootstrap/scss/_card.scss";
+@import "~bootstrap/scss/carousel";
+ @import "~bootstrap/scss/close";
+ //@import "~bootstrap/scss/_code.scss";
+// @import "~bootstrap/scss/_custom-forms.scss";
+ @import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/forms";
+// @import "~bootstrap/scss/_functions.scss";
+// @import "~bootstrap/scss/_grid.scss";
+// @import "~bootstrap/scss/_images.scss";
+// @import "~bootstrap/scss/_input-group.scss";
+// @import "~bootstrap/scss/_jumbotron.scss";
+// @import "~bootstrap/scss/_list-group.scss";
+@import "~bootstrap/scss/_media.scss";
+// @import "~bootstrap/scss/_mixins.scss";
+//@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/nav";
+ @import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/_pagination.scss";
+// @import "~bootstrap/scss/_popover.scss";
+// @import "~bootstrap/scss/_print.scss";
+// @import "~bootstrap/scss/_progress.scss";
+// @import "~bootstrap/scss/_reboot.scss";
+// @import "~bootstrap/scss/_root.scss";
+// @import "~bootstrap/scss/_tables.scss";
+// @import "~bootstrap/scss/_tooltip.scss";
+@import "~bootstrap/scss/_transitions";
+@import "~bootstrap/scss/_type";
+@import "~bootstrap/scss/_utilities";
