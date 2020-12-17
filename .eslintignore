@@ -1,1 +1,4 @@
 main.js
+vendor
+node_modules/
+*.min.*
