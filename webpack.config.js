@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "public/build"),
-    filename: '[name].min.[contenthash].js',
+    filename: '[name].[contenthash].js',
     publicPath: 'public/build'
   },
   watch: true,
@@ -41,7 +41,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].min.[contenthash].css"
+      filename: "[name].[contenthash].css"
     })
   ]
 };
