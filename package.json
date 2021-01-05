@@ -1,36 +1,41 @@
 {
-	"name": "planet4-child-theme-netherlands",
-	"description": "Child theme for Netherlands for the Planet 4 Wordpress project",
-	"repository": "git@github.com:greenpeace/planet4-child-theme-netherlands.git",
-	"author": "Greenpeace Netherlands",
-	"license": "MIT",
-	"devDependencies": {
-		"@babel/core": "^7.12.3",
-		"@babel/preset-env": "^7.12.1",
-		"del": "^3.0.0",
-		"eslint": "^5.12.0",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^6.1.0",
-		"gulp-babel": "^8.0.0",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-eslint": "5.0.0",
-		"gulp-livereload": "^4.0.2",
-		"gulp-notify": "^3.2.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-sass": "^4.1.0",
-		"gulp-sourcemaps": "^2.6.4",
-		"gulp-stylelint": "^8.0.0",
-		"gulp-uglify": "^3.0.1",
-		"stylelint": "^13.7.2"
-	},
-	"browserslist": [
-		"last 1 version",
-		"> 0.2% in my stats",
-		"not dead"
-	],
-	"dependencies": {
-		"bootstrap": "^4.3.1",
-		"jquery": "^3.5.1",
-		"popper.js": "^1.15.0"
-	}
+  "name": "planet4-child-theme-netherlands",
+  "description": "Child theme for Netherlands for the Planet 4 Wordpress project",
+  "repository": "git@github.com:greenpeace/planet4-child-theme-netherlands.git",
+  "author": "Greenpeace Netherlands",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
+    "poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "del": "^3.0.0",
+    "eslint": "^5.12.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-eslint": "5.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-uglify": "^3.0.1",
+    "stylelint": "^13.8.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 0.2% in my stats",
+    "not dead"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.15.0"
+  },
+  "version": "4.5.0"
 }

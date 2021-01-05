@@ -16,6 +16,13 @@
   }
 }
 
+.btn-primary {
+  background-color: $blood-orange;
+  color: $white;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .btn-secondary {
   background-color: $light-green;
   color: $black;
@@ -68,16 +75,39 @@
 
 .share-buttons {
   display: flex;
+
+  .share-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: .2em;
+    border-radius: 0;
+    box-shadow: none;
+
+    .icon {
+      top: unset;
+      position: unset;
+    }
+  }
 }
 
-.share-btn {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  margin-left: .2em;
+.wp-block-button {
 
-  .icon {
-    top: unset;
-    position: unset;
+  &.is-style-cta {
+    .wp-block-button__link {
+      background-color: $blood-orange;
+      box-shadow: none;
+
+      &:hover, &:active, &:focus {
+        background-color: $hover-orange;
+        color: $white;
+      }
+    }
+  }
+  
+  .wp-block-button__link {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
