@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"scripts": {
 		"postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
-		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
+		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
