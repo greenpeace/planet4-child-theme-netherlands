@@ -1,16 +1,16 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const defaultConfig = require("./node_modules/@wordpress/scripts/config/webpack.config");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const defaultConfig = require('./node_modules/@wordpress/scripts/config/webpack.config');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   ...defaultConfig,
   entry: {
     main: './assets/main/index.js', // The JS-index also contains scss files which will output with [name].css
-    bootstrap: "./assets/bootstrap/index.js"
+    bootstrap: './assets/bootstrap/index.js'
   },
   output: {
-    path: path.resolve(__dirname, "public/build"),
+    path: path.resolve(__dirname, 'public/build'),
     filename: '[name].[contenthash].js',
     publicPath: 'public/build'
   },
@@ -23,7 +23,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']}
+            presets: ['@babel/preset-env']
+          }
 
         }
       },
@@ -31,9 +32,9 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader',
           'postcss-loader',
-          "sass-loader"
+          'sass-loader'
         ]
       }
     ]
@@ -41,7 +42,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css"
+      filename: '[name].[contenthash].css'
     })
   ]
 };
