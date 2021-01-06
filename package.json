@@ -5,6 +5,8 @@
 	"author": "Greenpeace Netherlands",
 	"license": "MIT",
 	"scripts": {
+		"start": "wp-scripts start --mode development",
+		"build": "wp-scripts build --mode production",
 		"postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
 		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
 	},
