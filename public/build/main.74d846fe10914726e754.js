@@ -1,26 +1,26 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/app/index.js":
-/*!*****************************!*\
-  !*** ./assets/app/index.js ***!
-  \*****************************/
+/***/ "./assets/main/index.js":
+/*!******************************!*\
+  !*** ./assets/main/index.js ***!
+  \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.scss */ "./assets/app/styles/index.scss");
-/* harmony import */ var _navigation_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation-bar */ "./assets/app/navigation-bar.js");
+/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.scss */ "./assets/main/styles/index.scss");
+/* harmony import */ var _navigation_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation-bar */ "./assets/main/navigation-bar.js");
 /* harmony import */ var _navigation_bar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation_bar__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
 /***/ }),
 
-/***/ "./assets/app/navigation-bar.js":
-/*!**************************************!*\
-  !*** ./assets/app/navigation-bar.js ***!
-  \**************************************/
+/***/ "./assets/main/navigation-bar.js":
+/*!***************************************!*\
+  !*** ./assets/main/navigation-bar.js ***!
+  \***************************************/
 /***/ (function() {
 
 // If the browser is IE 10 or below show a notification
@@ -34,29 +34,29 @@ jQuery(document).ready(function () {
   var donateButton = jQuery('#donate-button-wrapper .dropdown .btn-donate');
 
   if ('ontouchstart' in window) {
-    donateButton[0].addEventListener("touchstart", removeHref);
+    donateButton[0].addEventListener('touchstart', removeHref);
   }
 });
 
 function removeHref(event) {
   var donateButton = $(event.target);
-  var href = donateButton.attr("href");
-  donateButton.removeAttr("href");
+  var href = donateButton.attr('href');
+  donateButton.removeAttr('href');
   donateButton.attr('data-toggle', 'dropdown');
-  donateButton[0].addEventListener("touchend", addHref, href);
+  donateButton[0].addEventListener('touchend', addHref, href);
 }
 
 function addHref(event, href) {
   var donateButton = $(event.target);
-  donateButton.attr("href", href);
+  donateButton.attr('href', href);
 }
 
 /***/ }),
 
-/***/ "./assets/app/styles/index.scss":
-/*!**************************************!*\
-  !*** ./assets/app/styles/index.scss ***!
-  \**************************************/
+/***/ "./assets/main/styles/index.scss":
+/*!***************************************!*\
+  !*** ./assets/main/styles/index.scss ***!
+  \***************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -135,8 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./assets/app/index.js");
+/******/ 	__webpack_require__("./assets/main/index.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=app.faf03b34e2feab2d6624.js.map
+//# sourceMappingURL=main.74d846fe10914726e754.js.map
