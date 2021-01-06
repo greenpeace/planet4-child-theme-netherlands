@@ -132,6 +132,7 @@
   background-color: white;
   box-shadow: 0 0 8px #000;
   position: fixed;
+  z-index: 9999;
 
   a {
     color: $slate-grey;

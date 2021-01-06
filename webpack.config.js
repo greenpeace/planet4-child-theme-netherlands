@@ -6,7 +6,7 @@ const path = require("path");
 module.exports = {
   ...defaultConfig,
   entry: {
-    app: "./assets/app/index.js", // The JS-index also contains scss files which will output with [name].css
+    main: './assets/main/index.js', // The JS-index also contains scss files which will output with [name].css
     bootstrap: "./assets/bootstrap/index.js"
   },
   output: {

@@ -8,20 +8,20 @@ if (navigator.userAgent.indexOf('MSIE') >= 0) {
 jQuery( document ).ready(function() {
   let donateButton = jQuery('#donate-button-wrapper .dropdown .btn-donate');
   if ('ontouchstart' in window) {
-    donateButton[0].addEventListener("touchstart", removeHref);
+    donateButton[0].addEventListener('touchstart', removeHref);
   }
 });
 
 function removeHref (event) {
   let donateButton = $(event.target);
-  let href = donateButton.attr("href");
-  donateButton.removeAttr("href");
+  let href = donateButton.attr('href');
+  donateButton.removeAttr('href');
   donateButton.attr('data-toggle', 'dropdown');
-  donateButton[0].addEventListener("touchend", addHref, href);
+  donateButton[0].addEventListener('touchend', addHref, href);
 }
 
 function addHref (event, href) {
   let donateButton = $(event.target);
-  donateButton.attr("href", href);
+  donateButton.attr('href', href);
 }
 
