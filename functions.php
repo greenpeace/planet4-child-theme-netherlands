@@ -23,7 +23,7 @@ add_action('wp_enqueue_scripts', 'enqueue_child_styles', 1);
 function enqueue_child_scripts()
 {
 	$app_script_file_path = glob(get_stylesheet_directory() . '/public/build/main.*.js');
-	wp_enqueue_script('main', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), ['jquery'], null, false);
+	wp_enqueue_script('child-style', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), ['jquery'], null, false);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_child_scripts');
