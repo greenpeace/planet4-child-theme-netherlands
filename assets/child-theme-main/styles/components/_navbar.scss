@@ -1,6 +1,11 @@
 @import "../base/variables";
 @import "buttons";
 
+.navbar {
+  flex-wrap: unset;
+  background-color: white;
+}
+
 .navbar-dropdown .active .nav-link,
 .navbar-dropdown .nav-link:focus,
 .navbar-dropdown .nav-link:hover,
@@ -78,9 +83,9 @@
       white-space: unset;
     }
 
-    .dropdown-menu {
-      background-color: white;
-    }
+    //.dropdown-menu {
+    //  background-color: white;
+    //}
   }
 }
 
@@ -129,7 +134,6 @@
 }
 
 .top-navigation {
-  background-color: white;
   box-shadow: 0 0 8px #000;
   position: fixed;
   z-index: 9999;

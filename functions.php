@@ -1,33 +1,48 @@
 <?php
 
+const DEV_ASSET_PATH = 'http://localhost:3003/public/build/';
 
-/**
- * Include styles (css).
- */
-function enqueue_child_styles()
+function is_dev(): bool
 {
-
-	$bootstrap_style_file_path = glob(get_stylesheet_directory() . '/public/build/bootstrap.*.css');
-	$app_style_file_path = glob(get_stylesheet_directory() . '/public/build/main.*.css');
-	wp_dequeue_style('bootstrap');
-	wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/public/build/' . basename($bootstrap_style_file_path[0]), [], null);
-	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/public/build/' . basename($app_style_file_path[0]), ['bootstrap', 'parent-style', 'plugin-blocks'], null);
+	$file_path = get_theme_file_path();
+	return count(glob($file_path . '/public/build/*')) === 0;
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_child_styles', 1);
-
-
-/**
- * Include scripts (js).
- */
-function enqueue_child_scripts()
+function enqueue_assets_from_entry($name, $script_dependencies = [], $style_dependencies = [])
 {
-	$app_script_file_path = glob(get_stylesheet_directory() . '/public/build/main.*.js');
-	wp_enqueue_script('child-style', get_stylesheet_directory_uri() . '/public/build/' . basename($app_script_file_path[0]), ['jquery'], null, false);
+	// Check to see if there are files in the build directory, If not (in develop mode) the in-memory JS file from webpack is used.
+	if (is_dev()) {
+		enqueue_dev_assets($name, $script_dependencies);
+	} else {
+		enqueue_prod_assets($name, $script_dependencies, $style_dependencies);
+	}
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_child_scripts');
+function enqueue_dev_assets($name, $script_dependencies)
+{
+	wp_enqueue_script($name, DEV_ASSET_PATH . $name . '.js', $script_dependencies, null, true);
+}
 
+function enqueue_prod_assets($name, $script_dependencies, $style_dependencies)
+{
+	$script_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.*.js');
+	$style_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.*.css');
+	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . '/public/build/' . basename($script_glob[0]), $script_dependencies, null, true) : null;
+	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . '/public/build/' . basename($style_glob[0]), $style_dependencies, null) : null;
+}
+
+
+function enqueue_assets()
+{
+	// Runtime.js is required in dev only to run the rest of the scripts.
+	if (is_dev()) {
+		wp_enqueue_script('child-theme-runtime', DEV_ASSET_PATH . 'runtime.js', [], null, true);
+	}
+	enqueue_assets_from_entry('bootstrap');
+	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style']);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_assets', 1);
 
 /**
  * Change the title placeholders for the posts and pages.
@@ -54,10 +69,7 @@ function set_page_template()
 {
 	if (is_plugin_active('planet4-gpnl-plugin-gutenberg-blocks/planet4-gutenberg-blocks.php')) {
 		$post_type_object = get_post_type_object('page');
-		$post_type_object->template = array(
-			array('planet4-gpnl-blocks/hero-image'),
-			array('core/paragraph'),
-		);
+		$post_type_object->template = array(array('planet4-gpnl-blocks/hero-image'), array('core/paragraph'),);
 	}
 }
 
@@ -153,9 +165,7 @@ add_filter('pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5);
 
 function datawrapper_oembed_provider()
 {
-
 	wp_oembed_add_provider('https://datawrapper.dwcdn.net/*', 'https://api.datawrapper.de/v3/oembed', false);
-
 }
 
 add_action('init', 'datawrapper_oembed_provider');
