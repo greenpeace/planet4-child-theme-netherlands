@@ -5,8 +5,8 @@
   "author": "Greenpeace Netherlands",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.config.dev.js",
-    "build": "wp-scripts build --config webpack/webpack.config.prod.js",
+    "start": "webpack serve --config webpack/webpack.config.dev.js",
+    "build": "webpack --config webpack/webpack.config.prod.js",
     "postinstall": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
     "poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg"
   },
