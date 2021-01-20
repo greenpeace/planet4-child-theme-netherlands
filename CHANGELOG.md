@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.7.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.6.0...v4.7.0) (2021-01-20)
+
+
+### Features
+
+* add webpack-dev-server with HRM ([cbc785d](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/cbc785dcc1b95b467aafc42fc86dbc4227f0f8bc))
+* use webpack script for asset building ([56ce047](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/56ce0474e230e2d54507c2834ce6396e62fc5764))
+
+
+### Bug Fixes
+
+* enqueue 'main' script with handle 'child-style'. ([a4be04e](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/a4be04e016dcb9283d474b056b63b2f071336bf5))
+* remove styling tryouts. ([8bb8e7f](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/8bb8e7f68c89a54ba2b0e18a7b64ea33e2c618e6))
+
 ## [4.6.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.5.0...v4.6.0) (2021-01-06)
 
 
