@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import "base/shame";
+@import "base/variables";
+@import "base/body";
+@import "base/typography";
+@import "base/mixins";
+
+@import "blocks/all";
+
+@import "components/all";
+
+@import "pages/search";
+@import "pages/privacypolicy";

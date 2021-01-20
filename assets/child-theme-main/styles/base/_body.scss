@@ -1,3 +1,5 @@
+@use "variables";
+
 @import "mixins";
 
 html > iframe:first-child {
@@ -8,6 +10,7 @@ html,
 body {
   overflow-x: hidden;
   background: $warm-light-grey;
+  background-color: variables.$anthracite;
 }
 
 h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
@@ -23,7 +26,6 @@ body {
   font-size: 1rem;
   color: $black;
   position: relative;
-  background: $warm-light-grey;
 
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
   a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 {
