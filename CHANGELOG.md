@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.8.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.7.0...v4.8.0) (2021-01-21)
+
+
+### Features
+
+* add comment possibility to a page. ([5d7fe97](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/5d7fe9793b965be90d81b0cac326bafb23eb4a14))
+* add comment template files in theme ([dcb009f](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/dcb009f47a4e643e44cb11987888ef61ec821ce7))
+
+
+### Bug Fixes
+
+* add 'plugin-blocks' as style and script dependency ([941f850](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/941f850062aeb4271447423683f1c4470a5d560a))
+* add jquery as a bootstrap dependency ([e10c0e4](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/e10c0e48a68c8ad42d52b4842f635b51ff2685db))
+* add page template with comments ([9c80a19](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/9c80a19a1da7575ce1084c748baf66aefaaabd5b))
+* disable firewall when for webpack dev server ([1e3fc8e](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/1e3fc8e30fa1a51106ba6e5d0341baac203fd3d3))
+* expose $ as jquery globally. ([0dcf9c9](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/0dcf9c98ef6ed2d8b4a0ebdd13f61dfed2c4bbbf))
+
 ## [4.7.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.6.0...v4.7.0) (2021-01-20)
 
 
