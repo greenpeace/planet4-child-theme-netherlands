@@ -39,7 +39,7 @@ function enqueue_assets()
 		wp_enqueue_script('child-theme-runtime', DEV_ASSET_PATH . 'runtime.js', [], null, true);
 	}
 	enqueue_assets_from_entry('bootstrap', ['jquery']);
-	enqueue_assets_from_entry('child-theme-main', ['bootstrap', 'plugin-blocks'], ['bootstrap', 'parent-style', 'plugin-blocks']);
+	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style', 'plugin-blocks']);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_assets', 1);
