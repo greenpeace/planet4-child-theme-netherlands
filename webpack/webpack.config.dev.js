@@ -25,6 +25,7 @@ module.exports = () => {
     ],
     devServer: {
       port: proxyPort,
+      firewall: false,
       headers: {"Access-Control-Allow-Origin": "*"},
       static: [path.resolve(__dirname, "/public/build/")],
       proxy: {
