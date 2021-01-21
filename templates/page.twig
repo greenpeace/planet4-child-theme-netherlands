@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="page-template">
+		{{ post.content|raw }}
+		{% if ( 'closed' != post.comment_status ) %}
+			{% include "comments_section.twig" with {comments:post.get_comments()} %}
+		{% endif %}
+	</div>
+{% endblock %}

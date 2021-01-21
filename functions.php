@@ -38,11 +38,12 @@ function enqueue_assets()
 	if (is_dev()) {
 		wp_enqueue_script('child-theme-runtime', DEV_ASSET_PATH . 'runtime.js', [], null, true);
 	}
-	enqueue_assets_from_entry('bootstrap');
-	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style']);
+	enqueue_assets_from_entry('bootstrap', ['jquery']);
+	enqueue_assets_from_entry('child-theme-main', ['bootstrap', 'plugin-blocks'], ['bootstrap', 'parent-style', 'plugin-blocks']);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_assets', 1);
+
 
 /**
  * Change the title placeholders for the posts and pages.
