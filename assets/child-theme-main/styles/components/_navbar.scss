@@ -7,7 +7,7 @@ $nav-breakpoint: 992px;
 #navbar {
   --nav-height: 60px;
   --nav-spacing: 1.2em;
-
+  --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.04), 5px 5px 5px 0 rgba(0, 0, 0, 0.04),  -5px 5px 5px 0px rgba(0, 0, 0, 0.04);
 
   height: var(--nav-height);
 
@@ -18,9 +18,7 @@ $nav-breakpoint: 992px;
   left: 0;
   right: 0;
   z-index: 3;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.04),
-  5px 5px 5px 0 rgba(0, 0, 0, 0.04),
-  -5px 5px 5px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--box-shadow);
 
 
   .btn-navbar-toggle {
@@ -93,6 +91,28 @@ $nav-breakpoint: 992px;
               color: variables.$slate-grey;
             }
 
+            // Remove wonky caret
+            &:after{
+              display: none;
+            }
+
+            svg {
+              fill: variables.$medium-grey;
+              height: 0.8em;
+              width: auto;
+              margin-left: 0.1em;
+              //transform: rotate(90deg);
+              //transition: all .3s;
+            }
+
+            &:hover {
+              color: variables.$anthracite;
+
+              svg {
+                fill: variables.$anthracite;
+              }
+            }
+
             }
         }
 
@@ -132,6 +152,10 @@ $nav-breakpoint: 992px;
         z-index: 11;
         height: calc(100vh - var(--nav-height));
 
+        @media only screen and (min-width: $nav-breakpoint) {
+          height: 50vh;
+        }
+
         * {
           height: unset;
         }
@@ -157,21 +181,34 @@ $nav-breakpoint: 992px;
         padding: 0;
         width: 100%;
 
-        li {
+        li#dropdownMenuButton {
           padding: 0;
+          display: flex;
+          justify-content: center;
+
+          &:hover {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
         }
 
         .btn-donate {
           min-width: unset; // GPI Override
           color: white;
 
-          // Remove caret
+          // Remove wonky caret
           &:after {
             display: none;
           }
 
-          // Remove green underline
           &:hover {
+            // Show dropdown menu on hover
+            ~#dropdownDonateMenu {
+              display: block;
+            }
+
+              // Remove green underline
             &:after {
               border-bottom: 0;
             }
@@ -181,6 +218,8 @@ $nav-breakpoint: 992px;
             height: 0.8em;
             width: auto;
             margin-left: 0.4em;
+            transform: rotate(90deg);
+            transition: all .3s;
 
             path {
               fill: white;
@@ -188,9 +227,43 @@ $nav-breakpoint: 992px;
           }
           }
 
+        #dropdownDonateMenu {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          top: 0;
+          left: 0;
+          border: none;
+          border-radius: 0;
+          transform: translate3d(0px, 60px, 0px) !important; // GPI Override
+          box-shadow: var(--box-shadow);
+
+          // Show menu on hover
+          &:hover {
+            display: block;
+
+          }
+
+          .dropdown-item {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+
+          @media only screen and (min-width: $nav-breakpoint) {
+            width: auto;
+            left: unset !important; // GPI Override
+            transform: translateY(60px) !important; // GPI Override
+            //border: 1px solid variables.$light-green;
+            //border-width: 0 1px 1px 1px;
+          }
+
+        }
+
 
         @media only screen and (min-width: $nav-breakpoint) {
-          margin-right: 4em;
+          margin-right: 3em;
         }
       }
   }
@@ -214,7 +287,16 @@ $nav-breakpoint: 992px;
       }
     }
   }
+
+  //.btn-donate:hover~#dropdownDonateMenu, #dropdownDonateMenu:hover {
+  //  display: block;
+  //}
+
+
 }
+
+
+
 
 //
 //.navbar-dropdown .active .nav-link,
