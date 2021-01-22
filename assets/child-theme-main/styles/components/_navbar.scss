@@ -3,7 +3,6 @@
 
 $nav-breakpoint: 992px;
 
-
 nav#header {
   --nav-height: 60px;
   --nav-spacing: 1.2em;
@@ -14,7 +13,6 @@ nav#header {
   background-color: white;
   display: flex;
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   z-index: 3;
