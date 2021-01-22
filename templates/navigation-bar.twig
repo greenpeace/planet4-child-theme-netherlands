@@ -43,6 +43,7 @@
 					data-ga-label="{{ page_category }}">
           <span class="screen-reader-text">{{ __( 'Selected', 'planet4-master-theme' ) }}:</span> {{ website_navbar_title }}
           <span class="screen-reader-text">{{ __( 'Change Country', 'planet4-master-theme' ) }}</span>
+			{% include 'icons/caret-down.svg' %}
         </button>
       </li>
       {% for key,item in navbar_menu.get_items %}
