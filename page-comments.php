@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Pagine met comments
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -106,5 +107,5 @@ if ( post_password_required( $post->ID ) ) {
 
 	Timber::render( 'single-page.twig', $context );
 } else {
-	Timber::render( [ 'page-' . $post->post_name . '.twig', 'page.twig' ], $context );
+	Timber::render( [ 'page-comments.twig', 'page.twig' ], $context );
 }
