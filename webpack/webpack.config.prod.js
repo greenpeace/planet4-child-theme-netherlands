@@ -2,11 +2,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const commonConfig = require('./webpack.common')
 const {merge} = require('webpack-merge');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = () => {
   const config = {
     output: {
-      filename: '[name].[contenthash].js',
+      filename: '[name].js',
       publicPath: ""
     },
     mode: 'production',
@@ -24,9 +25,21 @@ module.exports = () => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
-      new CssMinimizerPlugin()
+      new MiniCssExtractPlugin({filename: '[name].css'}),
+      new CssMinimizerPlugin(),
+      new WebpackManifestPlugin({generate: generateManifest}),
     ],
-  }
-  return merge(commonConfig, config)
+  };
+  return merge(commonConfig, config);
 };
+
+//(seed: Object, files: FileDescriptor[], entries: string[]) => Object
+function generateManifest(seed, files){
+  let assets ={};
+  files.forEach(function(file) {
+    let name = file.name;
+    let contentHash = file.chunk.contentHash;
+    assets[name] = (name.includes('.js')? contentHash.javascript : contentHash['css/mini-extract']);
+  });
+  return assets;
+}
