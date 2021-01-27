@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const entries = require('./entries');
@@ -6,13 +6,13 @@ const entries = require('./entries');
 module.exports = {
   entry: entries,
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
       main: path.resolve(__dirname, '../assets/main'),
     },
   },
   output: {
-    path: path.resolve(__dirname, "../public/build/"),
+    path: path.resolve(__dirname, '../public/build/'),
   },
   module: {
     rules: [
@@ -33,8 +33,8 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           'style-loader',
-          "css-loader",
-          "sass-loader",
+          'css-loader',
+          'sass-loader',
         ]
       },
     ]
@@ -44,4 +44,4 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ['**/*', '!.gitignore'] // Prevent '.gitignore' to be removed.
     })
   ],
-}
+};

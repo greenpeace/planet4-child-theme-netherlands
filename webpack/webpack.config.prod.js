@@ -1,6 +1,6 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const commonConfig = require('./webpack.common')
+const commonConfig = require('./webpack.common');
 const {merge} = require('webpack-merge');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
@@ -8,10 +8,9 @@ module.exports = () => {
   const config = {
     output: {
       filename: '[name].js',
-      publicPath: ""
+      publicPath: ''
     },
     mode: 'production',
-    watch: true,
     devtool: 'cheap-source-map',
     optimization: {
       minimize: true
@@ -20,7 +19,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.s?css$/,
-          use: [MiniCssExtractPlugin.loader, "css-loader", 'postcss-loader', "sass-loader",]
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader',]
         },
       ]
     },
