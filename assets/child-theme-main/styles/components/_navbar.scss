@@ -1,213 +1,285 @@
-@import "../base/variables";
+@use "../base/variables";
 @import "buttons";
 
-.navbar {
-  flex-wrap: unset;
+// Breakpoint where links in dropdown (hamburger) menu turn into inline menu
+$nav-breakpoint: 992px;
+
+nav#header {
+  --nav-height: 60px;
+  --nav-spacing: 1.2em;
+  --box-shadow:
+    0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0px rgba(0, 0, 0, 0.04);
+
+  height: var(--nav-height);
   background-color: white;
-}
-
-.navbar-dropdown .active .nav-link,
-.navbar-dropdown .nav-link:focus,
-.navbar-dropdown .nav-link:hover,
-.dropdown-item:hover {
-  color: $anthracite !important;
-  border-bottom: 4px solid $light-green;
-}
-
-.nav-link {
-  color: $grey-5 !important;
-  font-size: 1rem;
-  text-transform: none;
-}
-
-.dropdown:hover > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-toggle:after {
-  transform: rotate(90deg);
-  transition: 0.3s;
-}
-
-.dropdown-toggle:hover:after {
-  transform: rotate(0deg);
-  transition: 0.3s;
-}
-
-.dropdown-menu {
-  border: 1px solid #6c0;
-}
-
-@include large-and-up {
-  .navbar-dropdown {
-    padding: 2px 11px 2px 15px;
-    margin: 0;
-  }
-}
-
-.navbar-dropdown:hover {
-  color: white;
-}
-
-@media (max-width: 991px) {
-  .navbar-dropdown .nav-link {
-    border-bottom: 4px solid $white;
-    padding: 0 15px;
-  }
-
-  .nav-link::before {
-    width: 0;
-  }
-
-  .navbar-dropdown .btn-donate {
-    padding: 2px 11px 2px 15px;
-  }
-
-  #dropdownMenuButton, #dropdownDonateMenu {
-    width: 100%;
-    padding: 0 10px;
-
-    li {
-      a {
-        padding: 8px 0 0 0;
-        margin: 14px 0;
-        line-height: 1rem;
-      }
-    }
-
-    &.btn {
-      white-space: normal;
-    }
-
-    .dropdown-item {
-      white-space: unset;
-    }
-
-    //.dropdown-menu {
-    //  background-color: white;
-    //}
-  }
-}
-
-.dropdown-item {
-  border-bottom: 2px solid transparent;
-  text-transform: none;
-  font-size: 0.85rem;
-  padding: 0 0.8rem;
-  line-height: 2.2rem;
-  color: $slate-grey;
-
-  &:hover {
-    color: $anthracite;
-    border-bottom: 2px solid $light-green;
-  }
-}
-
-#donate-button-wrapper {
-  padding-left: 0;
-}
-
-.btn-navbar-toggle,
-.country-dropdown-toggle,
-.nav-item,
-.nav-link,
-.navbar-search-toggle,
-.site-logo {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.nav-search-wrap .top-nav-search-btn {
-  color: $slate-grey;
-
-  i {
-    vertical-align: middle;
-  }
-}
-
-.country-dropdown-toggle {
-  font-weight: 400;
-
-  &:hover, :active, :visited {
-    color: $anthracite;
-  }
-}
-
-.top-navigation {
-  box-shadow: 0 0 8px #000;
+  display: flex;
   position: fixed;
-  z-index: 9999;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  box-shadow: var(--box-shadow);
 
-  a {
-    color: $slate-grey;
-  }
-}
-
-.btn-navbar-toggle:active,
-.btn-navbar-toggle:focus,
-.btn-navbar-toggle:hover {
-  color: white;
-  background-color: white;
-}
-
-.btn-navbar-toggle,
-.btn-navbar-toggle:hover,
-.navbar-search-toggle {
-  color: black;
-  background-color: white;
-}
-
-.top-navigation .btn-donate {
-  @extend .btn-donate;
-}
-
-@media (max-width: 991px) {
-  .navbar-dropdown {
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #fff;
+  .btn-navbar-toggle {
+    background-color: white;
+    color: variables.$anthracite;
+    height: auto;
   }
 
   .site-logo {
-    font-weight: 500;
-    font-size: 1rem;
-    color: $grey-1;
-  }
-}
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
 
-@media screen and (max-width: 576px) {
-  .navbar-dropdown {
-    width: 100%;
-  }
-}
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
 
-.gpnl__notifications {
-  width: 100%;
-  background-color: $hover-red;
-  color: $white;
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: $white;
-    text-decoration: underline;
-  }
-
-  .javascript-not-enabled-notification, .old-ie-browser-notification {
-    p {
-      padding: $sm;
+      @media only screen and (min-width: $nav-breakpoint) {
+        position: unset;
+        transform: unset;
+        width: 200px;
+        height: auto;
+      }
     }
   }
-}
 
-.navbar-dropdown::before {
-  width: 0;
+  ul#navbar-dropdown {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    background-color: white;
+    justify-content: flex-start;
+    padding: 0;
+    box-shadow: var(--box-shadow);
+
+    &:before {
+      display: none; // Remove grey GPI line
+    }
+
+    @media only screen and (min-width: $nav-breakpoint) {
+      margin-left: calc(200px + 1rem);
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      box-shadow: none;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      height: var(--nav-height);
+      border: 0 !important; // GPI Override
+
+      &#country-select {
+        .country-dropdown-toggle {
+          color: variables.$light-grey;
+          height: var(--nav-height);
+
+          @media only screen and (min-width: $nav-breakpoint) {
+            color: variables.$slate-grey;
+          }
+
+          // Remove wonky caret
+          &:after {
+            display: none;
+          }
+
+          svg {
+            fill: variables.$medium-grey;
+            height: 0.8em;
+            width: auto;
+            margin-left: 0.1em;
+          }
+
+          &:hover {
+            color: variables.$anthracite;
+
+            svg {
+              fill: variables.$anthracite;
+            }
+          }
+        }
+      }
+
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 calc(var(--nav-spacing));
+        border: 0 !important; // GPI Override
+        color: variables.$slate-grey;
+
+        &:hover {
+          color: variables.$anthracite;
+
+          &:after {
+            border-bottom: 0.25em solid variables.$light-green;
+          }
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: calc(100% - 2 * var(--nav-spacing));
+          padding: 0;
+        }
+      }
+    }
+
+    .country-list {
+      position: absolute;
+      top: var(--nav-height);
+      z-index: 11;
+      height: calc(100vh - var(--nav-height));
+
+      @media only screen and (min-width: $nav-breakpoint) {
+        height: 50vh;
+      }
+
+      * {
+        height: unset;
+      }
+
+      li {
+        display: block;
+      }
+
+      a {
+        color: variables.$light-grey;
+
+        &:hover {
+          color: white;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    ul#donate-button-wrapper {
+      z-index: 1;
+      padding: 0;
+      width: 100%;
+
+      li#dropdownMenuButton {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+          svg {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      .btn-donate {
+        min-width: unset; // GPI Override
+        color: white;
+
+        // Remove wonky caret
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          // Show dropdown menu on hover
+          ~ #dropdownDonateMenu {
+            display: block;
+          }
+
+          // Remove green underline
+          &:after {
+            border-bottom: 0;
+          }
+        }
+
+        &[aria-expanded="true"]{
+          background-color: variables.$hover-orange;
+
+          svg {
+            transform: rotate(0);
+          }
+        }
+
+        svg {
+          height: 0.8em;
+          width: auto;
+          margin-left: 0.4em;
+          transform: rotate(90deg);
+          transition: all .3s;
+
+          path {
+            fill: white;
+          }
+        }
+      }
+
+      #dropdownDonateMenu {
+        width: 100%;
+        margin: 0;
+        margin-top: -4px;
+        padding: 0;
+        top: 0;
+        left: 0;
+        border: none;
+        border-radius: 0;
+        transform: translate3d(0px, 60px, 0px) !important; // GPI Override
+        box-shadow: var(--box-shadow);
+
+        // Show menu on hover
+        &:hover {
+          display: block;
+        }
+
+
+        .dropdown-item {
+          text-transform: none;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+
+        @media only screen and (min-width: $nav-breakpoint) {
+          width: auto;
+          left: unset !important; // GPI Override
+          transform: translateY(60px) !important; // GPI Override
+        }
+      }
+
+      @media only screen and (min-width: $nav-breakpoint) {
+        margin-right: 3em;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $nav-breakpoint) {
+    #search_form {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      input {
+        height: calc(100% - 1em);
+        margin: 0;
+      }
+
+      .top-nav-search-btn {
+        top: 10px
+      }
+    }
+  }
 }

@@ -60,11 +60,6 @@ body {
     font-family: $roboto;
   }
 
-  margin-top: 3.375rem;
-  @include medium-and-up {
-    margin-top: 3.75rem;
-  }
-
   &.wp-admin {
     margin-top: unset;
   }
@@ -76,6 +71,8 @@ body {
 }
 
 div.page-template {
+  padding-top: 60px; // Nav height
+
   @media (max-width: $small-width) {
     width: 100vw !important;
   }
@@ -92,6 +89,10 @@ div.page-template {
       }
     }
   }
+}
+
+article[id^=post]{
+  padding-top: 60px; // Nav height
 }
 
  //Unset Z-index that is set in the parent theme.
