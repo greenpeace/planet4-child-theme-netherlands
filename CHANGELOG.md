@@ -1,5 +1,25 @@
 # Changelog
 
+## [4.9.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.8.0...v4.9.0) (2021-01-27)
+
+
+### Features
+
+* add caret icon svg ([3bd4a88](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/3bd4a8850f96683bbcdd4cd6b724d135de306dc5))
+* add contenthash manifest generation ([26b03cd](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/26b03cd9356480ee5d361722258bee7170dbe70b))
+* add contenthashes as asset versions ([a716ba1](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/a716ba11fe7c118d901baddadbe12f664569cc8f))
+* add dropdown styles ([816eb12](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/816eb12d372b5ac8908236284e88fe8c18b97586))
+* Move comments pages into their own template ([4740c33](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/4740c33970fc737f73387d8e72ee11344c56620b))
+* navbar styling and code improvements ([55656a8](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/55656a81240c31a24adf5f3234d995a38dccac02))
+
+
+### Bug Fixes
+
+* add css selector for ci test ([b41a243](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/b41a243b3eeba2d9ef2ea29327c242e8b48a7781))
+* remove 'plugin-blocks' as script dependency ([e9df34b](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/e9df34bbb6452c62784ef282cb7597575d52e6ca))
+* set sensible default size for caret icon ([ac4ee88](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/ac4ee881a7b543f8900315221a6cb00b61d0ee14))
+* vertical position of navbar ([2aac201](https://www.github.com/greenpeace/planet4-child-theme-netherlands/commit/2aac20114959405ce884fcd512d724c7931c43ac))
+
 ## [4.8.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.7.0...v4.8.0) (2021-01-21)
 
 
