@@ -1,16 +1,16 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const commonConfig = require('./webpack.common')
+const commonConfig = require('./webpack.common');
 const {merge} = require('webpack-merge');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = () => {
   const config = {
     output: {
-      filename: '[name].[contenthash].js',
-      publicPath: ""
+      filename: '[name].js',
+      publicPath: ''
     },
     mode: 'production',
-    watch: true,
     devtool: 'cheap-source-map',
     optimization: {
       minimize: true
@@ -19,14 +19,26 @@ module.exports = () => {
       rules: [
         {
           test: /\.s?css$/,
-          use: [MiniCssExtractPlugin.loader, "css-loader", 'postcss-loader', "sass-loader",]
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader',]
         },
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
-      new CssMinimizerPlugin()
+      new MiniCssExtractPlugin({filename: '[name].css'}),
+      new CssMinimizerPlugin(),
+      new WebpackManifestPlugin({generate: generateManifest}),
     ],
-  }
-  return merge(commonConfig, config)
+  };
+  return merge(commonConfig, config);
 };
+
+//(seed: Object, files: FileDescriptor[], entries: string[]) => Object
+function generateManifest(seed, files){
+  let assets ={};
+  files.forEach(function(file) {
+    let name = file.name;
+    let contentHash = file.chunk.contentHash;
+    assets[name] = (name.includes('.js')? contentHash.javascript : contentHash['css/mini-extract']);
+  });
+  return assets;
+}
