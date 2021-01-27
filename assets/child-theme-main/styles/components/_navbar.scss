@@ -7,7 +7,8 @@ $nav-breakpoint: 992px;
 nav#header {
   --nav-height: 60px;
   --nav-spacing: 1.2em;
-  --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.04), 5px 5px 5px 0 rgba(0, 0, 0, 0.04), -5px 5px 5px 0px rgba(0, 0, 0, 0.04);
+  --box-shadow:
+    0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0px rgba(0, 0, 0, 0.04);
 
   height: var(--nav-height);
   background-color: white;
@@ -53,10 +54,7 @@ nav#header {
     background-color: white;
     justify-content: flex-start;
     padding: 0;
-
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.04),
-    5px 5px 5px 0 rgba(0, 0, 0, 0.04),
-    -5px 5px 5px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--box-shadow);
 
     &:before {
       display: none; // Remove grey GPI line
@@ -232,6 +230,7 @@ nav#header {
       #dropdownDonateMenu {
         width: 100%;
         margin: 0;
+        margin-top: -4px;
         padding: 0;
         top: 0;
         left: 0;
