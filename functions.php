@@ -25,10 +25,14 @@ function enqueue_dev_assets($name, $script_dependencies)
 
 function enqueue_prod_assets($name, $script_dependencies, $style_dependencies)
 {
-	$script_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.*.js');
-	$style_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.*.css');
-	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . '/public/build/' . basename($script_glob[0]), $script_dependencies, null, true) : null;
-	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . '/public/build/' . basename($style_glob[0]), $style_dependencies, null) : null;
+	$manifest = json_decode(file_get_contents(get_theme_file_path() . '/public/build/manifest.json'), true);
+	$script_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.js');
+	$script_version = $manifest[basename($script_glob[0])];
+	$style_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.css');
+	$style_version = $manifest[basename($style_glob[0])];
+
+	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . '/public/build/' . basename($script_glob[0]), $script_dependencies, $script_version, true) : null;
+	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . '/public/build/' . basename($style_glob[0]), $style_dependencies, $style_version) : null;
 }
 
 
