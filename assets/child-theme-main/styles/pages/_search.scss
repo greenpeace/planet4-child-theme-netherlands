@@ -1,11 +1,13 @@
 .search {
   background: $white;
+
   .search-block {
     padding-top: 0;
 
     .container .without-search-result {
       margin-top: 32px;
-      .result-statement+i{
+
+      .result-statement + i {
         display: none;
       }
     }

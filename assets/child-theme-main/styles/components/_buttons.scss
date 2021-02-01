@@ -4,7 +4,6 @@
   text-transform: uppercase;
 }
 
-
 .top-navigation .btn-donate {
   min-width: auto;
   text-transform: none;
@@ -92,7 +91,6 @@
 }
 
 .wp-block-button {
-
   &.is-style-cta {
     .wp-block-button__link {
       background-color: $blood-orange;
@@ -104,7 +102,7 @@
       }
     }
   }
-  
+
   .wp-block-button__link {
     border: none;
     border-radius: 0;
