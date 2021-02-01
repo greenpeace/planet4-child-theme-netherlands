@@ -91,12 +91,11 @@ div.page-template {
   }
 }
 
-article[id^=post]{
+article[id^=post] {
   padding-top: 60px; // Nav height
 }
 
- //Unset Z-index that is set in the parent theme.
+//Unset Z-index that is set in the parent theme.
 div.page-template > * {
   z-index: unset;
 }
-
