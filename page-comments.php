@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Pagine met comments
+ * Template Name: Pagina met comments
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
