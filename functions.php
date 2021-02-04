@@ -45,9 +45,20 @@ function enqueue_assets()
 	enqueue_assets_from_entry('bootstrap', ['jquery']);
 	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style', 'plugin-blocks']);
 }
+add_action('wp_enqueue_scripts', 'enqueue_assets', 3);
 
-add_action('wp_enqueue_scripts', 'enqueue_assets', 1);
 
+function enqueue_admin_assets()
+{
+	// Runtime.js is required in dev only to run the rest of the scripts.
+	if (is_dev()) {
+		wp_enqueue_script('child-theme-runtime', DEV_ASSET_PATH . 'runtime.js', [], null, true);
+	}
+	enqueue_assets_from_entry('bootstrap', ['jquery']);
+	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap']);
+}
+
+add_action('enqueue_block_editor_assets', 'enqueue_admin_assets', 1);
 
 /**
  * Change the title placeholders for the posts and pages.
