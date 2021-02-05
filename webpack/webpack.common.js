@@ -3,6 +3,9 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const entries = require('./entries');
 
+// TODO: Include entry name in output path, see: https://stackoverflow.com/questions/62008724/webpack-set-the-path-for-my-assets-according-to-the-entry-name
+// TODO: Add aliases for common assets such as base mixins and variables.
+
 module.exports = {
   entry: entries,
   resolve: {
