@@ -2,6 +2,8 @@ import BackgroundImage from '../images/background.png';
 import madeDillanWoff from '../fonts/made-dillan.woff';
 
 const canvas = document.getElementById('canvas_poster');
+const canvasInput = document.getElementById('canvas_input');
+const canvasDownload = document.getElementById('canvas_download');
 const ctx = canvas.getContext('2d');
 const canvasWidth = 2480; // Width of the image
 const canvasHeight = 3508; // Height of the image
@@ -20,7 +22,6 @@ ctx.textAlign = 'center';
 const background = new Image();
 background.src = BackgroundImage;
 
-const canvasInput = document.getElementById('canvas_input');
 let text = canvasInput.value;
 
 // Update canvas whenever text on input changes.
@@ -65,12 +66,14 @@ function printLine(line, y) {
   ctx.fillText(line, canvas.width / 2, y);
 }
 
+canvasDownload.addEventListener('click', () => downloadCanvasAsImage());
+
 // This function can be called from the button in HTML.
 function downloadCanvasAsImage(){
-  let downloadLink = document.createElement('a');
-  downloadLink.setAttribute('download', 'poster.png');
   let canvas = document.getElementById('canvas_poster');
   let dataURL = canvas.toDataURL('image/png');
+  let downloadLink = document.createElement('a');
+  downloadLink.setAttribute('download', 'poster.png');
   downloadLink.setAttribute('href',dataURL);
   downloadLink.click();
 }
