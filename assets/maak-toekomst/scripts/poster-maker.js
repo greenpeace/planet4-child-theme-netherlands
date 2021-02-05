@@ -1,6 +1,5 @@
 import BackgroundImage from '../images/background.png';
 import madeDillanWoff from '../fonts/made-dillan.woff';
-import madeDillanWoff2 from '../fonts/made-dillan.woff2';
 
 const canvas = document.getElementById('canvas_poster');
 const ctx = canvas.getContext('2d');
