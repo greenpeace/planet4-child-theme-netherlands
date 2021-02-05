@@ -1,31 +1,9 @@
 <?php
 /**
  * Template Name: Maak Toekomst
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * To generate specific templates for your pages you can use:
- * /mytheme/views/page-mypage.twig
- * (which will still route through this PHP file)
- * OR
- * /mytheme/page-mypage.php
- * (in which case you'll want to duplicate this file and save to the above path)
- *
- * Methods for TimberHelper can be found in the /lib sub-directory
- *
  * @package  WordPress
  * @subpackage  Timber
  * @since    Timber 0.1
- */
-
-/**
- * Category : Issue
- * Tag      : Campaign
- * Post     : Action
  */
 
 use P4\MasterTheme\Context;
@@ -34,6 +12,12 @@ use Timber\Timber;
 
 $context        = Timber::get_context();
 $post           = new Post(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+
+/*
+ * This is all we need for this template, all the assets coming from the single entrypoint.
+ */
+enqueue_assets_from_entry('maak-toekomst');
+
 $page_meta_data = get_post_meta( $post->ID );
 $page_meta_data = array_map( 'reset', $page_meta_data );
 
