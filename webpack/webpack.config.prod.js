@@ -29,6 +29,7 @@ module.exports = () => {
       new WebpackManifestPlugin({generate: generateManifest}),
     ],
   };
+
   return merge(commonConfig, config);
 };
 
@@ -36,9 +37,13 @@ module.exports = () => {
 function generateManifest(seed, files){
   let assets ={};
   files.forEach(function(file) {
+    if (file.isChunk === false) {
+      return;
+    }
     let name = file.name;
     let contentHash = file.chunk.contentHash;
     assets[name] = (name.includes('.js')? contentHash.javascript : contentHash['css/mini-extract']);
+
   });
   return assets;
 }
