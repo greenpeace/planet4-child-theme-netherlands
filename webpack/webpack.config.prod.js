@@ -8,7 +8,7 @@ module.exports = () => {
   const config = {
     output: {
       filename: '[name].js',
-      publicPath: '/wp-content/themes/planet4-child-theme-netherlands/public/build/'
+      publicPath: '/nl/wp-content/themes/planet4-child-theme-netherlands/public/build/'
     },
     mode: 'production',
     devtool: 'cheap-source-map',
