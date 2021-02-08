@@ -86,13 +86,17 @@
 
 @media screen and (min-width: 775px) {
   .canvas_container {
-    width: 50%;
+    width: 40%;
     height: auto;
   }
 
   .canvas_user_input_container {
-    width: 30%;
+    width: 60%;
     padding: 0 1rem 0 2rem;
+
+    textarea {
+      max-width: 300px;
+    }
   }
 
   .canvas_input_label {

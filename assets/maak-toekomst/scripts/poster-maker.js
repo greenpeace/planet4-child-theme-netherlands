@@ -3,10 +3,19 @@ import madeDillanWoff from '../fonts/made-dillan.woff';
 
 const canvas = document.getElementById('canvas_poster');
 const canvasInput = document.getElementById('canvas_input');
+const inputMaxLength = 30;
+
 const canvasDownload = document.getElementById('canvas_download');
+const canvasCountdown = document.getElementById('canvas_countdown');
 const ctx = canvas.getContext('2d');
 const canvasWidth = 2480; // Width of the image
 const canvasHeight = 3508; // Height of the image
+
+const urlParams = new URLSearchParams(window.location.search);
+const posterText = urlParams.get('poster-text'); // Allow the user to use a URL Param to set the default text.
+canvasInput.value = posterText || canvasInput.value;
+
+canvasInput.setAttribute('maxLength', inputMaxLength);
 
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
@@ -18,9 +27,9 @@ ctx.fillStyle = '#00103d';
 ctx.font = fontSize + ' ' + 'Dillan';
 ctx.textAlign = 'center';
 
-
 const background = new Image();
 background.src = BackgroundImage;
+background.crossOrigin = 'anonymous';
 
 let text = canvasInput.value;
 
@@ -30,8 +39,12 @@ canvasInput.addEventListener('input', function (e) {
   updateCanvas();
 });
 
+function updateCounter() {
+  canvasCountdown.innerText = String(inputMaxLength - canvasInput.value.length);
+}
 
 function updateCanvas() {
+  updateCounter();
   ctx.drawImage(background, 0, 0);
   let lines = getLines(ctx, text, canvas.width * 0.9); // * 0.9 for a small margin.
   let numberOfLines = lines.length;
@@ -61,12 +74,9 @@ function getLines(ctx, text, maxWidth) {
   return lines;
 }
 
-
 function printLine(line, y) {
   ctx.fillText(line, canvas.width / 2, y);
 }
-
-canvasDownload.addEventListener('click', () => downloadCanvasAsImage());
 
 // This function can be called from the button in HTML.
 function downloadCanvasAsImage(){
@@ -78,11 +88,14 @@ function downloadCanvasAsImage(){
   downloadLink.click();
 }
 
+canvasDownload.addEventListener('click', () => downloadCanvasAsImage());
+
 // Update the canvas when the background image had loaded.
 background.onload = function () {
   updateCanvas();
 };
 
+// Update the canvas when the font is loaded.
 let dillanFont = new FontFace('Dillan', `url(${madeDillanWoff})`);
 dillanFont.load().then(
   font => {
