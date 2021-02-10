@@ -29,7 +29,7 @@ max_length=52
 # build the regex pattern based on the config file
 function build_regex() {
   # allow revert commits
-	regexp="^((([Rr]evert|[Mm]erge): ?)|(("
+	regexp="^((([Rr]evert|[Mm]erge):? ?)|(("
 	# add types
   for type in "${types[@]}"
   do
