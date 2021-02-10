@@ -2,34 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.11.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.7.0...v4.11.0) (2021-02-10)
+
+
+### Features
+
+
+
+
+
+* improve changelog generation ([e3acef9](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e3acef9116382dac02a369c15eafa0b40b203896))
+
+
+
+### Bug Fixes
+* add pagination for news page ([b1e2f10](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/b1e2f10e83363932ad934d31e1f2105f983d2af3))
+* higher z-index on navbar ([53f14ca](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/53f14ca5fed046b1fc8e0e4a578f6e6c3792c55a))
+* reset body background color ([c0c038b](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c0c038b4a6186711ef9f1d763a1f9da0090a628b))
+
 ## [4.10.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.7.0...v4.10.0) (2021-02-04)
 
 
 ### Features
 
-* add caret icon svg ([3bd4a88](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/3bd4a8850f96683bbcdd4cd6b724d135de306dc5))
-* add comment possibility to a page. ([5d7fe97](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/5d7fe9793b965be90d81b0cac326bafb23eb4a14))
-* add comment template files in theme ([dcb009f](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/dcb009f47a4e643e44cb11987888ef61ec821ce7))
 * add contenthash manifest generation ([26b03cd](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/26b03cd9356480ee5d361722258bee7170dbe70b))
 * add contenthashes as asset versions ([a716ba1](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/a716ba11fe7c118d901baddadbe12f664569cc8f))
-* add dropdown styles ([816eb12](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/816eb12d372b5ac8908236284e88fe8c18b97586))
-* Move comments pages into their own template ([4740c33](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/4740c33970fc737f73387d8e72ee11344c56620b))
-* navbar styling and code improvements ([55656a8](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/55656a81240c31a24adf5f3234d995a38dccac02))
 
 
 ### Bug Fixes
 
-* add 'plugin-blocks' as style and script dependency ([941f850](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/941f850062aeb4271447423683f1c4470a5d560a))
-* add css selector for ci test ([b41a243](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/b41a243b3eeba2d9ef2ea29327c242e8b48a7781))
-* add jquery as a bootstrap dependency ([e10c0e4](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e10c0e48a68c8ad42d52b4842f635b51ff2685db))
 * add modal scss to bootstrap asset ([b56aa0b](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/b56aa0b86b836c64281939cbc6026bdd8abdade4))
-* add page template with comments ([9c80a19](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/9c80a19a1da7575ce1084c748baf66aefaaabd5b))
 * add separate function for admin assets ([f66b57e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/f66b57ee22d3d260f52ded6b232452a43c73179b))
-* disable firewall when for webpack dev server ([1e3fc8e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/1e3fc8e30fa1a51106ba6e5d0341baac203fd3d3))
-* expose $ as jquery globally. ([0dcf9c9](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/0dcf9c98ef6ed2d8b4a0ebdd13f61dfed2c4bbbf))
-* remove 'plugin-blocks' as script dependency ([e9df34b](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e9df34bbb6452c62784ef282cb7597575d52e6ca))
-* set sensible default size for caret icon ([ac4ee88](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/ac4ee881a7b543f8900315221a6cb00b61d0ee14))
-* vertical position of navbar ([2aac201](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2aac20114959405ce884fcd512d724c7931c43ac))
 
 ## [4.9.0](https://www.github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.8.0...v4.9.0) (2021-01-27)
 

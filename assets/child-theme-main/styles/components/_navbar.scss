@@ -8,14 +8,13 @@ nav#header {
   --nav-height: 60px;
   --nav-spacing: 1.2em;
   --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0 rgba(0, 0, 0, 0.04);
-
   height: var(--nav-height);
   background-color: white;
   display: flex;
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 9999;
   box-shadow: var(--box-shadow);
 
   .btn-navbar-toggle {
