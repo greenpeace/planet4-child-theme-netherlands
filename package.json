@@ -55,11 +55,11 @@
 	},
 	"standard-version": {
 		"scripts": {
-			"prerelease": "git branch -b release/v4.11.0",
+			"prerelease": "git checkout -b release/v4.11.0",
 			"postcommit": "git checkout develop && git merge release/v4.11.0",
 			"pretag": "git checkout master && git merge release/v4.11.0",
 			"posttag": "git branch -d release/v4.11.0"
 		}
 	},
-	"version": "4.10.0"
+	"version": "4.11.0"
 }
