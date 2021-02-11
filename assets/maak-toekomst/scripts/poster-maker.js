@@ -15,7 +15,7 @@ export default () => {
 
   const urlParams = new URLSearchParams(window.location.search);
   const urlPosterText = urlParams.get('poster-text'); // Allow the user to use a URL Param to set the default text.
-  canvasInput.value = urlPosterText.toLowerCase() || canvasInput.value;
+  canvasInput.value = urlPosterText ? urlPosterText.toLowerCase() : canvasInput.value;
 
   canvasInput.setAttribute('maxLength', inputMaxLength);
 
