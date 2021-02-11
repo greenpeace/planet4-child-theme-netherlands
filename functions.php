@@ -94,7 +94,6 @@ add_action('init', 'set_page_template');
 // Removes the canonical redirection
 remove_filter('template_redirect', 'redirect_canonical');
 
-
 /**
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
@@ -185,3 +184,13 @@ function datawrapper_oembed_provider()
 }
 
 add_action('init', 'datawrapper_oembed_provider');
+
+add_action('init', 'check_demopage');
+function check_demopage(){
+	// demo page should only be published in non-prod environments
+	$hostname= $_SERVER['HOSTNAME'];
+	$demopage_status = get_post_status(43617);
+	if (($hostname !== "www.greenpeace.org") && $demopage_status !== false && $demopage_status !== 'publish') {
+		wp_publish_post(43617);
+	}
+}
