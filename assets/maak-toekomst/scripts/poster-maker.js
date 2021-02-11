@@ -88,6 +88,10 @@ export default () => {
     downloadLink.setAttribute('download', 'poster.png');
     downloadLink.setAttribute('href', dataURL);
     downloadLink.click();
+
+    // Trigger an event for Google Analytics that also stores the input of the user.
+    ga('create', 'UA-24275211-1', 'auto');
+    ga('send', 'event', 'Planet 4', 'posterMaker', text);
   }
 
   canvasDownload.addEventListener('click', () => downloadCanvasAsImage());
