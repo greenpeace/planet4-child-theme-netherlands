@@ -6,5 +6,6 @@ For example, you can have an entry "Main" that includes all assets that are used
 const entries = {
   'child-theme-main': './assets/child-theme-main/index.js',
   'bootstrap': './assets/bootstrap/index.js',
+  'maak-toekomst': './assets/maak-toekomst/index.js',
 };
 module.exports = entries;
