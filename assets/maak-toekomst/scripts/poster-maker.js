@@ -14,8 +14,8 @@ export default () => {
   const canvasHeight = 3508; // Height of the image
 
   const urlParams = new URLSearchParams(window.location.search);
-  const posterText = urlParams.get('poster-text'); // Allow the user to use a URL Param to set the default text.
-  canvasInput.value = posterText || canvasInput.value;
+  const urlPosterText = urlParams.get('poster-text'); // Allow the user to use a URL Param to set the default text.
+  canvasInput.value = urlPosterText.toLowerCase() || canvasInput.value;
 
   canvasInput.setAttribute('maxLength', inputMaxLength);
 
