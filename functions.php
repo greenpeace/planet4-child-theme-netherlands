@@ -56,6 +56,7 @@ function enqueue_admin_assets()
 	}
 	enqueue_assets_from_entry('bootstrap', ['jquery']);
 	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap']);
+	enqueue_assets_from_entry('child-theme-editor');
 }
 
 add_action('enqueue_block_editor_assets', 'enqueue_admin_assets', 1);
