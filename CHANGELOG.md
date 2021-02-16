@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.12.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.11.0...v4.12.0) (2021-02-16)
+
+
+### Features
+
+* ensure demo page is always published on dev instance ([604383c](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/604383c83706a8578d067a17959e284986a86235))
+* poster maker for MAAK TOEKOMST ([be6bde6](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/be6bde63003f4949db4969ca56c79fe5842970f1))
+
+
+### Bug Fixes
+
+* merge configs after finishing feature ([9d4d59a](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/9d4d59ae7c0327fb50be59427ea9afe8fcdab9b9))
+
 ## [4.11.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.7.0...v4.11.0) (2021-02-10)
 
 
