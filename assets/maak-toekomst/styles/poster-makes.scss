@@ -1,11 +1,10 @@
-@use '../../child-theme-main/styles/base/variables';
+@use "../../child-theme-main/styles/base/variables";
 @use "../../child-theme-main/styles/base/mixins";
 
-
 @font-face {
-  font-family: 'Dillan';
-  src: url('../fonts/made-dillan.woff2') format('woff2'),
-  url('../fonts/made-dillan.woff') format('woff');
+  font-family: "Dillan";
+  src: url("../fonts/made-dillan.woff2") format("woff2"),
+    url("../fonts/made-dillan.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -61,7 +60,6 @@
     display: block;
   }
 }
-
 
 .canvas_wrap {
   position: absolute;

@@ -26,7 +26,6 @@ Text Domain: planet4-master-theme
 
 // TODO: Add variable overrides for the 16px grid here.
 
-
 // Optional
 // @import "~bootstrap/scss/reboot";
 // @import "~bootstrap/scss/type";
@@ -38,12 +37,12 @@ Text Domain: planet4-master-theme
 // @import "~bootstrap/scss/_breadcrumb.scss";
 // @import "~bootstrap/scss/_button-group.scss";
 // @import "~bootstrap/scss/_buttons.scss";
- @import "~bootstrap/scss/_card.scss";
+@import "~bootstrap/scss/_card.scss";
 @import "~bootstrap/scss/carousel";
- @import "~bootstrap/scss/close";
- //@import "~bootstrap/scss/_code.scss";
+@import "~bootstrap/scss/close";
+//@import "~bootstrap/scss/_code.scss";
 // @import "~bootstrap/scss/_custom-forms.scss";
- @import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/forms";
 // @import "~bootstrap/scss/_functions.scss";
 // @import "~bootstrap/scss/_grid.scss";
