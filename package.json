@@ -63,10 +63,10 @@
 	},
 	"standard-version": {
 		"scripts": {
-			"prerelease": "git checkout -b release/v4.11.0",
-			"postcommit": "git checkout develop && git merge release/v4.11.0",
-			"pretag": "git checkout master && git merge release/v4.11.0",
-			"posttag": "git branch -d release/v4.11.0"
+			"prerelease": "git checkout -b release",
+			"postcommit": "git checkout develop && git merge release",
+			"pretag": "git checkout master && git merge release",
+			"posttag": "git branch -d release"
 		}
 	},
 	"version": "4.11.0"
