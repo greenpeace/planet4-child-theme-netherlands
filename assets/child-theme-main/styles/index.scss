@@ -5,6 +5,7 @@
 @import "base/body";
 @import "base/typography";
 @import "base/mixins";
+@import "base/wp_block_overrides";
 
 @import "blocks/all";
 
@@ -12,3 +13,4 @@
 
 @import "pages/search";
 @import "pages/privacypolicy";
+

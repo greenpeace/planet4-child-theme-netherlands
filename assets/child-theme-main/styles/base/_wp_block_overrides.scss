@@ -1,0 +1,53 @@
+@use "variables";
+
+.wp-block-buttons {
+  display: block;
+  margin-top: 1em;
+
+  .wp-block-button__link {
+    border-radius: 0;
+    font-size: 1rem;
+    min-width: 10em;
+    padding: 1em 2em;
+    line-height: 1.5;
+    box-shadow: none !important;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .wp-block-button {
+    display: inline-flex !important;
+    margin: 0;
+
+    + .wp-block-button {
+      margin-left: 1em;
+    }
+
+  &.is-style-cta {
+    .wp-block-button__link {
+      text-transform: uppercase;
+      color: white !important;
+      background-color: variables.$blood-orange;
+
+      &:hover {
+        color: white !important;
+        background-color: variables.$hover-orange;
+      }
+    }
+  }
+
+  &.is-style-secondary {
+    .wp-block-button__link {
+      color: white !important;
+      background-color: variables.$dark-blue;
+
+      &:hover {
+        color: white !important;
+        background-color: darken(variables.$dark-blue, 5%);
+      }
+    }
+
+    }
+  }
+}
