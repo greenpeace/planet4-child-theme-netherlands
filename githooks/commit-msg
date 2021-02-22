@@ -22,6 +22,7 @@ types=(
 	"style"
 	"test"
 	"chore"
+	"WIP"
 )
 min_length=10
 max_length=52
