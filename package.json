@@ -11,11 +11,11 @@
 		"poststart": "ln -s -f ../../githooks/commit-msg .git/hooks/commit-msg && chmod +x githooks/commit-msg",
 		"release": "npm run-script build && git add . && standard-version -a --no-verify",
 		"dryrelease": "standard-version --dry-run",
-		"lint": "eslint assets --ext .js && stylelint 'assets/**/*.scss'",
-		"lint:fix": "eslint --fix assets --ext .js,.js && stylelint --fix 'assets/**/*.scss'",
-		"lint:js": "eslint assets --ext .js",
+		"lint": "eslint assets --ext .js,.jsx && stylelint 'assets/**/*.scss'",
+		"lint:fix": "eslint --fix assets --ext .js,.jsx && stylelint --fix 'assets/**/*.scss'",
+		"lint:js": "eslint assets --ext .js,.jsx",
 		"lint:css": "stylelint 'assets/**/*.scss'",
-		"lint:js:fix": "eslint --fix assets --ext .js,.js",
+		"lint:js:fix": "eslint --fix assets --ext .js,.jsx",
 		"lint:css:fix": "stylelint --fix 'assets/**/*.scss'"
 	},
 	"devDependencies": {

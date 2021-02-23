@@ -17,7 +17,7 @@ indent_size = 4
 [*.json]
 indent_size = 2
 
-[*.{css,js,scss}]
+[*.{css,js,scss,jsx}]
 indent_style = space
 indent_size = 2
 
