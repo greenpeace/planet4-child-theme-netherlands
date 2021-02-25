@@ -70,21 +70,6 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 			global $post,$wp;
 			if (!is_object($post)){return;}
 			$this->post = $post;
-			// thumbnail > og image > background override > first image
-			$has_thumbnail = is_string(get_the_post_thumbnail_url($this->post->ID, 'full'));
-			if(!$has_thumbnail){
-				$regex = '/<!-- wp:image {"id":(\d*),.*-->/m';
-				preg_match($regex, $post->post_content, $matches, PREG_OFFSET_CAPTURE, 0);
-				$image_id = $matches[1][0];
-				$image_url = wp_get_attachment_image_url($image_id);
-//				echo "<pre>".xdebug_var_dump($image_id)."</pre>";
-//				echo "<pre>".xdebug_var_dump($image_url)."</pre>";
-			}
-			else{
-				$image_url = get_the_post_thumbnail_url($this->post->ID, 'full');
-			}
-
-
 
 			$this->data = [
 				"wp_category"=>get_the_category()[0]->name ?? "Greenpeace",
@@ -94,16 +79,20 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 				'wp_datetime_modified'=>get_the_modified_date('c'),
 				'current_url'=>home_url( $wp->request ),
 				'site_url'=>get_site_url(),
-				'image_url'=>$image_url,
 //				'post_type'=>$post->post_type,
 			];
+
+			$this->data['image_url'] =$this->get_image();
 
 
 
 			$this->add_to_timbercontext('enhanced_structured_data', $this->data);
 			$this->add_to_timbercontext('structured_breadcrumbs', $this->get_breadcrumbs());
 			$this->add_to_timbercontext('structured_organization', $this->get_organization(0));
-			if($has_thumbnail){
+
+			//	Can be removed once more images have been enabled
+			$has_image = is_string($this->get_image());
+			if($has_image){
 				$this->add_to_timbercontext('structured_page_data', $this->get_page_data());
 			}
 		}
@@ -212,9 +201,36 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 				'publisher'=> $this->get_organization(1)
 			];
 
-//			echo "<pre>".xdebug_var_dump($article_info)."</pre>";
-
 			return $article_info;
+		}
+
+		private function get_image()
+		{
+			// Primarily return OG Image
+			if (is_array($this->post->custom) && isset($this->post->custom['p4_og_image'])) {
+				return $this->post->custom['p4_og_image'];
+			}
+			// Otherwise Thumbnail
+			$has_thumbnail = is_string(get_the_post_thumbnail_url($this->post->ID, 'full'));
+			if ($has_thumbnail) { return get_the_post_thumbnail_url($this->post->ID, 'full'); }
+
+			// Or Background image
+			if (is_array($this->post->custom) && isset($this->post->custom['p4_background_image_override'])) {
+				return $this->post->custom['p4_background_image_override'];
+			}
+
+			// If all else fails first image in post
+			$regex = '/<!-- wp:image {"id":(\d*),.*-->/m';
+			if (preg_match($regex, $this->post->post_content, $matches, PREG_OFFSET_CAPTURE, 0)){
+				$image_id = $matches[1][0];
+				$image_data = wp_get_attachment_image_src( $image_id, 'full' );
+				if ( $image_data ) {
+					return $image_data[0];
+				}
+			}
+			
+			// or give up and just return the logo
+			return $this->data['site_url'].'/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png';
 		}
 	}
 }
