@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.13.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.12.0...v4.13.0) (2021-02-25)
+
+
+### Features
+
+* improve structured data ([7fca609](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/7fca6090b0d265b51ba4f931f80077381a999c7a))
+* **dx:** Allow WIP as a commit type ([70a6da6](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/70a6da673e1b0413cec5117f22ec5c16a9b19130))
+
+
+### Bug Fixes
+
+* make linting run on jsx files ([05afccd](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/05afccd409b34e86c79d8826fe50ff5cfe13528f))
+
 ## [4.12.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.11.0...v4.12.0) (2021-02-16)
 
 
