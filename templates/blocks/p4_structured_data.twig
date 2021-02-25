@@ -1,0 +1,50 @@
+{% set social_menu_links = [] %}
+{% if footer_social_menu %}
+	{% for menu_details in footer_social_menu %}
+		{% set social_menu_links = social_menu_links|merge([menu_details.url]) %}
+	{% endfor %}
+{% endif %}
+{% set website_info = {
+	'@context': 'http://schema.org',
+	'@type': 'WebSite',
+	'@id': site.link~'#website',
+	'url': site.link,
+	'name': site.name,
+	'alternateName': 'Greenpeace',
+	'potentialAction': {
+		'name': 'Searchbar',
+		'@type': 'SearchAction',
+		'target': ( site.link ~ '/?s={search_term_string}&orderby=_score' ),
+		'query-input': 'required name=search_term_string',
+	}
+} %}
+{% set org_info = {
+	'@context': 'http://schema.org',
+	'@type': 'Organization',
+	'@id': site.link~'#organization',
+	'url': site.link,
+	'name': site.name,
+	'logo': site.link ~ '/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png'
+} %}
+{% if social_menu_links %}
+	{% set org_info = org_info|merge( {'sameAs': social_menu_links } ) %}
+{% endif %}
+
+
+
+{# Only include toplevel structured data on the homepage#}
+{% if current_url == site.link %}
+	<script type='application/ld+json'>{{ website_info|json_encode()|raw }}</script>
+{% endif %}
+
+{# Include relevant structured data#}
+{% if structured_page_data %}
+	<script type='application/ld+json'>{{ structured_page_data|json_encode()|raw }}</script>
+{% endif %}
+
+{# Always include Organization#}
+<script type='application/ld+json'>{{ org_info|json_encode()|raw }}</script>
+{# Always include breadcrumbs#}
+{% if structured_breadcrumbs %}
+	<script type='application/ld+json'>{{ structured_breadcrumbs|json_encode()|raw }}</script>
+{% endif %}

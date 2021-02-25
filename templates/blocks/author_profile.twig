@@ -3,18 +3,18 @@
 
 		<h2 class="author-block-info-title">Auteur</h2>
 
-		<footer class="author-block" itemscope itemtype="http://schema.org/Person">
+		<footer class="author-block">
 
 			{% if ( post.author.avatar ) %}
 				<figure class="gpnl-author-block-image d-none d-md-block">
-					<img itemprop="image" class="author-pic"
+					<img class="author-pic"
 						 src="{{ fn('get_avatar_url', post.author.id, {'size' : 294}) }}"
 						 alt="{{ post.author.name }}">
 				</figure>
 			{% endif %}
 
 			<div class="author-block-info">
-				<h4 rel="author" class="author-block-info-name" itemprop="name">
+				<h4 rel="author" class="author-block-info-name">
 					{{ post.author.name }}
 				</h4>
 
@@ -34,7 +34,7 @@
 					{% set author_bio = post.author.description %}
 				{% endif %}
 
-				<div class="author-block-info-bio" itemprop="description">
+				<div class="author-block-info-bio" >
 					{{ fn('wpautop', author_bio)|e('wp_kses_post')|raw }}
 				</div>
 
