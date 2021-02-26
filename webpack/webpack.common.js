@@ -1,10 +1,8 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 
 const entries = require('./entries');
-
-// TODO: Include entry name in output path, see: https://stackoverflow.com/questions/62008724/webpack-set-the-path-for-my-assets-according-to-the-entry-name
-// TODO: Add aliases for common assets such as base mixins and variables.
 
 module.exports = {
   entry: entries,
@@ -63,6 +61,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new DependencyExtractionWebpackPlugin(),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/*', '!.gitignore'] // Prevent '.gitignore' to be removed.
     })
