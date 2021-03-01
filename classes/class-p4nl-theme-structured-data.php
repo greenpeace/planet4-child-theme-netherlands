@@ -128,7 +128,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 			}
 
 			return [
-				'@context'=> 'http://schema.org',
+				'@context'=> 'https://schema.org',
 				'@type'=> 'BreadcrumbList',
 				'@id'=> $this->data['wp_category'].'#breadcrumbs',
 				'name'=> 'Breadcrumbs',
@@ -147,7 +147,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 			if ($organization_bool_username){ return $this->get_organization(0); }
 
 			return [
-				'@context'=> 'http://schema.org',
+				'@context'=> 'https://schema.org',
 				'@type'=> 'Person',
 				'@id'=> $current_url.'/'.'#author',
 				'name'=> get_the_author_meta('display_name', $author_id),
@@ -164,7 +164,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 
 			if ($publisher){
 				return [
-					'@context'=> 'http://schema.org',
+					'@context'=> 'https://schema.org',
 					'@type'=> 'Organization',
 					'@id'=> $this->data['site_url'].'/'.'#organization',
 					'name'=> get_the_author_meta('display_name', $author_id),
@@ -176,7 +176,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 			}
 
 			return [
-				'@context'=> 'http://schema.org',
+				'@context'=> 'https://schema.org',
 				'@type'=> 'Organization',
 				'@id'=> $current_url.'/'.'#author',
 				'name'=> get_the_author_meta('display_name', $author_id),
@@ -192,7 +192,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 			// JobPosting
 			// General page
 			$article_info = [
-				'@context'=> 'http://schema.org',
+				'@context'=> 'https://schema.org',
 				'@type'=> 'Article',
 				'headline'=> $this->data['wp_title'],
 				'abstract'=> $this->data['wp_excerpt'],
