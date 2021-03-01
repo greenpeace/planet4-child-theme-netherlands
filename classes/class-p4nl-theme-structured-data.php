@@ -116,14 +116,16 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 					'name'=> get_the_title()
 				]
 			];
-			$breadcrumb_tag=[[
-				'@type'=> 'ListItem',
-				'position'=> 2,
-				'name'=> $tags[0]->name,
-				'item'=> get_tag_link($tags[0]),
-			]];
 
-			if ($tag_bool){array_splice( $breadcrumbs, 1, 0, $breadcrumb_tag );}
+			if ($tag_bool){
+				$breadcrumb_tag=[[
+					'@type'=> 'ListItem',
+					'position'=> 2,
+					'name'=> $tags[0]->name,
+					'item'=> get_tag_link($tags[0]),
+				]];
+				array_splice( $breadcrumbs, 1, 0, $breadcrumb_tag );
+			}
 
 			return [
 				'@context'=> 'http://schema.org',
@@ -185,7 +187,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 
 		private function get_page_data(): array
 		{
-			// Article
+			// Article  ✓
 			// NewsArticle
 			// JobPosting
 			// General page
@@ -228,7 +230,7 @@ if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
 					return $image_data[0];
 				}
 			}
-			
+
 			// or give up and just return the logo
 			return $this->data['site_url'].'/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png';
 		}
