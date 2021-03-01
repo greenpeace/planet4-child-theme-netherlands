@@ -1,27 +1,32 @@
+const donateButton = document.querySelector('#donate-button-wrapper .dropdown .btn-donate');
+const href = donateButton.getAttribute('href');
+
 // If the browser is IE 10 or below show a notification
-if (navigator.userAgent.indexOf('MSIE') >= 0) {
-  jQuery('.old-ie-browser-notification').show();
-}
-
 // This will remove the direct link on the donate button on devices with touchscreens.
-// On touch or click the dropdown menu will show instead of following the link.
-jQuery( document ).ready(function() {
-  let donateButton = jQuery('#donate-button-wrapper .dropdown .btn-donate');
-  if ('ontouchstart' in window) {
-    donateButton[0].addEventListener('touchstart', removeHref);
-  }
-});
+if (navigator.userAgent.indexOf('MSIE') >= 0) {
+  document.querySelector('.old-ie-browser-notification').style.display = 'block';
 
-function removeHref (event) {
-  let donateButton = $(event.target);
-  let href = donateButton.attr('href');
-  donateButton.removeAttr('href');
-  donateButton.attr('data-toggle', 'dropdown');
-  donateButton[0].addEventListener('touchend', addHref, href);
+}
+// On touch or click the dropdown menu will show instead of following the link.
+if ( document.readyState === 'complete' ||  (document.readyState !== 'loading' && !document.documentElement.doScroll) ) {
+  donateMenu();
+} else {
+  document.addEventListener('DOMContentLoaded', donateMenu);
+
+}
+function donateMenu() {
+  if ('ontouchstart' in window) {
+    donateButton.addEventListener('touchstart', removeHref, {passive: true});
+  }
 }
 
-function addHref (event, href) {
-  let donateButton = $(event.target);
-  donateButton.attr('href', href);
+function removeHref () {
+  donateButton.removeAttribute('href');
+  donateButton.setAttribute('data-toggle', 'dropdown');
+  donateButton.addEventListener('touchend', addHref, {passive: true});
+}
+
+function addHref () {
+  donateButton.setAttribute('href', href);
 }
 
