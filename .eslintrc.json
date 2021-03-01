@@ -6,8 +6,9 @@
 		"jest": true
 	},
 	"extends": [
-	  "eslint:recommended",
-		"plugin:react/recommended"
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:no-jquery/all"
 	],
 	"settings": {
 		"react": {
@@ -60,6 +61,7 @@
 		"L": "writable"
 	},
 	"plugins": [
-		"react"
+		"react",
+		"no-jquery"
 	]
 }
