@@ -11,7 +11,7 @@ if (navigator.userAgent.indexOf('MSIE') >= 0) {
 if ( document.readyState === 'complete' ||  (document.readyState !== 'loading' && !document.documentElement.doScroll) ) {
   donateMenu();
 } else {
-  document.addEventListener('DOMContentLoaded', donateMenu);
+  document.addEventListener('DOMContentLoaded', donateMenu, {passive: true});
 
 }
 function donateMenu() {
