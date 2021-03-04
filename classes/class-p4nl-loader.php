@@ -87,10 +87,6 @@ final class P4NL_Theme_Loader {
 			'P4NL_Theme_Metabox_Register',
 		];
 
-		if ( is_admin() ) {
-			global $pagenow;
-
-		}
 
 		$services = array_merge( $services, $this->default_services );
 		if ( $services ) {

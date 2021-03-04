@@ -48,41 +48,6 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 			$this->title = __( 'Planet4 NL', 'planet4NL-master-theme-backend' );
 
 			$this->fields = [
-				[
-					'name' => __( 'WIDS URL', 'planet4NL-master-theme-backend' ),
-					'id'   => 'wids_url',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'Registreren API URL (DEPRECATED)', 'planet4NL-master-theme-backend' ),
-					'id'   => 'register_url',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'PetitiePixel URL', 'planet4NL-master-theme-backend' ),
-					'id'   => 'petitionpixel_url',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'Kenikdeze URL', 'planet4NL-master-theme-backend' ),
-					'id'   => 'knownemail_url',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'Kenikdezetel URL', 'planet4NL-master-theme-backend' ),
-					'id'   => 'knownphone_url',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'API key', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_api_key',
-					'type' => 'text',
-				],
-				[
-					'name' => __( 'API host', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_api_host',
-					'type' => 'text',
-				],
 					[
 						'name'    => __( 'Disco Status?', 'planet4-master-theme-backend' ),
 						'id'      => 'gpnl_system_status',
