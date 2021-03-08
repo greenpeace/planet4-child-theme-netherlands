@@ -15,13 +15,19 @@ final class P4NL_Theme_Loader {
 	 *
 	 * @var P4NL_Theme_Loader $instance
 	 */
-	private static P4NL_Theme_Loader $instance;
+	private static $instance;
 	/**
 	 * Indexed array of all the classes/services that are needed.
 	 *
 	 * @var array $services
 	 */
-	private array $services;
+	private $services;
+	/**
+	 * Indexed array of all the classes/services that are used by Planet4.
+	 *
+	 * @var array $default_services
+	 */
+	private $default_services;
 
 	/**
 	 * Singleton creational pattern.
@@ -43,7 +49,7 @@ final class P4NL_Theme_Loader {
 	 *
 	 * @param array $services The dependencies to inject.
 	 */
-	private function __construct(array $services) {
+	private function __construct( $services ) {
 		$this->load_files();
 		$this->load_services( $services );
 	}
@@ -51,20 +57,18 @@ final class P4NL_Theme_Loader {
 	/**
 	 * Load required files.
 	 */
-	private function load_files(): void
-	{
+	private function load_files() {
 		try {
-			// Class names need to be prefixed with P4 and should use capitalized words separated by underscores.
-			// Any acronyms should be all upper case.
+			// Class names need to be prefixed with P4 and should use capitalized words separated by underscores. Any acronyms should be all upper case.
 			spl_autoload_register(
-				static function ($class_name ) {
+				function ( $class_name ) {
 					if ( strpos( $class_name, 'P4NL_Theme' ) !== false ) {
 						$file_name = 'class-' . str_ireplace( [ 'p4nl\\', '_' ], [ '', '-' ], strtolower( $class_name ) );
 						require_once __DIR__ . '/' . $file_name . '.php';
 					}
 				}
 			);
-		} catch (Exception $e ) {
+		} catch ( \Exception $e ) {
 			echo esc_html( $e->getMessage() );
 		}
 	}
@@ -74,10 +78,9 @@ final class P4NL_Theme_Loader {
 	 *
 	 * @param array $services The dependencies to inject.
 	 */
-	private function load_services(array $services): void
-	{
+	private function load_services( $services ) {
 
-		$default_services = [
+		$this->default_services = [
 			'P4NL_Theme_Settings',
 			'P4NL_Theme_Structured_data',
 			'P4NL_Theme_Navbar',
@@ -85,7 +88,7 @@ final class P4NL_Theme_Loader {
 		];
 
 
-		$services = array_merge( $services, $default_services);
+		$services = array_merge( $services, $this->default_services );
 		if ( $services ) {
 			foreach ( $services as $service ) {
 				$this->services[ $service ] = new $service();

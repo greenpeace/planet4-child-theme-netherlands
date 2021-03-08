@@ -16,7 +16,14 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 		 *
 		 * @var string
 		 */
-		private string $key = 'planet4nl_options';
+		private $key = 'planet4nl_options';
+
+		/**
+		 * Array of metaboxes/fields
+		 *
+		 * @var array
+		 */
+		protected $option_metabox = [];
 
 		/**
 		 * Options Page title
@@ -30,11 +37,7 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 		 *
 		 * @var string
 		 */
-		protected string $options_page = '';
-		/**
-		 * @var array[]
-		 */
-		private array $fields;
+		protected $options_page = '';
 
 		/**
 		 * Constructor
@@ -68,8 +71,7 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 		/**
 		 * Initiate our hooks
 		 */
-		public function hooks(): void
-		{
+		public function hooks() {
 			add_action( 'admin_init', [ $this, 'init' ] );
 			add_action( 'admin_menu', [ $this, 'add_options_page' ] );
 		}
@@ -77,24 +79,21 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 		/**
 		 * Register our setting to WP.
 		 */
-		public function init(): void
-		{
+		public function init() {
 			register_setting( $this->key, $this->key );
 		}
 
 		/**
 		 * Add menu options page.
 		 */
-		public function add_options_page(): void
-		{
+		public function add_options_page() {
 			$this->options_page = add_options_page( $this->title, $this->title, 'manage_options', $this->key, [ $this, 'admin_page_display' ] );
 		}
 
 		/**
 		 * Admin page markup. Mostly handled by CMB2.
 		 */
-		public function admin_page_display(): void
-		{
+		public function admin_page_display() {
 			?>
 			<div class="wrap <?php echo $this->key; ?>">
 				<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
@@ -108,8 +107,7 @@ if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
 		 *
 		 * @return array
 		 */
-		public function option_metabox(): array
-		{
+		public function option_metabox() {
 			return [
 				'id'         => 'option_metabox',
 				'show_on'    => [
