@@ -116,6 +116,7 @@ nav#header {
         padding: 0 calc(var(--nav-spacing));
         border: 0 !important; // GPI Override
         color: variables.$slate-grey;
+        text-decoration: none;
 
         &:hover {
           color: variables.$anthracite;
