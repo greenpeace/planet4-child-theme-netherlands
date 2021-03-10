@@ -1,0 +1,35 @@
+@import "../base/variables";
+// Checkbox clarifications
+.cookies-block .custom-control input[type="checkbox"] {
+& + .custom-control-description {
+    color: $medium-grey;
+
+&:before {
+   border: 2px solid $medium-grey;
+ }
+
+&:hover {
+   color: $black;
+ }
+}
+
+&:checked {
+& + .custom-control-description {
+    color: $black;
+
+&:after {
+   border-bottom: 4px solid $light-green;
+   border-right: 4px solid $light-green;
+   top: calc((100% - 20px) / 2 + 2px);
+   left: 2px;
+   height: 10px;
+   width: 18px;
+   box-shadow: 1px 1px $anthracite;
+ }
+
+&:before {
+   border-color: $black;
+ }
+}
+}
+}
