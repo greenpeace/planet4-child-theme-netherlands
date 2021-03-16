@@ -90,22 +90,23 @@
   }
 }
 
-.wp-block-button {
-  &.is-style-cta {
-    .wp-block-button__link {
-      background-color: $blood-orange;
-      box-shadow: none;
-
-      &:hover, &:active, &:focus {
-        background-color: $hover-orange;
-        color: $white;
-      }
-    }
-  }
-
-  .wp-block-button__link {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
+//.wp-block-button {
+//  &.is-style-cta {
+//    .wp-block-button__link {
+//      background-color: $blood-orange;
+//      box-shadow: none;
+//
+//      &:hover, &:active, &:focus {
+//        background-color: $hover-orange;
+//        color: $white;
+//      }
+//    }
+//  }
+//
+//  .wp-block-button__link {
+//    color: red !important;
+//    border: none;
+//    border-radius: 0;
+//    box-shadow: none;
+//  }
+//}
