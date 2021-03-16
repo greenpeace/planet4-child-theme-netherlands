@@ -12,7 +12,7 @@
 						   data-ga-action="Social Icons"
 						   data-ga-label="{{ social.icon }}">
 							{{ social.icon|svgicon }}
-							<span class="sr-only">{{ social.icon }}</span>
+							<span class="visually-hidden">{{ social.icon }}</span>
 						</a>
 					</li>
 				{% endfor %}
@@ -33,7 +33,7 @@
 						   data-ga-action="Social Icons"
 						   data-ga-label="{{ social.title }}">
 						{{ name|svgicon }}
-						<span class="sr-only">{{ social.title }}</span>
+						<span class="visually-hidden">{{ social.title }}</span>
 					</a></li>
 			{% endfor %}
 			{% endif %}
@@ -65,7 +65,7 @@
 			{% endfor %}
 		</ul>
 		<div class="row">
-				<p class="footer-sponsors-logo col-md-3">
+				<p class="footer-sponsors-logo col-md-4">
 					<a href="https://www.greenpeace.org/nl/de-postcode-loterij-en-greenpeace/">
 						<picture>
 							<source srcset="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" type="image/png">
@@ -73,10 +73,10 @@
 						</picture>
 					</a>
 				</p>
-				<p class="copyright-text col-md-3">
+				<p class="copyright-text col-md-4">
 					{{ copyright_text_line1|e('wp_kses_post')|raw }}
 				</p>
-				<p class="footer-sponsors-logo col-md-3">
+				<p class="footer-sponsors-logo col-md-4">
 					<a href="https://www.cbf.nl/organisatie/greenpeace">
 						<picture>
 							<source srcset="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" type="image/png">

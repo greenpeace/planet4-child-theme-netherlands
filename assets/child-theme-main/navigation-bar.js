@@ -12,7 +12,6 @@ if ( document.readyState === 'complete' ||  (document.readyState !== 'loading' &
   donateMenu();
 } else {
   document.addEventListener('DOMContentLoaded', donateMenu, {passive: true});
-
 }
 function donateMenu() {
   if ('ontouchstart' in window) {
@@ -22,7 +21,7 @@ function donateMenu() {
 
 function removeHref () {
   donateButton.removeAttribute('href');
-  donateButton.setAttribute('data-toggle', 'dropdown');
+  donateButton.setAttribute('data-bs-toggle', 'dropdown');
   donateButton.addEventListener('touchend', addHref, {passive: true});
 }
 
