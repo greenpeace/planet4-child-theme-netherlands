@@ -45,9 +45,9 @@
                         {% else %}
 
                             {% if page.current %}
-                                <li class="page-item active"><a class="page-link" href="{{page.link}}">{{page.name}}</a></li>
+                                <li class="page-item active"><span class="page-link">{{page.name}}</span></li>
                             {% else %}
-                                <li class="page-item"><a class="page-link">{{page.title|raw}}</a></li>
+                                <li class="page-item"><span class="page-link">{{page.title|raw}}</span></li>
                             {% endif %}
 
                         {% endif %}
