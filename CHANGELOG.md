@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.14.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.13.0...v4.14.0) (2021-03-22)
+
+
+### Features
+
+* add DependencyExtractionWebpackPlugin ([e8ab4b5](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e8ab4b5d38e2eb531b5e2e2cb4ecf3ad903b76fb))
+* add DependencyExtractionWebpackPlugin ([bcfea25](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/bcfea25f916f0f8cd6f9485afda134be0ccb6a69))
+* Prevent accessing non-existent objects ([fecc34b](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/fecc34b869dfd632743d6804ea093b21268d558d))
+* remove jquery dependency ([fe7e592](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/fe7e5928ccc1c771fc0a79859c682cee8a51c7fa))
+* remove rounded image style in editor ([a9c3b7a](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/a9c3b7ad1c23d15e3f6839f281d17b89b3c3a877))
+* remove rounded image style in editor ([90812a1](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/90812a11674d0591186874b2c2c1a5ab1b910582))
+* upgrade bootstrap to v5 ([2b11473](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2b11473a4ecb36774324723e79d179f918e5b3a5))
+* **dx:** Add eslint plugin to discourage jquery usage ([18d3f10](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/18d3f108c77bac49560f7232ca24a6c8e57a4393))
+
+
+### Bug Fixes
+
+* add https to schema.org references ([9c01492](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/9c014924dcf17895ef41c3c47f760cbf4434f03b))
+* custom checkboxes should only apply to cookies block ([6c54dcb](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/6c54dcb42454e5af0cf0cff800216ccf3202f049))
+* focal point picker height in editor ([491c7ba](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/491c7ba915c7ba7938f9a2ebd27796bb7b489344))
+* focal point picker height in editor ([2d6aa1c](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2d6aa1c6db83c52856226cbe82a8980663cf6c5c))
+* more BS5 fixes ([7b269f3](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/7b269f31a128234b6fbeffb71f419890b4579828))
+* remove display setting from .wp-block ([1646cc1](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/1646cc15e2dca8e8e45b59432bc68e8e4e571ae9))
+
 ## [4.13.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.12.0...v4.13.0) (2021-02-25)
 
 
