@@ -43,7 +43,7 @@ function enqueue_assets()
 		wp_enqueue_script('child-theme-runtime', DEV_ASSET_PATH . 'runtime.js', [], null, true);
 	}
 	enqueue_assets_from_entry('bootstrap', ['jquery']);
-	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style', 'plugin-blocks']);
+	enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style', 'planet4-blocks-style']);
 }
 add_action('wp_enqueue_scripts', 'enqueue_assets', 3);
 
@@ -99,6 +99,15 @@ remove_filter('template_redirect', 'redirect_canonical');
  * Fix pagination on archive pages
  * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
  */
+
+add_filter( 'redirect_canonical', 'pick_event_year_redirect', 10 );
+function pick_event_year_redirect( $redirect_url ) {
+	if ( is_tax( 'event_category' ) && is_year() ) {
+		return '';
+	}
+
+	return $redirect_url;
+}
 function news_pagination()
 {
 	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
