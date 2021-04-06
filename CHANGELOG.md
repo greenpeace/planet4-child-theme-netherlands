@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.14.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.0...v4.14.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* rename blocks handle ([5648e1f](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/5648e1fb01ed6b8a81e1c3f4036f34ace214b7c6))
+
 ## [4.14.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.13.0...v4.14.0) (2021-03-22)
 
 
