@@ -40,8 +40,8 @@ global $wp;
 $current_url = home_url( add_query_arg( array(), $wp->request ) );
 $current_url = str_replace( "/".$paged, "", $current_url);
 $prefs = [
-	'base'     => $current_url."/%_%", // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
-	'format'   => '%#%', // ?page=%#% : %#% is replaced by the page number
+	'base' => get_pagenum_link(1) . '%_%',
+	'format' => 'pagina/%#%',
 	'current'  => $paged,
 	'end_size' => 0,
 	'mid_size' => 3,

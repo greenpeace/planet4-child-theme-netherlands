@@ -92,20 +92,13 @@ function set_page_template()
 
 add_action('init', 'set_page_template');
 
-// Removes the canonical redirection
-remove_filter('template_redirect', 'redirect_canonical');
-
-/**
- * Fix pagination on archive pages
- * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
- */
-function news_pagination()
-{
-	add_rewrite_rule('^nieuws/?([0-9]{1,})/?$', 'index.php?pagename=nieuws&paged=$matches[1]', 'top');
+function rename_rewrite_base() {
+	global $wp_rewrite;
+	$wp_rewrite->author_base     = 'auteur';
+	$wp_rewrite->pagination_base = 'pagina';
+	flush_rewrite_rules();
 }
-
-add_action('init', 'news_pagination');
-add_action('after_switch_theme', 'flush_rewrite_rules');
+add_action( 'init', 'rename_rewrite_base' );
 
 
 /**
