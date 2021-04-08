@@ -1,11 +1,11 @@
 <?php
-
+namespace GPNL\Theme;
 /**
  * Class P4_Metabox_Register
  *
  * This creates extra meta-data that can be set to a page, post or campaign.
  */
-class P4NL_Theme_Metabox_Register {
+class Metabox {
 
 	/**
 	 * Meta box prefix.

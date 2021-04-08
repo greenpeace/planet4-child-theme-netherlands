@@ -1,4 +1,5 @@
 <?php
+namespace GPNL\Theme;
 /**
  * P4NL Theme Loader Class
  *
@@ -6,14 +7,14 @@
  */
 
 /**
- * Class P4NL_Theme_Loader.
+ * Class Loader.
  * Loads all necessary classes for Planet4 Netherlands Child Theme.
  */
-final class P4NL_Theme_Loader {
+final class Loader {
 	/**
 	 * A static instance of Loader.
 	 *
-	 * @var P4NL_Theme_Loader $instance
+	 * @var Loader $instance
 	 */
 	private static $instance;
 	/**
@@ -35,9 +36,9 @@ final class P4NL_Theme_Loader {
 	 *
 	 * @param array $services The Controller services to inject.
 	 *
-	 * @return P4NL_Theme_Loader
+	 * @return Loader
 	 */
-	public static function get_instance( $services = [] ) : P4NL_Theme_Loader {
+	public static function get_instance( $services = [] ) : Loader {
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new self( $services );
 		}
@@ -50,27 +51,8 @@ final class P4NL_Theme_Loader {
 	 * @param array $services The dependencies to inject.
 	 */
 	private function __construct( $services ) {
-		$this->load_files();
-		$this->load_services( $services );
-	}
 
-	/**
-	 * Load required files.
-	 */
-	private function load_files() {
-		try {
-			// Class names need to be prefixed with P4 and should use capitalized words separated by underscores. Any acronyms should be all upper case.
-			spl_autoload_register(
-				function ( $class_name ) {
-					if ( strpos( $class_name, 'P4NL_Theme' ) !== false ) {
-						$file_name = 'class-' . str_ireplace( [ 'p4nl\\', '_' ], [ '', '-' ], strtolower( $class_name ) );
-						require_once __DIR__ . '/' . $file_name . '.php';
-					}
-				}
-			);
-		} catch ( \Exception $e ) {
-			echo esc_html( $e->getMessage() );
-		}
+		$this->load_services( $services );
 	}
 
 	/**
@@ -81,10 +63,10 @@ final class P4NL_Theme_Loader {
 	private function load_services( $services ) {
 
 		$this->default_services = [
-			'P4NL_Theme_Settings',
-			'P4NL_Theme_Structured_data',
-			'P4NL_Theme_Navbar',
-			'P4NL_Theme_Metabox_Register',
+			Settings::class,
+			StructuredData::class,
+			Navbar::class,
+			Metabox::class,
 		];
 
 

@@ -1,15 +1,16 @@
 <?php
+namespace GPNL\Theme;
 /**
  * Settings Class
  *
  * @package P4NL_CT
  */
 
-if ( ! class_exists( 'P4NL_Theme_Settings' ) ) {
+if ( ! class_exists( 'Settings' ) ) {
 	/**
-	 * Class P4NL_Theme_Settings
+	 * Class Settings
 	 */
-	class P4NL_Theme_Settings {
+	class Settings {
 
 		/**
 		 * Option key, and option page slug

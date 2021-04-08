@@ -1,16 +1,17 @@
 <?php
+namespace GPNL\Theme;
 /**
  * Navbar customization
  *
  * @package P4NL_CT
  */
 use Timber\Menu as TimberMenu;
-if ( ! class_exists( 'P4NL_Theme_Navbar' ) ) {
+if ( ! class_exists( 'Navbar' ) ) {
 	/**
-	 * Class P4NL_Theme_Navbar
+	 * Class Navbar
 	 */
 
-	class P4NL_Theme_Navbar {
+	class Navbar {
 
 		/**
 		 * Constructor
