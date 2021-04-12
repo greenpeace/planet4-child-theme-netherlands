@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.14.2](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.1...v4.14.2) (2021-04-12)
+
+
+### Bug Fixes
+
+* improve news pagination ([c3ad8fa](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c3ad8fa04b86216fbfc8d6d8dfac35d9de5190ed))
+* remove erroneously added lines ([0f0ce98](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/0f0ce985be9f6482272afa78599df536bf63592e))
+
 ### [4.14.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.0...v4.14.1) (2021-04-06)
 
 
