@@ -1,4 +1,5 @@
 <?php
+namespace GPNL\Theme;
 /**
  * Structured data customization
  *
@@ -6,12 +7,12 @@
  */
 
 use P4\MasterTheme\User;
-if ( ! class_exists( 'P4NL_Theme_Structured_data' ) ) {
+if ( ! class_exists( 'StructuredData' ) ) {
 	/**
 	 * Class P4NL_Theme_Structured data
 	 */
 
-	class P4NL_Theme_Structured_data {
+	class StructuredData {
 
 		/**
 		 * Indexed array of relevant data for structured data

@@ -1,5 +1,15 @@
 <?php
 
+use GPNL\Theme\Loader;
+
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+} else {
+	require_once __DIR__ . '/../../../../vendor/autoload.php';
+}
+
+
 const DEV_ASSET_PATH = 'http://localhost:3003/public/build/';
 
 function is_dev(): bool
@@ -101,11 +111,6 @@ function rename_rewrite_base() {
 add_action( 'init', 'rename_rewrite_base' );
 
 
-/**
- * Instantiate the GPNL child theme.
- */
-require_once __DIR__ . '/classes/class-p4nl-loader.php';
-P4NL_Theme_Loader::get_instance();
 
 // Disable WordPress sanitization to allow more than just $allowedtags from /wp-includes/kses.php and add p4 sanitization.
 remove_filter('pre_user_description', 'wp_filter_kses');
@@ -188,3 +193,19 @@ function check_demopage(){
 		wp_publish_post(43617);
 	}
 }
+
+/**
+ * Process form submission for the new ship naming competition.
+ */
+add_action('admin_post_process_ship_naming_competition_form_data', 'process_ship_naming_competition_form_data');
+function process_ship_naming_competition_form_data()
+{
+	header('Location: ' . $_SERVER['HTTP_REFERER'] . '?submitted=true&submitter=' . $_POST['name']);
+	exit;
+}
+
+require_once 'load-class-aliases.php';
+/**
+ * Instantiate the GPNL child theme.
+ */
+Loader::get_instance();
