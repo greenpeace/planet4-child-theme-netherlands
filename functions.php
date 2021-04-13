@@ -200,7 +200,9 @@ function check_demopage(){
 add_action('admin_post_process_ship_naming_competition_form_data', 'process_ship_naming_competition_form_data');
 function process_ship_naming_competition_form_data()
 {
-	header('Location: ' . $_SERVER['HTTP_REFERER'] . '?submitted=true&submitter=' . $_POST['name']);
+	$_POST = wp_unslash( $_POST );
+	$name  = htmlspecialchars( wp_strip_all_tags( $_POST['name'] ));
+	header('Location: ' . $_SERVER['HTTP_REFERER'] . '?submitted=true&submitter=' . $name);
 	exit;
 }
 
