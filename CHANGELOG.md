@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.15.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.2...v4.15.0) (2021-04-13)
+
+
+### Features
+
+* **dx:** Implement PSR-4 autoloading ([7d9b7db](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/7d9b7db2aa933c8d46b5177b7a942eefed3a4aaf))
+
+
+### Bug Fixes
+
+* remove unneeded class aliases ([e403c6e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e403c6e892ed073307c49cd014bdc3a1817c0eb9))
+* xss vulnerability in testing code ([7c26847](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/7c2684795756ef64c6a98c966cdd521b9d0e811a))
+
 ### [4.14.2](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.1...v4.14.2) (2021-04-12)
 
 
