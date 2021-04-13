@@ -206,7 +206,6 @@ function process_ship_naming_competition_form_data()
 	exit;
 }
 
-require_once 'load-class-aliases.php';
 /**
  * Instantiate the GPNL child theme.
  */
