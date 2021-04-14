@@ -71,18 +71,23 @@ if ( ! class_exists( 'Settings' ) ) {
 					'type' => 'textarea',
 				],
 				[
+						'name' => __( 'VMKEPLER db host', 'planet4NL-master-theme-backend' ),
+						'id'   => 'gpnl_db_host',
+						'type' => 'text',
+				],
+				[
 					'name' => __( 'VMKEPLER db', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_db',
+					'id'   => 'gpnl_db',
 					'type' => 'text',
 				],
 				[
-					'name' => __( 'VMKEPLER dbuser', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_dbuser',
+					'name' => __( 'VMKEPLER user', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_db_user',
 					'type' => 'text',
 				],
 				[
-					'name' => __( 'VMKEPLER dbuser', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_dbpass',
+					'name' => __( 'VMKEPLER pass', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_db_pass',
 					'type' => 'text',
 				],
 			];
