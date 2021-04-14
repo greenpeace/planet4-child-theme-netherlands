@@ -71,14 +71,19 @@ if ( ! class_exists( 'Settings' ) ) {
 					'type' => 'textarea',
 				],
 				[
-					'name' => __( 'VMKEPLER SSL ClientCert', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_clientcert',
-					'type' => 'textarea',
+					'name' => __( 'VMKEPLER db', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_db',
+					'type' => 'text',
 				],
 				[
-					'name' => __( 'VMKEPLER SSL ClientKey', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_clientkey',
-					'type' => 'textarea',
+					'name' => __( 'VMKEPLER dbuser', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_dbuser',
+					'type' => 'text',
+				],
+				[
+					'name' => __( 'VMKEPLER dbuser', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_dbpass',
+					'type' => 'text',
 				],
 			];
 			$this->hooks();
