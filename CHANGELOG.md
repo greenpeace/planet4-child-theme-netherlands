@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.16.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.15.0...v4.16.0) (2021-04-14)
+
+
+### Features
+
+* add extra wp settings ([f1f225f](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/f1f225f8a3a46d6487f9dd2ce0c9fc9192193004))
+
 ## [4.15.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.14.2...v4.15.0) (2021-04-13)
 
 
