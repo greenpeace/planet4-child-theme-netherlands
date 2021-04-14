@@ -49,21 +49,36 @@ if ( ! class_exists( 'Settings' ) ) {
 			$this->title = __( 'Planet4 NL', 'planet4NL-master-theme-backend' );
 
 			$this->fields = [
-					[
-						'name'    => __( 'Disco Status?', 'planet4-master-theme-backend' ),
-						'id'      => 'gpnl_system_status',
-						'type'    => 'select',
-						'default' => 'charibase',
-						'options' => [
-								'charibase'    => 'Charibase',
-								'systemfreeze' => 'Systemfreeze',
-								'salesforce'   => 'Salesforce',
-						],
+				[
+					'name'    => __( 'Disco Status?', 'planet4-master-theme-backend' ),
+					'id'      => 'gpnl_system_status',
+					'type'    => 'select',
+					'default' => 'charibase',
+					'options' => [
+							'charibase'    => 'Charibase',
+							'systemfreeze' => 'Systemfreeze',
+							'salesforce'   => 'Salesforce',
+					],
 				],
 				[
-						'name' => __( 'SystemFreeze Notif', 'planet4NL-master-theme-backend' ),
-						'id'   => 'gpnl_sf_notification',
-						'type' => 'textarea',
+					'name' => __( 'SystemFreeze Notif', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_sf_notification',
+					'type' => 'textarea',
+				],
+				[
+					'name' => __( 'VMKEPLER SSL Cert', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_cert',
+					'type' => 'textarea',
+				],
+				[
+					'name' => __( 'VMKEPLER SSL ClientCert', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_clientcert',
+					'type' => 'textarea',
+				],
+				[
+					'name' => __( 'VMKEPLER SSL ClientKey', 'planet4NL-master-theme-backend' ),
+					'id'   => 'gpnl_ssl_clientkey',
+					'type' => 'textarea',
 				],
 			];
 			$this->hooks();
