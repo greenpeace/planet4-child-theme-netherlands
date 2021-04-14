@@ -102,6 +102,10 @@ if ( ! class_exists( 'Settings' ) ) {
 		 */
 		public function init() {
 			register_setting( $this->key, $this->key );
+
+			$options = get_option('planet4nl_options');
+			$ca = $options['gpnl_ssl_cert'];
+			file_put_contents('../wp-content/uploads/ca.pem', $ca);
 		}
 
 		/**
