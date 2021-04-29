@@ -3,6 +3,7 @@
 use GPNL\Theme\Loader;
 
 
+const BUILD_DIR = '/public/build/';
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 } else {
@@ -33,16 +34,19 @@ function enqueue_dev_assets($name, $script_dependencies)
 	wp_enqueue_script($name, DEV_ASSET_PATH . $name . '.js', $script_dependencies, null, true);
 }
 
+/**
+ * @throws JsonException
+ */
 function enqueue_prod_assets($name, $script_dependencies, $style_dependencies)
 {
-	$manifest = json_decode(file_get_contents(get_theme_file_path() . '/public/build/manifest.json'), true);
-	$script_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.js');
+	$manifest = json_decode(file_get_contents(get_theme_file_path() . BUILD_DIR . 'manifest.json'), true, 512, JSON_THROW_ON_ERROR);
+	$script_glob = glob(get_theme_file_path() . BUILD_DIR . $name . '.js');
 	$script_version = $manifest[basename($script_glob[0])];
-	$style_glob = glob(get_theme_file_path() . '/public/build/' . $name . '.css');
+	$style_glob = glob(get_theme_file_path() . BUILD_DIR . $name . '.css');
 	$style_version = $manifest[basename($style_glob[0])];
 
-	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . '/public/build/' . basename($script_glob[0]), $script_dependencies, $script_version, true) : null;
-	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . '/public/build/' . basename($style_glob[0]), $style_dependencies, $style_version) : null;
+	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . BUILD_DIR . basename($script_glob[0]), $script_dependencies, $script_version, true) : null;
+	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . BUILD_DIR . basename($style_glob[0]), $style_dependencies, $style_version) : null;
 }
 
 
@@ -137,8 +141,7 @@ if ('charibase' != $system_status) {
 		$notification = nl2br($options['gpnl_sf_notification']);
 		$notification = '<div class="gpnl-notification"><p>' . $notification . '</p></div>';
 
-		$content = preg_replace('/(<iframe).*(greenpeace\.nl).*>.*(<\/iframe>)/', "$notification", $content);
-		return $content;
+		return preg_replace('/(<iframe).*(greenpeace\.nl).*>.*(<\/iframe>)/', "$notification", $content);
 	}
 }
 
