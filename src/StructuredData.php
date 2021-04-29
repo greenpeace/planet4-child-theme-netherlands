@@ -80,6 +80,7 @@ if ( ! class_exists( 'StructuredData' ) ) {
 				'wp_datetime_modified'=>get_the_modified_date('c'),
 				'current_url'=>home_url( $wp->request ),
 				'site_url'=>get_site_url(),
+				'logo'=> get_site_url() . '/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png'
 //				'post_type'=>$post->post_type,
 			];
 
@@ -171,7 +172,7 @@ if ( ! class_exists( 'StructuredData' ) ) {
 					'name'=> get_the_author_meta('display_name', $author_id),
 					'logo'=> [
 						'@type' => "ImageObject",
-						'url' => $this->data['site_url'].'/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png',
+						'url' => $this->data['logo'],
 					]
 				];
 			}
@@ -209,17 +210,18 @@ if ( ! class_exists( 'StructuredData' ) ) {
 
 		private function get_image()
 		{
+			$post_image = null;
 			// Primarily return OG Image
 			if (is_array($this->post->custom) && isset($this->post->custom['p4_og_image'])) {
-				return $this->post->custom['p4_og_image'];
+				$post_image = $this->post->custom['p4_og_image'];
 			}
 			// Otherwise Thumbnail
 			$has_thumbnail = is_string(get_the_post_thumbnail_url($this->post->ID, 'full'));
-			if ($has_thumbnail) { return get_the_post_thumbnail_url($this->post->ID, 'full'); }
+			if ($has_thumbnail) { $post_image = get_the_post_thumbnail_url($this->post->ID, 'full'); }
 
 			// Or Background image
 			if (is_array($this->post->custom) && isset($this->post->custom['p4_background_image_override'])) {
-				return $this->post->custom['p4_background_image_override'];
+				$post_image = $this->post->custom['p4_background_image_override'];
 			}
 
 			// If all else fails first image in post
@@ -228,12 +230,12 @@ if ( ! class_exists( 'StructuredData' ) ) {
 				$image_id = $matches[1][0];
 				$image_data = wp_get_attachment_image_src( $image_id, 'full' );
 				if ( $image_data ) {
-					return $image_data[0];
+					$post_image = $image_data[0];
 				}
 			}
 
-			// or give up and just return the logo
-			return $this->data['site_url'].'/wp-content/themes/planet4-master-theme/images/Greenpeace-logo.png';
+			// either return a relevant image or give up and just return the logo
+			return $post_image ?? ($this->data['logo']);
 		}
 	}
 }
