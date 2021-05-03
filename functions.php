@@ -34,19 +34,24 @@ function enqueue_dev_assets($name, $script_dependencies)
 	wp_enqueue_script($name, DEV_ASSET_PATH . $name . '.js', $script_dependencies, null, true);
 }
 
-/**
- * @throws JsonException
- */
 function enqueue_prod_assets($name, $script_dependencies, $style_dependencies)
 {
 	$manifest = json_decode(file_get_contents(get_theme_file_path() . BUILD_DIR . 'manifest.json'), true, 512, JSON_THROW_ON_ERROR);
 	$script_glob = glob(get_theme_file_path() . BUILD_DIR . $name . '.js');
-	$script_version = $manifest[basename($script_glob[0])];
 	$style_glob = glob(get_theme_file_path() . BUILD_DIR . $name . '.css');
-	$style_version = $manifest[basename($style_glob[0])];
 
-	!empty($script_glob) ? wp_enqueue_script($name, get_stylesheet_directory_uri() . BUILD_DIR . basename($script_glob[0]), $script_dependencies, $script_version, true) : null;
-	!empty($script_glob) ? wp_enqueue_style($name, get_stylesheet_directory_uri() . BUILD_DIR . basename($style_glob[0]), $style_dependencies, $style_version) : null;
+	if(!empty($script_glob)) {
+		$script_filename = basename($script_glob[0]);
+		$script_version = $manifest[$script_filename];
+		$script_path = get_stylesheet_directory_uri() . BUILD_DIR . $script_filename;
+		wp_enqueue_script($name, $script_path, $script_dependencies, $script_version, true);
+	}
+	if(!empty($script_glob)) {
+		$style_filename = basename($style_glob[0]);
+		$style_version = $manifest[$style_filename];
+		$style_path = get_stylesheet_directory_uri() . BUILD_DIR . $style_filename;
+		wp_enqueue_style($name, $style_path, $style_dependencies, $style_version);
+	}
 }
 
 
@@ -172,13 +177,14 @@ function p4_child_theme_set_post_order_in_admin($wp_query)
 {
 	global $pagenow;
 
-	if (is_admin() && 'edit.php' == $pagenow && array_key_exists('post_type', $_GET) && $_GET['post_type'] == 'page' && !isset($_GET['orderby'])) {
+	if (is_admin() && 'edit.php' === $pagenow && !isset($_GET['orderby'])) {
 		$wp_query->set('orderby', 'post_modified');
-		$wp_query->set('order', 'DESC');
+		$wp_query->set('order', 'desc');
+		return $wp_query;
 	}
 }
 
-add_filter('pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 5);
+add_filter('pre_get_posts', 'p4_child_theme_set_post_order_in_admin', 1);
 
 function datawrapper_oembed_provider()
 {
@@ -197,17 +203,6 @@ function check_demopage(){
 	}
 }
 
-/**
- * Process form submission for the new ship naming competition.
- */
-add_action('admin_post_process_ship_naming_competition_form_data', 'process_ship_naming_competition_form_data');
-function process_ship_naming_competition_form_data()
-{
-	$_POST = wp_unslash( $_POST );
-	$name  = htmlspecialchars( wp_strip_all_tags( $_POST['name'] ));
-	header('Location: ' . $_SERVER['HTTP_REFERER'] . '?submitted=true&submitter=' . $name);
-	exit;
-}
 
 /**
  * Instantiate the GPNL child theme.
