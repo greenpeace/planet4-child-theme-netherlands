@@ -63,6 +63,7 @@ final class Loader {
 	private function load_services( $services ) {
 
 		$this->default_services = [
+			AssetHelper::class,
 			Settings::class,
 			StructuredData::class,
 			Navbar::class,
