@@ -68,6 +68,7 @@ final class Loader {
 			StructuredData::class,
 			Navbar::class,
 			Metabox::class,
+			Tweaks::class,
 		];
 
 
