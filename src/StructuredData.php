@@ -3,7 +3,7 @@ namespace GPNL\Theme;
 /**
  * Structured data customization
  *
- * @package P4NL_CT
+ * @package GPNL\Theme
  */
 
 use P4\MasterTheme\User;

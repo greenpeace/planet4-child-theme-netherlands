@@ -3,7 +3,7 @@ namespace GPNL\Theme;
 /**
  * Navbar customization
  *
- * @package P4NL_CT
+ * @package GPNL\Theme
  */
 use Timber\Menu as TimberMenu;
 if ( ! class_exists( 'Navbar' ) ) {

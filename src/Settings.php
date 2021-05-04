@@ -3,7 +3,7 @@ namespace GPNL\Theme;
 /**
  * Settings Class
  *
- * @package P4NL_CT
+ * @package GPNL\Theme
  */
 
 if ( ! class_exists( 'Settings' ) ) {

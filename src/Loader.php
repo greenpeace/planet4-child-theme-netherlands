@@ -3,7 +3,7 @@ namespace GPNL\Theme;
 /**
  * P4NL Theme Loader Class
  *
- * @package P4NL_CT
+ * @package GPNL\Theme
  */
 
 /**
