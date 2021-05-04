@@ -94,7 +94,7 @@ class Tweaks
 	/**
 	 * Change default sort order of pages in Wordpress admin
 	 */
-	public static function p4_child_theme_set_post_order_in_admin($wp_query): object
+	public static function p4_child_theme_set_post_order_in_admin($wp_query)
 	{
 		global $pagenow;
 
