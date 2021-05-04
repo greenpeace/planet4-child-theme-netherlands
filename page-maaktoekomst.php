@@ -6,6 +6,7 @@
  * @since    Timber 0.1
  */
 
+use GPNL\Theme\AssetHelper;
 use P4\MasterTheme\Context;
 use P4\MasterTheme\Post;
 use Timber\Timber;
@@ -16,7 +17,8 @@ $post           = new Post(); // phpcs:ignore WordPress.WP.GlobalVariablesOverri
 /*
  * This is all we need for this template, all the assets coming from the single entrypoint.
  */
-enqueue_assets_from_entry('maak-toekomst');
+$assetHelper = new AssetHelper();
+$assetHelper->enqueue_assets_from_entry('maak-toekomst');
 
 $page_meta_data = get_post_meta( $post->ID );
 $page_meta_data = array_map( 'reset', $page_meta_data );
