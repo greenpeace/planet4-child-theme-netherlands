@@ -47,33 +47,23 @@
 				</button>
 			</li>
 			{% for key,item in navbar_menu.get_items %}
-				{% if 'wpml-ls-item' in item.class %}
-					{% if key == 0 %}
-						<li class="{{ item.class }}">
+				<li class="{{ item.class }} {{ item == item.current ? 'active' : '' }}">
+					{% if fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == act_page_id %}
+						{% set link_ga_action = 'Act' %}
+					{% elseif fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == explore_page_id %}
+						{% set link_ga_action = 'Explore' %}
+					{% else %}
+						{% set link_ga_action = item.title %}
 					{% endif %}
-					<a href="{{ item.get_link }}">{{ item.title|striptags|slice(0, 2) }}</a>
-					{% if key == (languages - 1) %}
-						</li>
-					{% endif %}
-				{% else %}
-					<li class="{{ item.class }} {{ item == item.current ? 'active' : '' }}">
-						{% if fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == act_page_id %}
-							{% set link_ga_action = 'Act' %}
-						{% elseif fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == explore_page_id %}
-							{% set link_ga_action = 'Explore' %}
-						{% else %}
-							{% set link_ga_action = item.title %}
-						{% endif %}
-						<a
-								class="nav-link underline"
-								href="{{ item.get_link }}"
-								data-ga-category="Menu Navigation"
-								data-ga-action="{{ link_ga_action }}"
-								data-ga-label="{{ page_category }}">
-							{{ item.title }}
-						</a>
-					</li>
-				{% endif %}
+					<a
+							class="nav-link underline"
+							href="{{ item.get_link }}"
+							data-ga-category="Menu Navigation"
+							data-ga-action="{{ link_ga_action }}"
+							data-ga-label="{{ page_category }}">
+						{{ item.title }}
+					</a>
+				</li>
 			{% endfor %}
 			<li>
 				<ul id="donate-button-wrapper">
