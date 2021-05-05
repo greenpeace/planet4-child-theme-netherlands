@@ -56,7 +56,7 @@
 						{% set link_ga_action = item.title %}
 					{% endif %}
 					<a
-							class="nav-link underline dropdown-toggle "
+							class="nav-link underline {% if item.children %}dropdown-toggle{% endif %}"
 							href="{{ item.get_link }}"
 							role="menu"
 							id="dropdown{{ key }}"
@@ -64,7 +64,9 @@
 							data-ga-action="{{ link_ga_action }}"
 							data-ga-label="{{ page_category }}">
 						{{ item.title }}
-						{% include 'icons/caret-down.svg' %}
+						{% if item.children %}
+							{% include 'icons/caret-down.svg' %}
+						{% endif %}
 					</a>
 
 					{% if item.children %}
