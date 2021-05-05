@@ -56,13 +56,27 @@
 						{% set link_ga_action = item.title %}
 					{% endif %}
 					<a
-							class="nav-link underline"
+							class="nav-link underline dropdown-toggle "
 							href="{{ item.get_link }}"
+							role="menu"
+							id="dropdown{{ key }}"
 							data-ga-category="Menu Navigation"
 							data-ga-action="{{ link_ga_action }}"
 							data-ga-label="{{ page_category }}">
 						{{ item.title }}
+						{% include 'icons/caret-down.svg' %}
 					</a>
+
+					{% if item.children %}
+						<ul class="dropdown-menu" aria-labelledby="dropdown{{ key }}">
+							{% for child in item.children %}
+								<li class="nav-drop-item">
+									<a href="{{ child.link }}">{{ child.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+
 				</li>
 			{% endfor %}
 			<li>
@@ -71,6 +85,7 @@
 						<a
 								class="btn btn-donate dropdown-toggle {{ enhanced_donate_btn_class }}"
 								href="{{ donatelink }}"
+								role="menu"
 								data-ga-category="Menu Navigation"
 								data-ga-action="Donate"
 								data-ga-label="{{ page_category }}">
