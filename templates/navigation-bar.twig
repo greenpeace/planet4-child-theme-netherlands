@@ -71,8 +71,11 @@
 
 					{% if item.children %}
 						<ul class="dropdown-menu" aria-labelledby="dropdown{{ key }}">
+							<li class="d-lg-none">
+								<a href="{{ item.get_link }}">{{ item.title }}</a>
+							</li>
 							{% for child in item.children %}
-								<li class="nav-drop-item">
+								<li class="">
 									<a href="{{ child.link }}">{{ child.title }}</a>
 								</li>
 							{% endfor %}
@@ -97,7 +100,7 @@
 
 						</a>
 						<ul class="dropdown-menu" id="dropdownDonateMenu" aria-labelledby="dropdownMenuButton">
-
+							<li class="d-lg-none"><a href="{{ donatelink }}" class="dropdown-item">{{ donatetext }}</a></li>
 							{% for item in donation_navbar_menu.get_items %}
 								<li><a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a></li>
 							{% endfor %}
