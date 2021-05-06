@@ -1,5 +1,7 @@
-const donateButton = document.querySelector('#donate-button-wrapper .dropdown .btn-donate');
-const href = donateButton.getAttribute('href');
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+dropdownToggles.forEach(toggle =>(
+  toggle.setAttribute('data-href', toggle.getAttribute('href'))
+));
 
 // If the browser is IE 10 or below show a notification
 // This will remove the direct link on the donate button on devices with touchscreens.
@@ -9,23 +11,26 @@ if (navigator.userAgent.indexOf('MSIE') >= 0) {
 }
 // On touch or click the dropdown menu will show instead of following the link.
 if ( document.readyState === 'complete' ||  (document.readyState !== 'loading' && !document.documentElement.doScroll) ) {
-  donateMenu();
+  toggleDropdowns();
 } else {
-  document.addEventListener('DOMContentLoaded', donateMenu, {passive: true});
+  document.addEventListener('DOMContentLoaded', toggleDropdowns, {passive: true});
 }
-function donateMenu() {
+function toggleDropdowns() {
   if ('ontouchstart' in window) {
-    donateButton.addEventListener('touchstart', removeHref, {passive: true});
+    dropdownToggles.forEach(
+      toggle => (
+        toggle.addEventListener('touchstart', removeHref, {passive: true})
+      ));
   }
 }
 
 function removeHref () {
-  donateButton.removeAttribute('href');
-  donateButton.setAttribute('data-bs-toggle', 'dropdown');
-  donateButton.addEventListener('touchend', addHref, {passive: true});
+  this.removeAttribute('href');
+  this.setAttribute('data-bs-toggle', 'dropdown');
+  this.addEventListener('touchend', addHref, {passive: true});
 }
 
 function addHref () {
-  donateButton.setAttribute('href', href);
+  this.setAttribute('href', this.getAttribute('data-href'));
 }
 
