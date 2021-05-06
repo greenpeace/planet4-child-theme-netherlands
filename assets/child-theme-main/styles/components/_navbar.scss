@@ -190,8 +190,7 @@ nav#header {
       }
 
       &[aria-expanded="true"] {
-        background-color: variables.$hover-orange;
-
+        color: variables.$black;
         svg {
           transform: rotate(0);
         }
@@ -218,7 +217,6 @@ nav#header {
       border: none;
       border-radius: 0;
       justify-content: space-evenly;
-      padding: 0 20% 0 20%;
       box-shadow: var(--box-shadow);
       &:hover {
         display: flex;
@@ -229,6 +227,10 @@ nav#header {
         &:hover{
           color: variables.$black;
         }
+      }
+
+      @media only screen and (min-width: $nav-breakpoint) {
+        padding: 0 20% 0 20%;
       }
     }
 
@@ -256,6 +258,10 @@ nav#header {
           // Remove green underline
           &:after {
             border-bottom: 0;
+          }
+
+          &[aria-expanded="true"] {
+            background-color: variables.$hover-orange;
           }
         }
       }
