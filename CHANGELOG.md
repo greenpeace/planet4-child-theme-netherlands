@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.17.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.16.0...v4.17.0) (2021-05-25)
+
+
+### Features
+
+* change site settings ([91a0c12](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/91a0c12f1df09b202dae9b1aed2bccc1d9a1cfc1))
+
+
+### Bug Fixes
+
+* temporarily remove type definition ([2327ae7](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2327ae7a5fe5c436b546488f00b6ca2519aba3de))
+* use new assetHelper class for asset loading ([2a22a34](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2a22a34d10aaa6511123b6fc24fa7bcebbc2c952))
+* wp-block margin issue on smaller screens ([e985932](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e985932f2942772cfc6d481593119f733db4eeb9))
+
 ## [4.16.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.15.0...v4.16.0) (2021-04-14)
 
 
