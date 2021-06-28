@@ -66,21 +66,6 @@ if ( ! class_exists( 'Settings' ) ) {
 					'type' => 'textarea',
 				],
 				[
-					'name' => __( 'VMKEPLER SSL CA', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_ca',
-					'type' => 'textarea',
-				],
-				[
-					'name' => __( 'VMKEPLER SSL Cert', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_cert',
-					'type' => 'textarea',
-				],
-				[
-					'name' => __( 'VMKEPLER SSL Key', 'planet4NL-master-theme-backend' ),
-					'id'   => 'gpnl_ssl_key',
-					'type' => 'textarea',
-				],
-				[
 					'name' => __( 'VMKEPLER db host', 'planet4NL-master-theme-backend' ),
 					'id'   => 'gpnl_db_host',
 					'type' => 'text',
@@ -119,9 +104,6 @@ if ( ! class_exists( 'Settings' ) ) {
 			register_setting( $this->key, $this->key );
 
 			$options = get_option('planet4nl_options');
-			file_put_contents('../wp-content/uploads/ca.pem', $options['gpnl_ssl_ca']);
-			file_put_contents('../wp-content/uploads/client-cert.pem', $options['gpnl_ssl_cert']);
-			file_put_contents('../wp-content/uploads/client-key.pem', $options['gpnl_ssl_key']);
 		}
 
 		/**
