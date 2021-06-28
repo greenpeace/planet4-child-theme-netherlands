@@ -22,6 +22,10 @@ class Tweaks
 		add_action('p4_action_tag_page_redirect', [ $this, 'p4_child_theme_tag_page_redirect']);
 		add_filter('pre_get_posts', [ $this, 'p4_child_theme_set_post_order_in_admin'], 1);
 		$this->allow_tags_in_author_bio();
+		add_theme_support( 'disable-custom-font-sizes' );
+		add_theme_support( 'disable-custom-colors' );
+		add_theme_support( 'disable-custom-gradients' );
+		add_theme_support( 'editor-styles' );
 
 		// Localization
 		add_action('init', [ $this, 'rename_rewrite_base' ]);
