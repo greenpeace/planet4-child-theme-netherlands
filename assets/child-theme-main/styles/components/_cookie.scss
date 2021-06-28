@@ -20,17 +20,13 @@
     }
   }
 
-  button.btn {
-    background-color: $blood-orange;
-    height: 2.4rem;
+  .btn {
     border-radius: .25rem;
-    color: white;
-    align-self: end;
+    height: 2.4rem;
+    width: unset;
 
-    &:hover {
-      background-color: $hover-orange;
-      outline: $hover-orange;
-      border: none;
+    &.btn-secondary{
+      background-color: #9fa1a4;
     }
   }
 

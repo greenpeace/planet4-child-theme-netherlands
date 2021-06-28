@@ -1,0 +1,14 @@
+{% if ( cookies.text ) %}
+	<div class="cookie-notice" id="set-cookie">
+		<div>
+			{{ cookies.text|e('wp_kses_post')|raw }}
+		</div>
+		<button class="btn btn-primary" id="hidecookie">{{ __( 'Got it!', 'planet4-master-theme' ) }}</button>
+		<button class="btn btn-secondary" id="preferences">Aanpassen</button>
+		<div id="cookieSettings"style="display: none;flex-direction: column">
+			<button class="btn btn-primary" id="all">Alle cookies</button>
+			<button class="btn btn-primary" id="functional">Functionele cookies</button>
+			<button class="btn btn-primary" id="none">Geen cookies</button>
+		</div>
+	</div>
+{% endif %}

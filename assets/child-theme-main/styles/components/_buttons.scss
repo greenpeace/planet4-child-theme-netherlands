@@ -20,6 +20,11 @@
   color: $white;
   box-shadow: none;
   border-radius: 0;
+  &:hover {
+    background-color: $hover-orange;
+    outline: $hover-orange;
+    border: none;
+  }
 }
 
 .btn-secondary {
@@ -89,24 +94,3 @@
     }
   }
 }
-
-//.wp-block-button {
-//  &.is-style-cta {
-//    .wp-block-button__link {
-//      background-color: $blood-orange;
-//      box-shadow: none;
-//
-//      &:hover, &:active, &:focus {
-//        background-color: $hover-orange;
-//        color: $white;
-//      }
-//    }
-//  }
-//
-//  .wp-block-button__link {
-//    color: red !important;
-//    border: none;
-//    border-radius: 0;
-//    box-shadow: none;
-//  }
-//}
