@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.17.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.17.0...v4.17.1) (2021-07-19)
+
+
+### Bug Fixes
+
+* Hide new bullet in front of tags ([4de5d6c](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/4de5d6c257f99dd7f8cff4adb2eda0b1abb051a2))
+* implement new WP options ([42a1207](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/42a12073c29877646f44d47e6c8e86d2a1c85617))
+* remove unused settings ([3dc1c0e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/3dc1c0e422cfbeebd034392338286857515d893a))
+* upgrade bootstrap from 5.0.0-beta2 to 5.0.0 ([c904d21](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c904d2133957c09d1e1baad2b8b505fb17d43b1d))
+* upgrade bootstrap from 5.0.0-beta2 to 5.0.0 ([269a9f0](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/269a9f039e9cfa6c357bb3f0fb43528dc3fa68bc))
+
 ## [4.17.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.16.0...v4.17.0) (2021-05-25)
 
 
