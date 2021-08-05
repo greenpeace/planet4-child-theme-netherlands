@@ -12,10 +12,13 @@ nav#header {
   background-color: white;
   display: flex;
   position: fixed;
+  justify-content: space-between;
   left: 0;
   right: 0;
   z-index: 9999;
+  width: 100%;
   box-shadow: var(--box-shadow);
+  //background-color: red;
 
   .btn-navbar-toggle {
     background-color: white;
@@ -25,9 +28,10 @@ nav#header {
 
   .site-logo {
     display: flex;
-    align-items: center;
     position: absolute;
     height: 100%;
+    right: 0;
+    left: 0;
 
     img {
       position: absolute;
