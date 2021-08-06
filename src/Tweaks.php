@@ -26,11 +26,24 @@ class Tweaks
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support( 'disable-custom-gradients' );
 		add_theme_support( 'editor-styles' );
+		add_filter( 'planet4_csp_allowed_frame_ancestors', [ $this, 'csp_frameancestors_whitelist'] );
 
 		// Localization
 		add_action('init', [ $this, 'rename_rewrite_base' ]);
 		add_filter('enter_title_here', [ $this, 'change_title_placeholders']);
 	}
+
+	/**
+	 * Set HTTP headers to allow embedding of P4 in Formsuite
+	 * This serves the cross-domain cookie setup
+	 */
+	public static function csp_frameancestors_whitelist( $whitelist ): array
+	{
+
+		return array_merge($whitelist, ["steun.greenpeace.nl"]);
+	}
+
+
 
 	/**
 	 * Change the title placeholders for the posts and pages.
