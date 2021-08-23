@@ -222,6 +222,7 @@ nav#header {
       border-radius: 0;
       justify-content: space-evenly;
       box-shadow: var(--box-shadow);
+      transform: translate3d(0, 60px, 0) !important; // GPI Override
       &:hover {
         display: flex;
       }
@@ -277,7 +278,6 @@ nav#header {
         padding: 0;
         top: 0;
         left: 0;
-        transform: translate3d(0, 60px, 0) !important; // GPI Override
         box-shadow: var(--box-shadow);
         background-color: variables.$white;
         flex-flow: column wrap;
