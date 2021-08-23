@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.18.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.17.1...v4.18.0) (2021-08-23)
+
+
+### Features
+
+* Add csp header for embedding P4 in FS ([046c446](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/046c44651b5e84e49f37a5fe051136c2947a9ac3))
+* add main items on small screens ([284a6f9](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/284a6f934b94e0af0c73b7520e39800015f1db4e))
+* allow multiple mobile dropdowns ([f5ae54e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/f5ae54efa8ca8c0a166e866a9c635d51878f83a5))
+* implement new cookie design ([7a056a3](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/7a056a3f3abf968e2069c7282b172bb2b530c680))
+* only show downdown toggle if there's children ([c798b86](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c798b86bc6a7052e99654ed02ada1ebeba9ddf3b))
+* polish up mobile css ([2907686](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2907686f12ce950cbba9989a7cd17c36194cd4aa))
+* support dropdown in navbar ([75c8559](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/75c855989e7767d44558e757fccf68d9cc2acae0))
+
+
+### Bug Fixes
+
+* h1 uppercase ([5b78062](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/5b78062c7ac2c5077363e583d66de3d0aca81c50))
+* link color ([2c3090f](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/2c3090f02c29fbeeb654d8aa73b286a1c39b628e))
+* logo and search placement of nav on mobile ([23fcd46](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/23fcd46685283131183fd7c6a821be1042934523))
+* move all dropdowns under the navbar ([1d47509](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/1d4750980f9f073cc2492304aaed195758368ec0))
+* page header background ([edd9080](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/edd9080b9507ef057aa16ecd20ed352e16ee9f56))
+* remove reference to non-existent file ([23c3e09](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/23c3e09c2ae4d8c15375030f203eba1aa82b46ff))
+
 ### [4.17.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.17.0...v4.17.1) (2021-07-19)
 
 
