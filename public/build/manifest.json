@@ -1,8 +1,7 @@
 {
-<<<<<<< develop
-  "child-theme-main.css": "6106788743ae24c994c9",
-  "child-theme-main.js": "d270591c7c771936c208",
-  "child-theme-main.js.map": "d270591c7c771936c208",
+  "child-theme-main.css": "a4ba9def72ac24994325",
+  "child-theme-main.js": "fd806b1e26c71edd3eb5",
+  "child-theme-main.js.map": "fd806b1e26c71edd3eb5",
   "child-theme-editor.css": "06d0c53b1d3ae26a4543",
   "child-theme-editor.js": "bf17357c645c47214e66",
   "child-theme-editor.js.map": "bf17357c645c47214e66",
@@ -15,25 +14,4 @@
   "maak-toekomst.woff": "a274aa9b7b1a378e567f",
   "maak-toekomst.png": "a274aa9b7b1a378e567f",
   "maak-toekomst.js.map": "24bf19033291631ca7b1"
-=======
-  "child-theme-main.css": "b46b04355d1711604a0a",
-  "child-theme-main.js": "8ef276d829e265543c2a",
-  "child-theme-main.css.map": "b46b04355d1711604a0a",
-  "child-theme-main.js.map": "8ef276d829e265543c2a",
-  "child-theme-editor.css": "1df163e0b0784a035164",
-  "child-theme-editor.js": "371b746d99548d194df6",
-  "child-theme-editor.css.map": "1df163e0b0784a035164",
-  "child-theme-editor.js.map": "371b746d99548d194df6",
-  "bootstrap.css": "bccc800644f8d2d330f2",
-  "bootstrap.js": "0d4974864ea25f353e18",
-  "bootstrap.css.map": "bccc800644f8d2d330f2",
-  "bootstrap.js.map": "0d4974864ea25f353e18",
-  "maak-toekomst.css": "e62e21d06854a230e324",
-  "maak-toekomst.js": "978ffc949685462e276b",
-  "maak-toekomst.woff": "e62e21d06854a230e324",
-  "maak-toekomst.png": "e62e21d06854a230e324",
-  "maak-toekomst.woff2": "e62e21d06854a230e324",
-  "maak-toekomst.css.map": "e62e21d06854a230e324",
-  "maak-toekomst.js.map": "978ffc949685462e276b"
->>>>>>> chore: add build files
 }
