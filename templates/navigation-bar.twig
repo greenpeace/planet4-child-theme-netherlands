@@ -47,33 +47,42 @@
 				</button>
 			</li>
 			{% for key,item in navbar_menu.get_items %}
-				{% if 'wpml-ls-item' in item.class %}
-					{% if key == 0 %}
-						<li class="{{ item.class }}">
+				<li class="{{ item.class }} {{ item == item.current ? 'active' : '' }}">
+					{% if fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == act_page_id %}
+						{% set link_ga_action = 'Act' %}
+					{% elseif fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == explore_page_id %}
+						{% set link_ga_action = 'Explore' %}
+					{% else %}
+						{% set link_ga_action = item.title %}
 					{% endif %}
-					<a href="{{ item.get_link }}">{{ item.title|striptags|slice(0, 2) }}</a>
-					{% if key == (languages - 1) %}
-						</li>
-					{% endif %}
-				{% else %}
-					<li class="{{ item.class }} {{ item == item.current ? 'active' : '' }}">
-						{% if fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == act_page_id %}
-							{% set link_ga_action = 'Act' %}
-						{% elseif fn('get_post_meta', item.ID, '_menu_item_object_id', true ) == explore_page_id %}
-							{% set link_ga_action = 'Explore' %}
-						{% else %}
-							{% set link_ga_action = item.title %}
+					<a
+							class="nav-link underline {% if item.children %}dropdown-toggle{% endif %}"
+							href="{{ item.get_link }}"
+							role="menu"
+							id="dropdown{{ key }}"
+							data-ga-category="Menu Navigation"
+							data-ga-action="{{ link_ga_action }}"
+							data-ga-label="{{ page_category }}">
+						{{ item.title }}
+						{% if item.children %}
+							{% include 'icons/caret-down.svg' %}
 						{% endif %}
-						<a
-								class="nav-link underline"
-								href="{{ item.get_link }}"
-								data-ga-category="Menu Navigation"
-								data-ga-action="{{ link_ga_action }}"
-								data-ga-label="{{ page_category }}">
-							{{ item.title }}
-						</a>
-					</li>
-				{% endif %}
+					</a>
+
+					{% if item.children %}
+						<ul class="dropdown-menu" aria-labelledby="dropdown{{ key }}">
+							<li class="d-lg-none">
+								<a href="{{ item.get_link }}">{{ item.title }}</a>
+							</li>
+							{% for child in item.children %}
+								<li class="">
+									<a href="{{ child.link }}">{{ child.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+
+				</li>
 			{% endfor %}
 			<li>
 				<ul id="donate-button-wrapper">
@@ -81,6 +90,7 @@
 						<a
 								class="btn btn-donate dropdown-toggle {{ enhanced_donate_btn_class }}"
 								href="{{ donatelink }}"
+								role="menu"
 								data-ga-category="Menu Navigation"
 								data-ga-action="Donate"
 								data-ga-label="{{ page_category }}">
@@ -90,7 +100,7 @@
 
 						</a>
 						<ul class="dropdown-menu" id="dropdownDonateMenu" aria-labelledby="dropdownMenuButton">
-
+							<li class="d-lg-none"><a href="{{ donatelink }}" class="dropdown-item">{{ donatetext }}</a></li>
 							{% for item in donation_navbar_menu.get_items %}
 								<li><a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a></li>
 							{% endfor %}

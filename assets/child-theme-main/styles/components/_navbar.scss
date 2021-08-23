@@ -145,6 +145,7 @@ nav#header {
       top: var(--nav-height);
       z-index: 11;
       height: calc(100vh - var(--nav-height));
+      box-shadow: var(--box-shadow);
 
       @media only screen and (min-width: $nav-breakpoint) {
         height: 50vh;
@@ -171,6 +172,74 @@ nav#header {
       }
     }
 
+    .dropdown-toggle {
+      min-width: unset; // GPI Override
+
+      // Remove wonky caret
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        // Show dropdown menu on hover
+        ~ .dropdown-menu {
+          display: flex;
+        }
+        svg {
+          transform: rotate(0deg);
+          path {
+            fill: variables.$anthracite;
+          }
+        }
+      }
+
+      &[aria-expanded="true"] {
+        color: variables.$black;
+        svg {
+          transform: rotate(0);
+        }
+      }
+
+      svg {
+        height: 0.8em;
+        width: auto;
+        margin-left: 0.4em;
+        transform: rotate(90deg);
+        transition: all .3s;
+
+        path {
+          fill: variables.$slate-grey;
+        }
+      }
+    }
+
+    // Show menu on hover
+    ul.dropdown-menu{
+      left: 0;
+      width: 100%;
+      background-color: variables.$light-grey;
+      border: none;
+      border-radius: 0;
+      justify-content: space-evenly;
+      box-shadow: var(--box-shadow);
+      transform: translate3d(0, 60px, 0) !important; // GPI Override
+      &:hover {
+        display: flex;
+      }
+
+      li a{
+        color: variables.$anthracite;
+        &:hover{
+          color: variables.$black;
+        }
+      }
+
+      @media only screen and (min-width: $nav-breakpoint) {
+        padding: 0 20% 0 20%;
+      }
+    }
+
+
     ul#donate-button-wrapper {
       z-index: 1;
       padding: 0;
@@ -181,51 +250,23 @@ nav#header {
         display: flex;
         justify-content: center;
 
-        &:hover {
-          svg {
-            transform: rotate(0deg);
-          }
-        }
-      }
-
-      .btn-donate {
-        min-width: unset; // GPI Override
-        color: white;
-
-        // Remove wonky caret
-        &:after {
-          display: none;
+        path {
+          fill: white;
         }
 
-        &:hover {
-          // Show dropdown menu on hover
-          ~ #dropdownDonateMenu {
-            display: block;
-          }
+        .btn-donate{
+          color: white;
 
+          &:hover {
+            color: white;
+          }
           // Remove green underline
           &:after {
             border-bottom: 0;
           }
-        }
 
-        &[aria-expanded="true"] {
-          background-color: variables.$hover-orange;
-
-          svg {
-            transform: rotate(0);
-          }
-        }
-
-        svg {
-          height: 0.8em;
-          width: auto;
-          margin-left: 0.4em;
-          transform: rotate(90deg);
-          transition: all .3s;
-
-          path {
-            fill: white;
+          &[aria-expanded="true"] {
+            background-color: variables.$hover-orange;
           }
         }
       }
@@ -237,15 +278,9 @@ nav#header {
         padding: 0;
         top: 0;
         left: 0;
-        border: none;
-        border-radius: 0;
-        transform: translate3d(0, 60px, 0) !important; // GPI Override
         box-shadow: var(--box-shadow);
-
-        // Show menu on hover
-        &:hover {
-          display: block;
-        }
+        background-color: variables.$white;
+        flex-flow: column wrap;
 
         .dropdown-item {
           text-transform: none;
