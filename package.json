@@ -59,7 +59,7 @@
 		"webpack-merge": "^5.7.3"
 	},
 	"dependencies": {
-		"bootstrap": "^5.0.0",
+		"bootstrap": "^5.1.0",
 		"popper.js": "^1.15.0"
 	},
 	"standard-version": {
