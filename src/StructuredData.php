@@ -189,13 +189,13 @@ if ( ! class_exists( 'StructuredData' ) ) {
 
 		private function get_page_data(): array
 		{
-			// Article  ✓
-			// NewsArticle
+			// Article
+			// NewsArticle ✓
 			// JobPosting
 			// General page
 			$article_info = [
 				'@context'=> 'https://schema.org',
-				'@type'=> 'Article',
+				'@type'=> 'NewsArticle',
 				'headline'=> $this->data['wp_title'],
 				'abstract'=> $this->data['wp_excerpt'],
 				'image'=> $this->data['image_url'],
