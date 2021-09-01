@@ -42,7 +42,11 @@ commit with type `fix` | Patch version change, ie x.x.2
 ### Development
 To watch the files run `yarn start`.
 ### Build for production
-To build files for production run `yarn build`.
+To build files for production run `yarn build`. 
+#### Browserslist
+All source code gets transpiled according to our actual usage data. To make sure we don't support too old browsers, the usage data should be refreshed every once in a while (once-twice a year).  
+Generating the usage data can be done using [browserslist-ga-export](https://github.com/browserslist/browserslist-ga-export)
+
 ### Linting
 Linters for both CSS and JS are available both for linting and fixing.  
 `yarn lint` `yarn lint:fix` for both CSS and JS  
