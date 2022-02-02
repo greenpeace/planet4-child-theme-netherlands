@@ -4,7 +4,7 @@
 // Breakpoint where links in dropdown (hamburger) menu turn into inline menu
 $nav-breakpoint: 992px;
 
-nav#header {
+#header {
   --nav-height: 60px;
   --nav-spacing: 1.2em;
   --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0 rgba(0, 0, 0, 0.04);
@@ -18,7 +18,7 @@ nav#header {
   z-index: 9999;
   width: 100%;
   box-shadow: var(--box-shadow);
-  //background-color: red;
+  // background-color: red;
 
   .btn-navbar-toggle {
     background-color: white;
@@ -244,6 +244,7 @@ nav#header {
       z-index: 1;
       padding: 0;
       width: 100%;
+      outline: 5px solid red;
 
       li#dropdownMenuButton {
         padding: 0;
