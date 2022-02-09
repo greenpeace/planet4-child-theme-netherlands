@@ -55,51 +55,11 @@ $nav-breakpoint: 992px;
     }
   }
 
-  // nav#nav-menu > ul {
-  //   justify-content: space-between;
-  // }
-
-  // --top-navigation--height: 60px;
-  // --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0 rgba(0, 0, 0, 0.04);
-  // background-color: white;
-  // display: flex;
-  // position: fixed;
-  // justify-content: space-between;
-  // left: 0;
-  // right: 0;
-  // z-index: 9999;
-  // width: 100%;
-  // box-shadow: var(--box-shadow);
-  // background-color: red;
-
   .btn-navbar-toggle {
     // background-color: white;
     color: variables.$anthracite;
     height: auto;
   }
-
-  // .site-logo {
-  //   display: flex;
-  //   position: absolute;
-  //   height: 100%;
-  //   right: 0;
-  //   left: 0;
-
-  //   img {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     margin: 0;
-
-  //     @media only screen and (min-width: $nav-breakpoint) {
-  //       position: unset;
-  //       transform: unset;
-  //       width: 200px;
-  //       height: auto;
-  //     }
-  //   }
-  // }
 
   #nav-menu > ul {
     // &:before {
@@ -268,6 +228,8 @@ $nav-breakpoint: 992px;
       justify-content: space-evenly;
       box-shadow: var(--box-shadow);
       transform: translate3d(0, 60px, 0) !important; // GPI Override
+      display: none;
+
       &:hover {
         display: flex;
       }
@@ -288,7 +250,6 @@ $nav-breakpoint: 992px;
     ul#donate-button-wrapper {
       z-index: 1;
       padding: 0;
-      width: 100%;
 
       li#dropdownMenuButton {
         padding: 0;
@@ -319,7 +280,7 @@ $nav-breakpoint: 992px;
       #dropdownDonateMenu {
         width: 100%;
         margin: 0;
-        margin-top: -4px;
+        margin-top: -1px;
         padding: 0;
         top: 0;
         left: 0;
@@ -328,9 +289,17 @@ $nav-breakpoint: 992px;
         flex-flow: column wrap;
 
         .dropdown-item {
+          font-size: .7em;
           text-transform: none;
+          text-align: start;
+          height: var(--top-navigation--height);
+          line-height: var(--top-navigation--height);
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+          border-bottom: 4px inset transparent;
 
           &:hover {
+            text-decoration: none;
+            border-bottom: 4px inset #6c0;
             background-color: transparent;
           }
         }
@@ -340,10 +309,6 @@ $nav-breakpoint: 992px;
           left: unset !important; // GPI Override
           transform: translateY(60px) !important; // GPI Override
         }
-      }
-
-      @media only screen and (min-width: $nav-breakpoint) {
-        margin-right: 3em;
       }
     }
   }

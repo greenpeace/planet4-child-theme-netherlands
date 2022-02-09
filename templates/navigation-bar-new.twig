@@ -39,14 +39,28 @@
 				</li>
 				{% endfor %}
 				<li class="nav-item nav-donate">
-					<a
-						class="btn btn-donate"
-						href="{{ donatelink }}"
-						data-ga-category="Menu Navigation"
-						data-ga-action="Donate"
-						data-ga-label="{{ page_category }}">
-							{{ donatetext }}
-					</a>
+					<ul id="donate-button-wrapper">
+						<li class="btn dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+							<a
+									class="btn btn-donate dropdown-toggle {{ enhanced_donate_btn_class }}"
+									href="{{ donatelink }}"
+									role="menu"
+									data-ga-category="Menu Navigation"
+									data-ga-action="Donate"
+									data-ga-label="{{ page_category }}">
+								{{ donatetext }}
+
+								{% include 'icons/caret-down.svg' %}
+
+							</a>
+							<ul class="dropdown-menu" id="dropdownDonateMenu" aria-labelledby="dropdownMenuButton">
+								<li class="d-lg-none"><a href="{{ donatelink }}" class="dropdown-item">{{ donatetext }}</a></li>
+								{% for item in donation_navbar_menu.get_items %}
+									<li><a class="dropdown-item" href="{{ item.get_link }}">{{ item.title }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
