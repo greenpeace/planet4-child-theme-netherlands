@@ -34,7 +34,6 @@ $nav-breakpoint: 992px;
   }
 }
 
-
 #header {
   --nav-spacing: 1.2em;
   height: var(--top-navigation--height);
@@ -61,6 +60,20 @@ $nav-breakpoint: 992px;
     .nav-search-clear {
       display: none;
     }
+  }
+
+  .site-logo {
+    margin-inline-start: 1em;
+
+    img {
+      @media only screen and (min-width: $nav-breakpoint) {
+        height: 30px;
+      }
+    }
+  }
+
+  nav#nav-menu > ul {
+    justify-content: space-between;
   }
 
   // --top-navigation--height: 60px;
