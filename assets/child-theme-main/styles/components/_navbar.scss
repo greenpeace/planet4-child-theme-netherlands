@@ -55,26 +55,9 @@ $nav-breakpoint: 992px;
     }
   }
 
-  .nav-search-form {
-    display: flex;
-    .nav-search-clear {
-      display: none;
-    }
-  }
-
-  .site-logo {
-    margin-inline-start: 1em;
-
-    img {
-      @media only screen and (min-width: $nav-breakpoint) {
-        height: 30px;
-      }
-    }
-  }
-
-  nav#nav-menu > ul {
-    justify-content: space-between;
-  }
+  // nav#nav-menu > ul {
+  //   justify-content: space-between;
+  // }
 
   // --top-navigation--height: 60px;
   // --box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 10px 5px 5px 0 rgba(0, 0, 0, 0.04), -10px 5px 5px 0 rgba(0, 0, 0, 0.04);
@@ -119,9 +102,9 @@ $nav-breakpoint: 992px;
   // }
 
   #nav-menu > ul {
-    &:before {
-      display: none; // Remove grey GPI line
-    }
+    // &:before {
+    //   display: none; // Remove grey GPI line
+    // }
 
     // @media only screen and (min-width: $nav-breakpoint) {
     //   margin-left: calc(200px + 1rem);
