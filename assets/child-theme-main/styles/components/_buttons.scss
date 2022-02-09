@@ -4,10 +4,10 @@
   text-transform: uppercase;
 }
 
-.top-navigation .btn-donate {
-  min-width: auto;
-  text-transform: none;
-}
+// .top-navigation .btn-donate {
+//   min-width: auto;
+//   text-transform: none;
+// }
 
 .dropdown-toggle {
   :after {
@@ -37,23 +37,23 @@
   }
 }
 
-.btn-donate {
-  padding: 2px 11px 2px 15px;
-  margin: 0;
-  background-color: $blood-orange;
-  color: $white;
-  box-shadow: none;
-  text-transform: none;
+// .btn-donate {
+//   padding: 2px 11px 2px 15px;
+//   margin: 0;
+//   background-color: $blood-orange;
+//   color: $white;
+//   box-shadow: none;
+//   text-transform: none;
 
-  &:hover, &:active, &:focus {
-    background-color: $hover-orange;
-    color: $white;
-  }
+//   &:hover, &:active, &:focus {
+//     background-color: $hover-orange;
+//     color: $white;
+//   }
 
-  &.btn-donate-top::after {
-    display: none;
-  }
-}
+//   &.btn-donate-top::after {
+//     display: none;
+//   }
+// }
 
 .btn-block {
   display: block;
