@@ -1,21 +1,6 @@
 @import "../base/variables";
 
-.site-footer {
-  background: $blue-4;
-  border-top: 4px solid $light-green;
-
-  a {
-    &:hover {
-      color: $blue-3 !important;
-    }
-  }
-
-  ul li a svg {
-    font-size: 3rem;
-  }
-
-  .copyright-text{
-    margin: unset;
-    width: 33.33333%; // GPI Override
-  }
+.footer-sponsors {
+  margin-top: 40px;
 }
+

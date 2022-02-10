@@ -71,7 +71,7 @@ a {
   --link--color: #{$light-green};
   --link--hover--color: #{$hover-green};
   color: var(--link--color);
-  font-weight: 700;
+  // font-weight: 700;
   text-decoration: none;
 
   &:hover {

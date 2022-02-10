@@ -1,0 +1,72 @@
+<footer id="footer" class="site-footer site-footer--{{ nav_type }}">
+	{% if new_design_country_selector and nav_type != 'minimal' %}
+	<div id="country-selector" class="footer-country-selector">
+		{% include 'footer_country_selector.twig' %}
+	</div>
+	{% endif %}
+	<div class="container d-flex flex-column flex-lg-row-reverse">
+		<div>
+			{% include 'footer_social_media.twig' %}
+			<div class="footer-sponsors">
+				<div class="row">
+						<p class="footer-sponsors-logo col-md-6">
+							<a href="https://www.greenpeace.org/nl/de-postcode-loterij-en-greenpeace/">
+								<picture>
+									<source srcset="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" type="image/png">
+									<img src="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/logo-postcode-loterij.png" alt="Greenpeace & Postcode Loterij">
+								</picture>
+							</a>
+						</p>
+						<p class="footer-sponsors-logo col-md-6">
+							<a href="https://www.cbf.nl/organisatie/greenpeace">
+								<picture>
+									<source srcset="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" type="image/png">
+									<img src="https://www.greenpeace.org/static/planet4-netherlands-stateless/2018/06/CBF-ERKEND-DIAP-small.png" alt="CBF Keurmerk">
+								</picture>
+							</a>
+						</p>
+				</div>
+			</div>
+		</div>
+
+		{% if nav_type != 'minimal' %}
+			<nav class="footer-menu">
+				<ul class="list-unstyled">
+					{% for primary in footer_primary_menu %}
+						<li>
+							<a href="{{ primary.url }}"
+								data-ga-category="Footer Navigation"
+								data-ga-action="Footer Links"
+								data-ga-label="{{ primary.title }}">
+								{{ primary.title }}
+							</a>
+						</li>
+					{% endfor %}
+
+					{% for secondary in footer_secondary_menu %}
+						<li>
+							<a href="{{ secondary.url }}"
+								data-ga-category="Footer Navigation"
+								data-ga-action="Footer Links"
+								data-ga-label="{{ secondary.title }}">
+								{{ secondary.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		{% endif %}
+	</div>
+
+	<div class="copyright">
+		<div class="container d-flex flex-column flex-xl-row">
+			<span role="text">
+				{{ 'creative-commons'|svgicon }}
+				{{ copyright_text_line2|e('wp_kses_post')|raw }} {{"now"|date('Y')}}
+			</span>
+			<span role="text">
+				{{ copyright_text_line1|e('wp_kses_post')|raw }}
+			</span>
+		</div>
+	</div>
+</footer>
