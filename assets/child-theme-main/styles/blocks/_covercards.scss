@@ -1,15 +1,4 @@
-.take-action-covers-block {
-  .cover {
-    height: 350px;
-    min-height: 0;
-
-    .cover-card-content {
-      padding: 0;
-    }
-  }
-}
-
-.cover-card.cover, .take-action-covers-block .cover {
+.covers-block.take-action-covers-block .cover-card.cover {
   padding: 0;
   transition: none;
   margin-bottom: 40px;
