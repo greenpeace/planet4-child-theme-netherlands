@@ -20,14 +20,12 @@ class AssetHelper
 
 	public function enqueue_assets(): void
 	{
-		$this->enqueue_assets_from_entry('bootstrap', ['jquery']);
-		$this->enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap', 'parent-style', 'planet4-blocks-style']);
+		$this->enqueue_assets_from_entry('child-theme-main', [], ['parent-style', 'planet4-blocks-style']);
 	}
 
 	public function enqueue_admin_assets(): void
 	{
-		$this->enqueue_assets_from_entry('bootstrap', ['jquery']);
-		$this->enqueue_assets_from_entry('child-theme-main', ['bootstrap'], ['bootstrap']);
+		$this->enqueue_assets_from_entry('child-theme-main');
 		$this->enqueue_assets_from_entry('child-theme-editor');
 	}
 

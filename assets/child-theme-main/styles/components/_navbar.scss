@@ -178,6 +178,9 @@ $nav-breakpoint: 992px;
         flex-flow: column wrap;
 
         .dropdown-item {
+          display: block;
+          width: auto;
+
           font-size: .7em;
           text-transform: none;
           text-align: start;
