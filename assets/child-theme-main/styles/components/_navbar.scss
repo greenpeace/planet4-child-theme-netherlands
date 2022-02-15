@@ -39,7 +39,14 @@ $nav-breakpoint: 992px;
   height: var(--top-navigation--height);
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.16),10px 5px 5px 0 rgba(0,0,0,0.04),-10px 5px 5px 0 rgba(0,0,0,0.04);
 
+  // Probably better in Master Theme
   .btn-donate {
+    height: var(--top-navigation--height);
+    line-height: var(--top-navigation--height);
+  }
+
+  // Probably better in Master Theme
+  .site-logo {
     height: var(--top-navigation--height);
     line-height: var(--top-navigation--height);
   }
