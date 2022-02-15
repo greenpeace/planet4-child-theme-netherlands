@@ -43,6 +43,9 @@ $nav-breakpoint: 992px;
   .btn-donate {
     height: var(--top-navigation--height);
     line-height: var(--top-navigation--height);
+    @media only screen and (max-width: $nav-breakpoint) {
+      width: 100%;
+    }
   }
 
   // Probably better in Master Theme
@@ -68,6 +71,10 @@ $nav-breakpoint: 992px;
   }
 
   #nav-menu > ul {
+    @media only screen and (max-width: $nav-breakpoint) {
+      padding: 16px;
+    }
+
     li.nav-item {
       height: var(--top-navigation--height);
       line-height: var(--top-navigation--height);
@@ -194,7 +201,7 @@ $nav-breakpoint: 992px;
         .dropdown-item {
           display: block;
           width: 100%;
-          padding: 0.25rem 1rem;
+          padding: 0 1rem;
           clear: both;
           font-weight: 400;
           color: #212529;
@@ -202,7 +209,7 @@ $nav-breakpoint: 992px;
           white-space: nowrap;
           background-color: transparent;
           border: 0;
-          font-size: 0.875rem;
+          font-size: 1rem;
           text-transform: none;
           height: var(--top-navigation--height);
           line-height: var(--top-navigation--height);
