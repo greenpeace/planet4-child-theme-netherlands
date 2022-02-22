@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.0...v4.19.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* upgrade bootstrap from 5.0.0 to 5.1.0 ([3754791](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/3754791016aa9861dfd57eae42b7c2171fdda714))
+
 ## [4.19.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.18.1...v4.19.0) (2022-02-22)
 
 
