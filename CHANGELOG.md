@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.19.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.18.1...v4.19.0) (2022-02-22)
+
+
+### Features
+
+* Improve StructuredData ([02f0ddd](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/02f0ddd11d4c967390089fc726ff1d2d3964b170))
+
 ### [4.18.1](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.18.0...v4.18.1) (2021-08-23)
 
 ## [4.18.0](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.17.1...v4.18.0) (2021-08-23)
