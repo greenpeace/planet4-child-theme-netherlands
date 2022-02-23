@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.4](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.3...v4.19.4) (2022-02-23)
+
+
+### Bug Fixes
+
+* **ui:** Remove extra border from Master Theme. ([53a6592](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/53a659235e0cfd41c9c2a72a85ca66c8b39595f9))
+
 ### [4.19.3](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.1...v4.19.3) (2022-02-22)
 ### [4.19.2](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.1...v4.19.2) (2022-02-22)
 
