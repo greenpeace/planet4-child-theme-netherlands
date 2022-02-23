@@ -62,6 +62,11 @@ $nav-breakpoint: 992px;
     &:hover {
       text-decoration: none;
       border-bottom: 4px inset #6c0;
+
+      &::before {
+        // Remove GPI's border.
+        display: none;
+      }
     }
   }
 
