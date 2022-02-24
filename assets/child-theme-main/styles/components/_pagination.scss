@@ -30,3 +30,34 @@
     }
   }
 }
+
+// Bootstrap pagination styles
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+
+  .page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+  }
+
+  .page-link {
+    padding: .375rem .75rem;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &:focus, &:hover {
+      background-color: #e9ecef;
+    }
+
+    &:hover {
+      z-index: 2;
+      border-color: #dee2e6;
+    }
+  }
+}
