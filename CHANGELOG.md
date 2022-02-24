@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.5](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.4...v4.19.5) (2022-02-24)
+
+
+### Bug Fixes
+
+* **ui:** Remove page-template class from news page. ([4fff23f](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/4fff23ffe2d503ec914e77de6089fc38ce5f5389))
+* **ui:** Update News page styles. ([0ef9be2](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/0ef9be228657c7f17befbedef1ae1e549953017a))
+
 ### [4.19.4](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.3...v4.19.4) (2022-02-23)
 
 
