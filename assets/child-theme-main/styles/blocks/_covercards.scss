@@ -1,4 +1,5 @@
-.covers-block.take-action-covers-block .cover-card.cover {
+.covers-block .cover-card,
+.cover-card {
   padding: 0;
   transition: none;
   margin-bottom: 40px;
@@ -8,6 +9,14 @@
   height: 350px;
   min-height: 0;
   box-shadow: none;
+  position: relative;
+  background-size: cover;
+  background-position: center 100px;
+  margin-top: 16px;
+
+  .take-action-covers-block & {
+    margin-top: 0px;
+  }
 
   &:before {
     transition: none;
@@ -35,9 +44,6 @@
     .cover-card-btn {
       display: block;
     }
-    p {
-      display: none;
-    }
   }
 
   .cover-card-tag {
@@ -49,8 +55,11 @@
     margin: 0;
     height: 100%;
 
-    p, p.cover-card-excerpt {
-      display: none;
+    // Hide excerpt in home page covers only
+    .take-action-covers-block & {
+      p, p.cover-card-excerpt {
+        display: none;
+      }
     }
 
     .cover-card-heading {
@@ -129,5 +138,16 @@
 
   @include small-and-up {
     margin-left: 0;
+  }
+}
+
+// Very specific to: /lesmaterialen/
+.educationcovers__card__p {
+  font-size: 1rem;
+
+  + {
+    .cover-card-btn {
+      bottom: -30px;
+    }
   }
 }
