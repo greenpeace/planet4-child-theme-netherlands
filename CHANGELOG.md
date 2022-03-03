@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.6](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.5...v4.19.6) (2022-03-03)
+
+
+### Bug Fixes
+
+* **ui:** Restore styles for cover cards. ([c19f9d5](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c19f9d577652c173c60533e0bf19171104a06414))
+
 ### [4.19.5](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.4...v4.19.5) (2022-02-24)
 
 
