@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.7](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.6...v4.19.7) (2022-03-08)
+
+
+### Bug Fixes
+
+* **ui:** Increase override specificity. ([6dce57e](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/6dce57e781fc23efb80c26a2dbeb995ad9377844))
+* **ui:** Minor styling fixes for posts. ([c2ed1e8](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/c2ed1e891e2faf58b21faf38169ee09c0a2f193b))
+
 ### [4.19.6](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.5...v4.19.6) (2022-03-03)
 
 
