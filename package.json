@@ -70,5 +70,5 @@
 			"posttag": "git branch -d release"
 		}
 	},
-	"version": "4.19.6"
+	"version": "4.19.7"
 }
