@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.8](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.7...v4.19.8) (2022-06-26)
+
+
+### Bug Fixes
+
+* rename more main body selectors ([e3c24bb](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/e3c24bb5ce8ca07d6143c201cf3986e89c33ab80))
+* Style loading switches on existence of style assets ([22219cb](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/22219cb50650c137fc3678812196422d4270b61d))
+* **ui:** rename body selector for z-index reset ([29ef492](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/29ef4928016ad506a55c1a3d0c0db59d804637ce))
+
 ### [4.19.7](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.6...v4.19.7) (2022-03-08)
 
 
