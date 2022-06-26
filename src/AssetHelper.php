@@ -54,7 +54,7 @@ class AssetHelper
 			$script_path = get_stylesheet_directory_uri() . BUILD_DIR . $script_filename;
 			wp_enqueue_script($name, $script_path, $script_dependencies, $script_version, true);
 		}
-		if(!empty($script_glob)) {
+		if(!empty($style_glob)) {
 			$style_filename = basename($style_glob[0]);
 			$style_version = $manifest[$style_filename];
 			$style_path = get_stylesheet_directory_uri() . BUILD_DIR . $style_filename;
