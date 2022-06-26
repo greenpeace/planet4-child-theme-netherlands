@@ -69,7 +69,7 @@ body {
   }
 }
 
-div.page-template {
+div.page-content {
   padding-top: 60px; // Nav height
 
   @media (max-width: $small-width) {
@@ -95,6 +95,6 @@ article[id^=post] {
 }
 
 //Unset Z-index that is set in the parent theme.
-div.page-template > * {
+div.page-content > * {
   z-index: unset;
 }
