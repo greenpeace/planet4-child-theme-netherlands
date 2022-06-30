@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+  .boxout {
+    border-top: 4px solid #6c0;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    top: 120px;
+    height: 400px;
+    flex-direction: column-reverse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    .cover-card-btn {
+      position: absolute;
+      bottom: -24px;
+      right: 20px;
+      left: 20px;
+      line-height: 37px;
+      height: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
