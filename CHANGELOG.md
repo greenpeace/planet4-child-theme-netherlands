@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.19.9](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.8...v4.19.9) (2022-10-10)
+
+
+### Bug Fixes
+
+* floating boxout should show only on bigger screen ([a2c0621](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/a2c06210085d771444c4245aaddbc106ad3aa7d0))
+* **ui:** Fix footer images. ([89fddba](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/89fddba17e35e79ca9ffde7407c3182f7718cad2))
+* **ui:** Floating take action boxout. ([d6edf07](https://github.com/greenpeace/planet4-child-theme-netherlands/commit/d6edf07f6a0f56f355aa7d6e3afd4549fd9199d2))
+
 ### [4.19.8](https://github.com/greenpeace/planet4-child-theme-netherlands/compare/v4.19.7...v4.19.8) (2022-06-26)
 
 
