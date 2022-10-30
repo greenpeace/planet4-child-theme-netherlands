@@ -6,11 +6,11 @@ $nav-breakpoint: 992px;
 
 // Override Planet 4 CSS Themes using CSS custom properties as much as possible!
 :root {
-  --nav-link--color: #{variables.$slate-grey};
+  --nav-link--color: #{variables.$black};
   --nav-link--hover--color: #{variables.$anthracite};
   --top-navigation--color: #{variables.$slate-grey};
   --top-navigation--fill: #{variables.$anthracite};
-  --top-navigation--height: 60px;
+  --top-navigation--height: 68px;
   --top-navigation--background: #fff;
 }
 
@@ -31,5 +31,8 @@ $nav-breakpoint: 992px;
     }
   }
 
+  .nav-submenu ul{
+    border-radius: 0 0 4px 4px;
+    margin-top: 2px;
   }
 }
