@@ -66,7 +66,6 @@ final class Loader {
 			AssetHelper::class,
 			Settings::class,
 			StructuredData::class,
-			Navbar::class,
 			Metabox::class,
 			Tweaks::class,
 		];
