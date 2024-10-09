@@ -1,47 +1,26 @@
 {
-	"name": "greenpeace/planet4-child-theme-netherlands",
-	"description": "Child theme for Netherlands for the Planet 4 Wordpress project",
-	"type":"wordpress-theme",
-	"minimum-stability" : "stable",
-	"authors": [
-		{
-			"name": "Konstantinos Kokkorogiannis",
-			"email": "kkokkoro@greenpeace.org"
-		},
-		{
-			"name": "Oscar Keur",
-			"email": "okeur@greenpeace.org"
-		}
-	],
-	"license": "GPL-3.0+",
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/greenpeace/planet4-child-theme-netherlands/issues",
-		"wiki": "https://github.com/greenpeace/planet4-child-theme-netherlands/wiki",
-		"source": "https://github.com/greenpeace/planet4-child-theme-netherlands"
-	},
-	"extra": {
-		"installer-paths": {
-			"../../plugins/{$name}/": [
-				"wpackagist-plugin/*",
-				"type:wordpress-plugin"
-			]
-		}
-	},
-	"require": {
-	},
-	"require-dev": {
-		"squizlabs/php_codesniffer": "3.4.*",
-		"wp-coding-standards/wpcs": "2.1.*"
-	},
-	"autoload": {
-		"psr-4": {
-			"GPNL\\Theme\\": "src/"
-		}
-	}
+  "name": "greenpeace/planet4-child-theme-netherlands",
+  "description": "Child theme for Netherlands for the Planet 4 Wordpress project",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "license": "GPL-3.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/greenpeace/planet4-child-theme-netherlands"
+  },
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "require": {
+  }
 }

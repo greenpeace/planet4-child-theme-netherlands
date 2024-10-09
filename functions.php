@@ -1,31 +1,13 @@
 <?php
 
-use GPNL\Theme\Loader;
-
-
-const BUILD_DIR = '/public/build/';
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-	require_once __DIR__ . '/vendor/autoload.php';
-} else {
-	require_once __DIR__ . '/../../../../vendor/autoload.php';
-}
-
-$options = get_option('planet4nl_options');
-$system_status = $options['gpnl_system_status'];
-
-if ('charibase' != $system_status) {
-	add_filter('the_content', 'filter_charibaselinks');
-	function filter_charibaselinks($content)
-	{
-		$options = get_option('planet4nl_options');
-		$notification = nl2br($options['gpnl_sf_notification']);
-		$notification = '<div class="gpnl-notification"><p>' . $notification . '</p></div>';
-
-		return preg_replace('/(<iframe).*(greenpeace\.nl).*>.*(<\/iframe>)/', "$notification", $content);
-	}
-}
-
 /**
- * Instantiate the GPNL child theme.
- */
-Loader::get_instance();
+* Additional code for the child theme goes in here.
+*/
+
+add_action( 'wp_enqueue_scripts', 'enqueue_child_styles', 99);
+
+function enqueue_child_styles() {
+  $css_creation = filectime(get_stylesheet_directory() . '/style.css');
+
+  wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
+}
