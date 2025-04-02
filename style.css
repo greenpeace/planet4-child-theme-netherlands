@@ -10,3 +10,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: light, accessibility-ready
 Text Domain: planet4-child-theme
 */
+
+#trustwidget-widget-container {
+	z-index: 100;
+}
+
