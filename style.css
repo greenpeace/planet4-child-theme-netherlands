@@ -450,3 +450,72 @@ a.wp-block-social-link-anchor::after {
 .full-excerpt .posts-list-query .wp-block-post-excerpt__excerpt {
   -webkit-line-clamp: 10 !important;
 }
+
+
+/* Styling and animation for news items */
+/* Image on top */
+.wp-block-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+
+/* Category */
+.wp-block-post .wp-block-post-terms {
+  color: #5BC236;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+/* Date */
+.wp-block-post .wp-block-post-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Excerpt */
+.wp-block-post .wp-block-post-excerpt {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* Container for each news item */
+.wp-block-post {
+  margin-bottom: 3rem;
+  font-family: "Work Sans", sans-serif;
+  overflow: hidden;
+  background-color: white;
+	position: relative;
+}
+
+/* Animated green line on hover for grid layout */
+.wp-block-query-is-layout-grid  .wp-block-post::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #5BC236;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+/* Activate animation on hover */
+.wp-block-post:hover::before {
+  transform: scaleX(1);
+}
+
+/* Hover effect for container */
+.wp-block-post:hover img {
+  transform: scale(1.03);
+	transition: transform 0.3s ease;
+}
+
