@@ -101,6 +101,12 @@ h6 a:hover {
   }
 }
 
+@media (max-width: 991px) {
+  body.with-mobile-tabs .no-page-title {
+    padding-top: 0 !important;
+  }
+}
+
 nav * {
   font-family: var(--font-family-primary);
   text-transform: uppercase;
