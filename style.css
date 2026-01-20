@@ -102,8 +102,8 @@ h6 a:hover {
 }
 
 @media (max-width: 991px) {
-  body.with-mobile-tabs .no-page-title {
-    padding-top: 0 !important;
+  body.home.with-mobile-tabs .wp-block-cover:first-of-type {
+    margin-top: -1px;
   }
 }
 
