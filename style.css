@@ -33,7 +33,7 @@ Import Custom Styling
   --button--padding: 0.75rem 2rem;
 }
 
-/* GPAP typography style overides */
+/* Typography style overides */
 
 h1 {
   text-transform: uppercase;
@@ -258,6 +258,19 @@ body.scrolled.home .site-logo img {
 
 .nav-search-toggle {
   --top-navigation--search-toggle--background: var(--grey-800);
+}
+
+.page-template-default .page-content, 
+.home .page-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+body:not(.scrolled) .top-navigation {
+    background-color: transparent !important;
+    position: absolute !important;
+    width: 100%;
+    z-index: 999;
 }
 
 /*--#footer {
