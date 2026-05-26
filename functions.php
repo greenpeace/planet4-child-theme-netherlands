@@ -37,5 +37,6 @@ function p4_child_theme_gpap_add_allowed_blocks( $allowed_blocks, $post ) {
 }
 add_filter('allowed_block_types', 'p4_child_theme_gpap_add_allowed_blocks', 11, 2);
 
+/*
 // Allow manual configuration for Gravity Forms Salesforce plugin
-add_filter( 'gform_salesforce_allow_manual_configuration', '__return_true' );
+add_filter( 'gform_salesforce_allow_manual_configuration', '__return_true' ); */
